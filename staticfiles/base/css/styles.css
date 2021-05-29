@@ -3,7 +3,7 @@
 }
 
 .navbar-fixed-top.scrolled {
-    background-color: #26344B !important;
+    background-color: #172b4d !important;
     transition: background-color 200ms linear;
 }
 
@@ -22,4 +22,60 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+}
+
+.footer-icon {
+    color: #32325d;
+}
+
+.footer-copyright {
+    color: #32325d;
+}
+
+.main-information {
+    color: #5e72e4;
+}
+
+.img-mask {
+    background-color: rgba(251, 251, 251, 0.15);
+}
+
+.img-fluid {
+    object-fit: cover !important;
+    height: 100% !important;
+    width: 100% !important;
+}
+
+.section-subheading {
+    font-style: normal !important;
+}
+
+.timeline-image-text {
+    color: rgb(33, 37, 41) !important;
+}
+
+.timeline-main-text {
+   color: #172b4d !important;
+}
+
+.bg-gradient-primary {
+    background: #172b4d !important;
+}
+
+.bg-secondary {
+    background: #edf0f2 !important;
+}
+
+.navbar-horizontal .navbar-brand img {
+    height: 40px !important;
+}
+
+.send-message-btn {
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+.profile-card {
+    height: 140px !important;
+    width: 140px !important;
 }

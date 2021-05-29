@@ -1,0 +1,7 @@
+.button-image-upload {
+    background-size: cover !important;
+    padding: 0 0 !important;
+    width: 140px!important;
+    height: 140px!important;
+    object-fit: cover!important;
+}
