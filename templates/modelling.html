@@ -1,0 +1,292 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_links %}
+    <link rel="stylesheet" href="{% static 'base/css/button-styles.css' %}" type="text/css">
+{% endblock extra_links %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ request.session.profile.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_modelling' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Modelling_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock extra_wrapper %}
+{% block container %}
+    <input type="hidden" value="{{ csrf_token }}" id="csrf-token">
+    <div class="container-fluid mt--6" style="min-height: 60vh">
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Success_title_modelling' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif message.tags == "warning" %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Warning_title_modelling' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Error_title_modelling' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page"><a
+                                    href="{% url 'interface:disasters' %}">{% trans 'Disasters' %}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans 'Modelling' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center">
+
+            <div class="card m-5" style="width: 20rem; height: 35rem">
+                <img
+                        src="{% static 'base/img/company-forecast.png' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:200px"
+                />
+                <div class="card-body text-center">
+                    <a href="#!" class="btn btn-default" data-toggle="modal"
+                       data-target="#modal-form-company-forecast">{% trans 'Check' %}</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Company_forecast' %}</h5>
+                    <p class="card-text">
+                        {% trans 'Company_forecast_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'Company_forecast_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'Company_forecast_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'Company_forecast_char_3' %}</li>
+                </ul>
+            </div>
+            <div class="card m-5" style="width: 20rem; height: 35rem">
+                <img
+                        src="{% static 'base/img/company-stresstest.jpg' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:200px"
+                />
+                <div class="card-body text-center">
+                    <a href="#!" class="btn btn-default" data-toggle="modal"
+                       data-target="#modal-form-company-stresstest">{% trans 'Check' %}</a>
+                </div>
+                <div class="card-body">
+
+                    <h5 class="card-title">{% trans 'Company_stresstest' %}</h5>
+                    <p class="card-text">
+                        {% trans 'Company_stresstest_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'Company_stresstest_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'Company_stresstest_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'Company_stresstest_char_3' %}</li>
+                </ul>
+            </div>
+            <div class="card m-5" style="width: 20rem; height: 35rem">
+
+                <img
+                        src="{% static 'base/img/market.png' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:200px"
+                />
+                <div class="card-body text-center">
+                    <a href="#!" class="btn btn-default" data-toggle="modal"
+                       data-target="#modal-form-market-forecast">{% trans 'Check' %}</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Market_forecast' %}</h5>
+                    <p class="card-text">
+                        {% trans 'Market_forecast_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'Market_forecast_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'Market_forecast_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'Market_forecast_char_3' %}</li>
+                </ul>
+
+            </div>
+            <div class="card m-5" style="width: 20rem; height: 35rem">
+                <img
+                        src="{% static 'base/img/audience.jpg' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:200px"
+                />
+                <div class="card-body text-center">
+                    <a href="{% url 'interface:audience' %}" class="btn btn-default">{% trans 'Check' %}</a>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Audience_modelling' %}</h5>
+                    <p class="card-text">
+                        {% trans 'Audience_modelling_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'Audience_modelling_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'Audience_modelling_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'Audience_modelling_char_3' %}</li>
+                </ul>
+            </div>
+        </div>
+        <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+              action="{% url 'interface:company_forecast' %}">
+            {% csrf_token %}
+            <div class="modal fade" id="modal-form-company-forecast" tabindex="-2" role="dialog"
+                 aria-labelledby="modal-form" aria-hidden="true">
+                <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card bg-secondary border-0 mb-0">
+                                <div class="card-body px-lg-5 py-lg-5">
+                                    <div class="text-center text-muted mb-4">
+                                        <small>{% trans 'Enter_info' %}</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-pen"></i></span>
+                                            </div>
+                                            <textarea class="form-control" style="max-height: 20vh"
+                                                      placeholder="{% trans 'Info' %}"
+                                                      type="text" name="info" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative mb-3">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-file"></i></span>
+                                            </div>
+                                            <input class="form-control" name="data"
+                                                   placeholder="{% trans 'Data_placeholder' %}" type="file"
+                                                   style="padding-top: 0.45rem; padding-left: 0.8rem" required>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit"
+                                               class="btn btn-success my-4"
+                                               value="{% trans 'Make_forecast' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+              action="{% url 'interface:market_forecast' %}">
+            {% csrf_token %}
+            <div class="modal fade" id="modal-form-market-forecast" tabindex="-2" role="dialog"
+                 aria-labelledby="modal-form" aria-hidden="true">
+                <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card bg-secondary border-0 mb-0">
+                                <div class="card-body px-lg-5 py-lg-5">
+                                    <div class="text-center text-muted mb-4">
+                                        <small>{% trans 'Select_method' %}</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                             <span class="input-group-text">
+                                                 <i class="fas fa-drafting-compass"></i></span>
+                                            </div>
+                                            <select class="form-select form-control"
+                                                    name="method"
+                                                    aria-label="{% trans 'Method' %}"
+                                                    required>
+                                                <option value="fast">{% trans 'Fast' %}</option>
+                                                <option value="slow">{% trans 'Slow' %}</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit"
+                                               class="btn btn-success my-4"
+                                               value="{% trans 'Make_forecast' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+        <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+              action="{% url 'interface:company_stresstest' %}">
+            {% csrf_token %}
+            <div class="modal fade" id="modal-form-company-stresstest" tabindex="-2" role="dialog"
+                 aria-labelledby="modal-form" aria-hidden="true">
+                <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card bg-secondary border-0 mb-0">
+                                <div class="card-body px-lg-5 py-lg-5">
+                                    <div class="text-center text-muted mb-4">
+                                        <small>{% trans 'Enter_info' %}</small>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-pen"></i></span>
+                                            </div>
+                                            <textarea class="form-control" style="max-height: 20vh"
+                                                      placeholder="{% trans 'Info' %}"
+                                                      type="text" name="info" required></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit"
+                                               class="btn btn-success my-4"
+                                               value="{% trans 'Testing' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock container %}

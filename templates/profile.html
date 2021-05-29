@@ -1,0 +1,279 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ request.session.profile.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_profile' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Profile_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    <div class="container-fluid mt--6">
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans 'Profile' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Success_title_profile' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif message.tags == "warning" %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Warning_title_profile' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Error_title_profile' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="row">
+            <div class="col-xl-4 order-xl-2">
+                <div class="card card-profile">
+                    <img src="{% static 'assets/argon/img/theme/img-1-1000x600.jpg' %}" alt="Image placeholder"
+                         class="card-img-top">
+                    <form method="post" enctype="multipart/form-data" action="{% url 'interface:change_image' %}">
+                        {% csrf_token %}
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 order-lg-2">
+                                <div class="card-profile-image">
+                                    <img src="{{ request.session.profile.img }}" class="rounded-circle"
+                                         id="image-profile"
+                                         style="width: 140px; height: 140px;object-fit: cover;">
+                                    <input type="file" style="display: none" id="file-profile" name="img"
+                                           onchange="readURL(this);">
+                                    <input type="hidden" id="old-image-profile" name="old_img" value="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-0">
+                            <div class="d-flex justify-content-between">
+                                <a href="{% url 'interface:companies' %}"
+                                   class="btn btn-sm btn-success  mr-4 ">{% trans 'Companies' %}</a>
+                                <a href="{% url 'interface:reviews' %}"
+                                   class="btn btn-sm btn-success float-right">{% trans 'Reviews' %}</a>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5" style="display:none;">
+                                <input type="submit" class="btn btn-sm btn-success  mr-4 "
+                                       id="image-button-profile-save"
+                                       style="display:none;" value="{% trans 'Save' %}">
+                                <a href="#" class="btn btn-sm btn-default float-right" id="image-button-profile-cancel"
+                                   style="display:none;" onclick="cancelUpload()">{% trans 'Cancel' %}</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <span class="heading">{{ request.session.profile.counters.ratings }}</span>
+                                        <span class="description">{% trans 'Ratings' %}</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">{{ request.session.profile.counters.articles }}</span>
+                                        <span class="description">{% trans 'Articles' %}</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">{{ request.session.profile.counters.disasters }}</span>
+                                        <span class="description">{% trans 'Disasters' %}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="h3">
+                                {{ request.session.profile.first_name }} {{ request.session.profile.last_name }}
+                            </h5>
+                            <div class="h5 font-weight-300">
+                                <i class="fas fa-calendar-plus mr-2"></i>{% trans 'joined' %}: {{ request.session.profile.data_joined }}
+                            </div>
+                            <div class="h5 font-weight-300">
+                                <a href="{% url 'interface:change_subscription' %}"
+                                   class="badge badge-default">{% trans request.session.profile.subscription %}</a>
+                            </div>
+                            <div class="h5 mt-4">
+                                <i class="fas fa-user-ninja mr-2"></i>{{ request.session.profile.position }}
+                            </div>
+                            <div>
+                                <i class="fas fa-briefcase mr-2"></i>{{ request.session.profile.company }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 order-xl-1">
+                <div class="card">
+
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">{% trans 'Edit_profile' %} </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="#" class="btn btn-sm btn-success" id="reset-password-enter"
+                                   onclick="submitEditUser()">
+                                    {% trans 'Save' %}</a>
+                                <a href="#" class="btn btn-sm btn-default" id="reset-password-enter"
+                                   onclick="openResetPassword()">
+                                    {% trans 'Reset_password' %}</a>
+                                <a href="#" class="btn btn-sm btn-default" id="reset-password-cancel"
+                                   style="display: none" onclick="closeResetPassword()">
+                                    {% trans 'Cancel_reset_password' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="{% url 'interface:change_profile' %}">
+                            {% csrf_token %}
+                            <h6 class="heading-small text-muted mb-4">{% trans 'User_information' %}</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-username">{% trans 'Username' %}</label>
+                                            <input type="text" id="input-username" class="form-control"
+                                                   placeholder="{% trans 'Username' %}"
+                                                   value="{{ request.session.profile.username }}" name="username">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-email">{% trans 'Email_address' %}</label>
+                                            <input type="email" id="input-email" class="form-control"
+                                                   placeholder="{% trans 'Email' %}"
+                                                   value="{{ request.session.profile.email }}" name="email">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-first-name">{% trans 'First_name' %}</label>
+                                            <input type="text" id="input-first-name" class="form-control"
+                                                   placeholder="{% trans 'First_name' %}"
+                                                   value="{{ request.session.profile.first_name }}" name="first_name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-last-name">{% trans 'Last_name' %}</label>
+                                            <input type="text" id="input-last-name" class="form-control"
+                                                   placeholder="{% trans 'Last_name' %}"
+                                                   value="{{ request.session.profile.last_name }}" name="last_name">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" id="submit-edit-user" style="display: none;">
+                        </form>
+                        <form id="reset-password-form" style="display: none" method="post"
+                              action="{% url 'interface:change_password' %}">
+                            {% csrf_token %}
+                            <hr class="my-4"/>
+                            <h6 class="heading-small text-muted mb-4">{% trans 'Reset_Password_Form' %}</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-password">{% trans 'New_Password' %}</label>
+                                            <input type="password" id="password" class="form-control"
+                                                   placeholder="{% trans 'New_Password' %}"
+                                                   value="" name="password">
+                                            <div class="text-muted font-italic pb-3">
+                                                <small>{% trans 'password_strength' %}
+                                                    <span id="strength-strong" class="font-weight-700 text-success"
+                                                          style="display: none">
+                                                        {% trans 'strong' %}</span>
+                                                    <span id="strength-medium" class="font-weight-700 text-default"
+                                                          style="display: none">
+                                                        {% trans 'medium' %}</span>
+                                                    <span id="strength-weak" class="font-weight-700 text-danger"
+                                                          style="display: none">
+                                                        {% trans 'weak' %}</span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="confirm-password">{% trans 'Confirm_New_Password' %}</label>
+                                            <input type="password" id="confirm-password" class="form-control"
+                                                   placeholder="{% trans 'Confirm_New_Password' %}" value="">
+                                            <div class="text-muted font-italic pb-3">
+                                                <small>{% trans 'password_confirm' %}
+                                                    <span id="matching" class="font-weight-700 text-success"
+                                                          style="display: none">
+                                                        {% trans 'matching' %}</span>
+                                                    <span id="not-matching" class="font-weight-700 text-warning"
+                                                          style="display: none">
+                                                        {% trans 'not_matching' %}</span>
+                                                </small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label text-white" for="input-submit"
+                                                   style="user-select: none">Dismart</label>
+                                            <input type="submit" id="submit-button" class="form-control btn btn-default"
+                                                   placeholder="" value="{% trans 'Send_New_Password' %}" disabled>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/js/reset-password.js' %}"></script>
+    <script src="{% static 'base/js/check-password-strong-reset.js' %}"></script>
+    <script src="{% static 'base/js/check-block-submit-reset.js' %}"></script>
+    <script src="{% static 'base/js/display-profile-image.js' %}"></script>
+    <script src="{% static 'base/js/submit-edit.js' %}"></script>
+    <script src="{% static 'base/jquery/confirm-password-reset.js' %}"></script>
+    <script src="{% static 'base/jquery/upload-profile-image.js' %}"></script>
+{% endblock extra_script %}

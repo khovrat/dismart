@@ -1,0 +1,125 @@
+{% extends 'wrappers/main.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_navbar %}
+    <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+        <ul class="navbar-nav mr-auto">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% with '/'|add:LANGUAGE_CODE|add:'/' as path_index %}
+                {% if 'home/' in request.path or path_index == request.path %}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <span class="nav-link-inner--text text-success font-weight-bold">{% trans 'Home' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'interface:home' %}" class="nav-link">
+                            <span class="nav-link-inner--text">{% trans 'Home' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            {% endwith %}
+            {% if 'profile/' in request.path %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-inner--text text-success font-weight-bold">{% trans 'Profile' %}</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'interface:profile' %}" class="nav-link">
+                        <span class="nav-link-inner--text">{% trans 'Profile' %}</span>
+                    </a>
+                </li>
+            {% endif %}
+            {% if 'aid/' in request.path %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-inner--text text-success font-weight-bold">{% trans 'Aid' %}</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'interface:aid' %}" class="nav-link">
+                        <span class="nav-link-inner--text">{% trans 'Aid' %}</span>
+                    </a>
+                </li>
+            {% endif %}
+            {% if 'disasters/' in request.path %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link">
+                        <span class="nav-link-inner--text text-success font-weight-bold">{% trans 'Disasters' %}</span>
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'interface:disasters' %}" class="nav-link">
+                        <span class="nav-link-inner--text">{% trans 'Disasters' %}</span>
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock extra_navbar %}
+{% block extra_footer %}
+    <div class="col-xl-6">
+        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+            {% get_current_language as LANGUAGE_CODE %}
+            {% with '/'|add:LANGUAGE_CODE|add:'/' as path_index %}
+                {% if 'home/' in request.path or request.path == path_index %}
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-success">
+                            {% trans 'Home' %}
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a href="{% url 'interface:home' %}" class="nav-link">
+                            {% trans 'Home' %}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endwith %}
+            {% if 'profile/' in request.path %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-success">
+                        {% trans 'Profile' %}
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'interface:profile' %}" class="nav-link">
+                        {% trans 'Profile' %}
+                    </a>
+                </li>
+            {% endif %}
+            {% if 'aid/' in request.path %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-success">
+                        {% trans 'Aid' %}
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'interface:aid' %}" class="nav-link">
+                        {% trans 'Aid' %}
+                    </a>
+                </li>
+            {% endif %}
+            {% if 'disasters/' in request.path %}
+                <li class="nav-item">
+                    <a href="#" class="nav-link text-success">
+                        {% trans 'Disasters' %}
+                    </a>
+                </li>
+            {% else %}
+                <li class="nav-item">
+                    <a href="{% url 'interface:disasters' %}" class="nav-link">
+                        {% trans 'Disasters' %}
+                    </a>
+                </li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock extra_footer %}

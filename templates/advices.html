@@ -1,0 +1,164 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_links %}
+    <link rel="stylesheet" href="{% static 'base/css/button-styles.css' %}" type="text/css">
+{% endblock extra_links %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ request.session.profile.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_advice' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Advice_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    <input type="hidden" value="{{ csrf_token }}" id="csrf-token">
+    <div class="container-fluid mt--6" style="min-height: 60vh">
+        <div class="header bg-transparent ">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="col-lg-6 col-7">
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i
+                                        class="fas fa-home"></i></a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page"><a
+                                        href="{% url 'interface:aid' %}">{% trans 'Aid' %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans 'Advices' %}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-end mb-4 mt--5">
+                        <a href="#" data-toggle="modal"
+                           data-target="#modal-form-filter"
+                           class="btn btn-sm btn-success" id="filter-link-power">{% trans 'Filter' %}</a>
+                        <a href="{% url 'interface:advices' %}" class="btn btn-sm btn-default" style="display: none"
+                           id="cancel-filter-link">{% trans 'Cancel_Filter' %}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Success_title_advices' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif message.tags == "warning" %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Warning_title_advices' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Error_title_advices' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="row d-flex align-items-center justify-content-center">
+            {% include 'pagination/advices.html' %}
+            {% if filter %}
+                <input type="hidden" value="{% url 'interface:advices_filter' %}" id="name-pagination">
+            {% else %}
+                <input type="hidden" value="{% url 'interface:advices' %}" id="name-pagination">
+            {% endif %}
+        </div>
+        <form role="form" method="post"
+              action="{% url 'interface:advices_filter' %}">
+            {% csrf_token %}
+            <div class="modal fade" id="modal-form-filter" tabindex="-1" role="dialog"
+                 aria-labelledby="modal-form" aria-hidden="true">
+                <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body p-0">
+                            <div class="card bg-secondary border-0 mb-0">
+                                <div class="card-body px-lg-5 py-lg-5">
+                                    <div class="text-center text-muted mb-4">
+                                        {% trans 'Filter_advices_title' %}
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"
+                                                      data-toggle="tooltip"
+                                                      data-original-title="{% trans 'Disaster_type_tip' %}"><i
+                                                        class="fas fa-house-damage"></i></span>
+                                            </div>
+                                            <select class="form-select form-control"
+                                                    name="type" id="form-type"
+                                                    aria-label="{% trans 'Type' %}"
+                                            >
+                                                {% for disaster in disasters %}
+                                                    <option value="{{ disaster.id }}">{{ disaster.name }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                 <span class="input-group-text"><i
+                                                         class="fas fa-star" data-toggle="tooltip"
+                                                         data-original-title="{% trans 'Rate_tip' %}"></i></span>
+                                            </div>
+                                            <div class="range w d-flex align-items-center justify-content-center">
+                                                <input type="range" class="form-range ml-4" min="0" max="5" step="0.5"
+                                                       id="form-rating" name="rating"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="input-group input-group-merge input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                  <span class="input-group-text" data-toggle="tooltip"
+                                                        data-original-title="{% trans 'Amount_tip' %}"><i
+                                                          class="fas fa-users"></i></span>
+                                            </div>
+                                            <div class="range w d-flex align-items-center justify-content-center">
+                                                <input type="range" class="form-range ml-4" min="0"
+                                                       max="{{ max_amount }}"
+                                                       step="1"
+                                                       id="form-amount" name="amount"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <input type="submit"
+                                               class="btn btn-success my-4"
+                                               value="{% trans 'Filter_advices' %}" id="filter-link"
+                                               href="{% url 'interface:advices_filter' %}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+    <script src="{% static 'base/jquery/ajax-filter-advice.js' %}"></script>
+{% endblock extra_script %}

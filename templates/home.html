@@ -1,0 +1,375 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_links %}
+    <link href="{% static 'base/css/counter-styles.css' %}" rel="stylesheet"/>
+{% endblock extra_links %}
+{% block extra_wrapper %}
+    <div class="header pb-6 d-flex align-items-center welcome-cover article">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-7 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_disaster' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Project_short_description' %}</p>
+                </div>
+                <div class="tab-pane tab-example-result fade show active welcome-text">
+                    <a href="#subscription" class="btn btn-neutral">{% trans 'Buy_subscription' %}</a>
+                    <a href="#about"
+                       class="btn btn-outline-neutrale text-white">{% trans 'Read_full_description' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "success" %}
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-text"><strong>{% trans 'Success_home' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% elif message.tags == "warning" %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-text"><strong>{% trans 'Warning_title_home' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% else %}
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-text"><strong>{% trans 'Error_title_home' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+    <section class="page-section p-5" id="services">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">{% trans 'Services' %}</h2>
+                <h3 class="section-subheading text-muted">{% trans 'Services_description' %}</h3>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-default"></i>
+                            <i class="fas fa-chart-bar fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="my-3">{% trans 'Services_1_home' %}</h4>
+                    <p class="text-muted">{% trans 'Services_1_home_description' %}</p>
+                </div>
+                <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-default"></i>
+                            <i class="far fa-newspaper fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="my-3">{% trans 'Services_2_home' %}</h4>
+                    <p class="text-muted">{% trans 'Services_2_home_description' %}</p>
+                </div>
+                <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fas fa-circle fa-stack-2x text-default"></i>
+                            <i class="fas fa-table fa-stack-1x fa-inverse"></i>
+                        </span>
+                    <h4 class="my-3">{% trans 'Services_3_home' %}</h4>
+                    <p class="text-muted">{% trans 'Services_3_home_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section p-5" id="counter">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">{% trans 'Services' %}</h2>
+                <h3 class="section-subheading text-muted">{% trans 'Services_description' %}</h3>
+            </div>
+            <div class="row">
+                <div class="four col-md-3">
+                    <div class="counter-box"><i class="fas fa-users"></i>
+                        <span class="counter">{{ amount.users }}</span>
+                        <p>{% trans 'Users' %}</p>
+                    </div>
+                </div>
+                <div class="four col-md-3">
+                    <div class="counter-box"><i class="fas fa-building"></i> <span
+                            class="counter">{{ amount.companies }}</span>
+                        <p>{% trans 'Companies' %}</p>
+                    </div>
+                </div>
+                <div class="four col-md-3">
+                    <div class="counter-box"><i class="fas fa-newspaper"></i> <span
+                            class="counter">{{ amount.articles }}</span>
+                        <p>{% trans 'Articles' %}</p>
+                    </div>
+                </div>
+                <div class="four col-md-3">
+                    <div class="counter-box"><i class="fas fa-comment"></i> <span
+                            class="counter">{{ amount.advices }}</span>
+                        <p>{% trans 'Advices' %}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="page-section p-5" id="about">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">{% trans 'About' %}</h2>
+                <h3 class="section-subheading text-muted">{% trans 'About_description' %}.</h3>
+            </div>
+            <ul class="timeline">
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                     src="{% static 'base/img/nure-1.jpg' %}"
+                                                     alt="..."/></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-main-text">2017-2018</h4>
+                            <h4 class="subheading timeline-main-text">{% trans 'About_part_1' %}</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">{% trans 'About_part_1_description' %}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                     src="{% static 'base/img/nure-2.jpg' %}"
+                                                     alt="..."/></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-main-text">2018-2019</h4>
+                            <h4 class="subheading timeline-main-text">{% trans 'About_part_2' %}</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">{% trans 'About_part_2_description' %}</p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                     src="{% static 'base/img/nure-3.jpg' %}"
+                                                     alt="..."/></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-main-text">2019-2020</h4>
+                            <h4 class="subheading timeline-main-text">{% trans 'About_part_3' %}</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">{% trans 'About_part_3_description' %}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted">
+                    <div class="timeline-image"><img class="rounded-circle img-fluid"
+                                                     src="{% static 'base/img/nure-4.jpg' %}"
+                                                     alt="..."/></div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-main-text">2020-2021</h4>
+                            <h4 class="subheading timeline-main-text">{% trans 'About_part_4' %}</h4>
+                        </div>
+                        <div class="timeline-body"><p class="text-muted">{% trans 'About_part_3_description' %}</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="timeline-inverted" data-toggle="tooltip" data-original-title="{% trans 'Watch_video' %}">
+                    <button class="timeline-image" data-toggle="modal"
+                            data-target="#modal-form-video">
+                        <h4 class="timeline-image-text">
+                            {% trans 'Story' %}
+                        </h4>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="miri-ui-kit-section team-members-section p-5">
+        <div class="container">
+            <h2 class="text-uppercase text-center">{% trans 'Team_members' %}</h2>
+            <p class="mb-5 text-center">{% trans 'Team_members_description' %}</p>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="team-card card border-0 raise-on-hover bg-image hover-overlay ripple">
+                        <img src="{% static 'base/img/me/me-director.jpg' %}" alt="director"
+                             class="card-img-top img-fluid">
+                        <a href="#">
+                            <div class="mask img-mask"></div>
+                        </a>
+                        <div class="card-body pl-5 scale">
+                            <h5 class="card-title mb-0 fs-5">{% trans 'Artem_Khovrat' %}</h5>
+                            <p class="font-weight-medium designation fs-7 main-information">{% trans 'Director' %}</p>
+                            <p class="fs-7">{% trans 'Me_director_description' %}</p>
+                            <p class="social-links">
+                                <a href="{{ links.my_facebook }}" class="icon-fb pr-2" target="_blank">
+                                    <i class="fab fa-facebook-square footer-icon"></i></a>
+                                <a href="{{ links.my_twitter }}" class="icon-twitter pr-2" target="_blank">
+                                    <i class="fab fa-twitter-square footer-icon"></i></a>
+                                <a href="{{ links.my_linkedin }}" class="icon-linkedin" target="_blank">
+                                    <i class="fab fa-linkedin footer-icon"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card card border-0 raise-on-hover bg-image hover-overlay ripple">
+                        <img src="{% static 'base/img/me/me-engineer.jpg' %}" alt="Engineer"
+                             class="card-img-top img-fluid">
+                        <a href="#">
+                            <div class="mask img-mask"></div>
+                        </a>
+                        <div class="card-body pl-5 scale">
+                            <h5 class="card-title mb-0 fs-5">{% trans 'Artem_Khovrat' %}</h5>
+                            <p class="font-weight-medium designation fs-7 main-information">{% trans 'Engineer' %}</p>
+                            <p class="fs-8">{% trans 'Me_engineer_description' %}</p>
+                            <p class="social-links">
+                                <a href="{{ links.my_facebook }}" class="icon-fb pr-2" target="_blank">
+                                    <i class="fab fa-facebook-square footer-icon"></i></a>
+                                <a href="{{ links.my_twitter }}" class="icon-twitter pr-2" target="_blank">
+                                    <i class="fab fa-twitter-square footer-icon"></i></a>
+                                <a href="{{ links.my_linkedin }}" class="icon-linkedin" target="_blank">
+                                    <i class="fab fa-linkedin footer-icon"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="team-card card border-0 raise-on-hover bg-image hover-overlay ripple">
+                        <img src="{% static 'base/img/me/me-translator.jpg' %}" alt="Translator"
+                             class="card-img-top img-fluid">
+                        <a href="#">
+                            <div class="mask img-mask"></div>
+                        </a>
+                        <div class="card-body pl-5 scale ">
+                            <h5 class="card-title mb-0 fs-5">{% trans 'Artem_Khovrat' %}</h5>
+                            <p class=" font-weight-medium designation fs-9 main-information">{% trans 'Translator' %}</p>
+                            <p class="fs-9">{% trans 'Me_translator_description' %}</p>
+                            <p class="social-links">
+                                <a href="{{ links.my_facebook }}" class="icon-fb pr-2" target="_blank">
+                                    <i class="fab fa-facebook-square footer-icon"></i></a>
+                                <a href="{{ links.my_twitter }}" class="icon-twitter pr-2" target="_blank">
+                                    <i class="fab fa-twitter-square footer-icon"></i></a>
+                                <a href="{{ links.my_linkedin }}" class="icon-linkedin" target="_blank">
+                                    <i class="fab fa-linkedin footer-icon"></i></a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="pricing-section p-5" id="subscription">
+        <div class="container scale">
+            <h2 class="text-uppercase text-center">{% trans 'Choose_plan' %}</h2>
+            <p class="mb-5 text-center">{% trans 'Choose_plan_description' %}</p>
+            <div class="card-group">
+                <div class="card text-center">
+                    <div class="card-body p-5">
+                        <h4>{% trans 'Free' %}</h4>
+                        <p>{% trans 'Free_Description' %}</p>
+
+                        <form action="{% url 'interface:change_subscription' %}">
+                            <button class="btn btn-default"
+                                    {% if request.session.profile.subscription == 'DEFAULT' %}
+                                    disabled
+                                    {% endif %}
+                            >{% trans 'Change_plan' %}</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-body p-5">
+                        <h4>{% trans 'Maximum' %}</h4>
+                        <p>{% trans 'Maximum_description' %}</p>
+                        <form action="{% url 'interface:change_subscription' %}">
+                            <button class="btn btn-default"
+                                    {% if request.session.profile.subscription == 'MAXIMUM' %}
+                                    disabled
+                                    {% endif %}
+                            >{% trans 'Change_plan' %}</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="card text-center">
+                    <div class="card-body p-5">
+                        <h4>{% trans 'Ultra' %}</h4>
+                        <p>{% trans 'Ultra_description' %}</p>
+                        <form action="{% url 'interface:change_subscription' %}">
+                            <button class="btn btn-default"
+                                    {% if request.session.profile.subscription == 'ULTRA' %}
+                                    disabled
+                                    {% endif %}
+                            >{% trans 'Change_plan' %}</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="miri-ui-kit-section contact-section p-5" id="email">
+        <div class="container">
+            <h2 class="text-center mb-4 scale">{% trans 'SendYourFeedback' %}</h2>
+            <p class="text-center mb-4 pb-3 scale">
+                {% trans 'SendYourFeedbackDesciption' %}
+            </p>
+            <div class="row">
+                <div class="col-md-6 offset-md-3 scale">
+                    <form action="{% url 'interface:send_review' %}" class="contact-form" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <input type="text" name="review" class="form-control form-control-pill h-100"
+                                       placeholder="{% trans 'PressYourMessage' %}" data-toggle="tooltip"
+                                       data-original-title="{% trans 'Enter_review' %}">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <input type="text" name="email" class="form-control form-control-pill mb-3"
+                                       value="{{ request.session.profile.email }}" data-toggle="tooltip"
+                                       data-original-title="{% trans 'Enter_email' %}">
+                                <button id="submit-button" class="btn btn-block btn-pill btn-icon btn-success">
+                                        <span class="btn-inner--icon">
+                                            <i class="fas fa-user-tie"></i>
+                                        </span>
+                                    <span class="btn-inner--text">{% trans 'Send_message' %}</span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal fade" id="modal-form-video" tabindex="-1" role="dialog"
+         aria-labelledby="modal-form" aria-hidden="true">
+        <div class="modal-dialog modal- modal-dialog-centered" role="document" style="width: 610px">
+            <div class="modal-content" style="width: 610px">
+                <div class="modal-body p-0">
+                    <div class="card bg-secondary border-0 mb-0">
+                        <div class="card-body">
+                            <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ links.video }}"
+                                    frameborder="0"
+                                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                    allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock container %}
+
+{% block extra_script %}
+    <script src="{% static 'base/js/check-counter.js' %}"></script>
+{% endblock extra_script %}

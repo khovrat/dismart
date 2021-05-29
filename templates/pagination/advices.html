@@ -1,0 +1,175 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination" class="row d-flex align-items-center justify-content-center">
+    {% for advice in advices %}
+        <div class="card text-center mr-5 mb-5" style="max-width: 400px;">
+            <div class="card-header">{{ advice.advice.type }}</div>
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img
+                        src="{{ advice.advice.img }}"
+                        class="img-fluid"
+                />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{ advice.name }}</h5>
+                <p class="card-text">
+                    {{ advice.content }}
+                </p>
+                <a href="#!" class="btn btn-default" data-toggle="modal"
+                   data-target="#modal-form-rate">{% trans 'Rate' %}</a>
+            </div>
+            <div class="card-footer text-muted">
+                {% if advice.rating_my %}
+                    <span class="mr-3" data-toggle="tooltip" data-original-title="{% trans 'My_rate' %}"><i
+                            class="fas fa-star mr-2"></i>{{ advice.rating_my }}</span>
+                {% endif %}
+                <span class="mr-3" data-toggle="tooltip" data-original-title="{% trans 'Avg_rate' %}"><i
+                        class="fas fa-grin-stars mr-2"></i>{{ advice.rating }}</span>
+                <span><i class="fas fa-users mr-2" data-toggle="tooltip"
+                         data-original-title="{% trans 'Amount_rate' %}"></i>{{ advice.amount }}</span>
+            </div>
+
+            <form role="form" method="post" id="add-user-form"
+                  action="{% url 'interface:advices_rate' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-form-rate" tabindex="-1" role="dialog"
+                     aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card bg-secondary border-0 mb-0">
+                                    <div class="card-body px-lg-5 py-lg-5">
+                                        <div class="text-center text-muted mb-4">
+                                            {% trans 'Rate_your_advice' %}
+                                        </div>
+
+                                        <input type="hidden" value="{{ advice.advice.id }}" name="name">
+                                        <fieldset
+                                                class="starability-heart d-flex align-items-center justify-content-center"
+                                                style="width: 100%">
+                                            <input type="radio" id="no-rate" class="input-no-rate" name="rating"
+                                                   value="0"
+                                                   checked
+                                                   aria-label="No rating."/>
+                                            <input type="radio" id="first-rate1" name="rating" value="1"/>
+                                            <label for="first-rate1" title="Terrible">1 star</label>
+                                            <input type="radio" id="first-rate2" name="rating" value="2"/>
+                                            <label for="first-rate2" title="Not good">2 stars</label>
+                                            <input type="radio" id="first-rate3" name="rating" value="3"/>
+                                            <label for="first-rate3" title="Average">3 stars</label>
+                                            <input type="radio" id="first-rate4" name="rating" value="4"/>
+                                            <label for="first-rate4" title="Very good">4 stars</label>
+                                            <input type="radio" id="first-rate5" name="rating" value="5"/>
+                                            <label for="first-rate5" title="Amazing">5 stars</label>
+                                        </fieldset>
+                                        <div class="text-center">
+                                            <input type="submit"
+                                                   class="btn btn-success my-4"
+                                                   value="{% trans 'Rate_advice' %}"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+    {% if not advices %}
+        <div class="card text-center mr-5 mb-5" style="max-width: 400px;">
+            <div class="card-header">{% trans 'Ooops' %}</div>
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img
+                        src="{% static 'base/img/arm.jpg' %}"
+                        class="img-fluid"
+                />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{% trans 'We_have_a_problem' %}</h5>
+                <p class="card-text">
+                    {% trans 'We_have_a_problem_description' %}
+                </p>
+            </div>
+            <div class="card-footer text-muted">
+                <span>{% trans 'My_god' %}</span>
+            </div>
+        </div>
+    {% endif %}
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if advices.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active" href="{{ advices.previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if advices.number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ advices.number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in advices.paginator.page_range %}
+                    {% if advices.number == i %}
+                        <li class="page-item active" aria-current="page">
+                                          <span class="page-link">
+                                              <input type="hidden" value="{{ i }}" class="current-page">
+                                            {{ i }}
+                                            <span class="sr-only">(current)</span>
+                                          </span>
+                        </li>
+                    {% elif i > advices.number|add:'-5' and i < advices.number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active" href="{{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if advices.paginator.num_pages > advices.number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ advices.number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if advices.has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active" href="{{ advices.next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% if filter %}
+    <input type="hidden" value="{% url 'interface:advices_filter' %}" id="name-pagination">
+{% else %}
+    <input type="hidden" value="{% url 'interface:advices' %}" id="name-pagination">
+{% endif %}
+<input type="hidden" value="{{ amount }}" id="amount-refresh">
+<input type="hidden" value="{{ type }}" id="type-refresh">
+<input type="hidden" value="{{ rating }}" id="rating-refresh">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>

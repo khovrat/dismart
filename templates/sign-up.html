@@ -1,0 +1,156 @@
+{% extends 'wrappers/authorization.html' %}
+{% load static %}
+{% load i18n %}
+{% block header_authorization %}
+    <h1 class="section-heading text-uppercase text-white text-center display-3">{% trans 'Hi_sign_up' %}</h1>
+    <p class="text-white mt-0 mb-0 ">{% trans 'Sign_up_description' %}</p>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "success" %}
+                <div class="alert alert-success alert-dismissible fade show mb-0 mt-3" role="alert">
+                    <span class="alert-text"><strong>{% trans 'Success_title_sign_up' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% elif message.tags == "warning" %}
+                <div class="alert alert-warning alert-dismissible fade show mb-0 mt-3" role="alert">
+                    <span class="alert-text"><strong>{% trans 'Warning_title_sign_up' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% else %}
+                <div class="alert alert-danger alert-dismissible fade show mb-0 mt-3" role="alert">
+                    <span class="alert-text"><strong>{% trans 'Error_title_sign_up' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock header_authorization %}
+{% block specific_authorization %}
+    <div class="text-center text-muted mb--4">
+        {% trans 'Simple_sign_up_header' %}
+    </div>
+{% endblock specific_authorization %}
+{% block main_authorization %}
+    <div class="text-center text-muted mb-4">
+        <small>{% trans 'Simple_sign_up' %}</small>
+    </div>
+    <form role="form" method="post" enctype="multipart/form-data" action="{% url 'interface:sign_up_internal' %}">
+        {% csrf_token %}
+        <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-tie"></i></span>
+                </div>
+                <input class="form-control" name="username" placeholder="{% trans 'Username_placeholder' %}" type="text"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input class="form-control textInfo" name="first_name"
+                       placeholder="{% trans 'First_name_placeholder' %}" type="text" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-users"></i></span>
+                </div>
+                <input class="form-control textInfo" name="last_name" placeholder="{% trans 'Last_name_placeholder' %}"
+                       type="text" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                </div>
+                <input class="form-control" name="email" placeholder="{% trans 'Email_placeholder' %}" type="email"
+                       required>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="input-group input-group-merge input-group-alternative mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-file-image"></i></span>
+                </div>
+                <input class="form-control" name="img" placeholder="{% trans 'Image_placeholder' %}" type="file"
+                       style="padding-top: 0.45rem; padding-left: 0.8rem">
+            </div>
+        </div>
+        <div class="form-group mb-0">
+            <div class="input-group input-group-merge input-group-alternative">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                </div>
+                <input class="form-control" name="password" id="password"
+                       placeholder="{% trans 'Password_placeholder' %}"
+                       type="password" required>
+            </div>
+        </div>
+        <div class="text-muted font-italic pb-3">
+            <small>{% trans 'password_strength' %}
+                <span id="strength-strong" class="font-weight-700 text-success" style="display: none">
+                    {% trans 'strong' %}</span>
+                <span id="strength-medium" class="font-weight-700 text-default" style="display: none">
+                    {% trans 'medium' %}</span>
+                <span id="strength-weak" class="font-weight-700 text-danger" style="display: none">
+                    {% trans 'weak' %}</span>
+            </small>
+        </div>
+        <div class="form-group mb-0">
+            <div class="input-group input-group-merge input-group-alternative">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-lock"></i></span>
+                </div>
+                <input class="form-control" name="password_confirm" id="confirm-password"
+                       placeholder="{% trans 'Password_confirm_placeholder' %}"
+                       type="password" required>
+                <span id='message'></span>
+            </div>
+        </div>
+        <div class="text-muted font-italic pb-3">
+            <small>{% trans 'password_confirm' %}
+                <span id="matching" class="font-weight-700 text-success" style="display: none">
+                    {% trans 'matching' %}</span>
+                <span id="not-matching" class="font-weight-700 text-warning" style="display: none">
+                    {% trans 'not_matching' %}</span>
+            </small>
+        </div>
+        <div class="row my-4">
+            <div class="col-12">
+                <div class="custom-control custom-control-alternative custom-checkbox">
+                    <input class="custom-control-input" id="customCheckRegister" type="checkbox"
+                           onclick="checkPolicy(this)" required>
+                    <label class="custom-control-label" for="customCheckRegister">
+                        <span class="text-muted">{% trans 'I_agree_with_the' %}
+                            <a href="#">{% trans 'Privacy_policy' %}</a>
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="text-center">
+            <button id="submit-button" class="btn btn-icon btn-default mt-3" disabled>
+                                        <span class="btn-inner--icon">
+                                            <i class="fas fa-user-tie"></i>
+                                        </span>
+                <span class="btn-inner--text">{% trans 'Create_account' %}</span>
+            </button>
+        </div>
+    </form>
+{% endblock main_authorization %}
+{% block footer_authorization %}
+    <div class="col-12 text-right">
+        <a href="{% url 'interface:sign_in' %}" class="nav-link"><small>{% trans 'I_have_an_account' %}</small></a>
+    </div>
+{% endblock footer_authorization %}

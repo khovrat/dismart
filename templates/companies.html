@@ -1,0 +1,213 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_links %}
+    <link rel="stylesheet" href="{% static 'base/css/button-styles.css' %}" type="text/css">
+{% endblock extra_links %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ request.session.profile.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_companies' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Companies_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    <div class="container-fluid mt--6" style="min-height: 60vh">
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i
+                                    class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a
+                                    href="{% url 'interface:profile' %}">{% trans 'Profile' %}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans 'Companies' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Success_title_companies' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif message.tags == "warning" %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Warning_title_companies' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Error_title_companies' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">{% trans 'Companies_table' %} </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="#" class="btn btn-sm btn-success" data-toggle="modal"
+                                   data-target="#modal-form">{% trans 'Add' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="hidden" value="{% url 'interface:companies' %}" id="name-pagination">
+                    {% include 'pagination/companies.html' %}
+                    <form role="form" method="post" id="add-user-form" enctype="multipart/form-data"
+                          action="{% url 'interface:companies_add' %}">
+                        {% csrf_token %}
+                        <div class="modal fade" id="modal-form" tabindex="-1" role="dialog"
+                             aria-labelledby="modal-form" aria-hidden="true">
+                            <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-body p-0">
+                                        <div class="card bg-secondary border-0 mb-0">
+                                            <div class="card-body px-lg-5 py-lg-5">
+                                                <div class="text-center mb-3 ">
+                                                    <img class="btn rounded-circle button-image-upload"
+                                                         data-toggle="tooltip"
+                                                         data-original-title="{% trans 'Image_required' %}"
+                                                         id="image-profile"
+                                                         src="{% static 'base/img/profile-cover.jpg' %}"/>
+                                                </div>
+                                                <input type="file" style="display: none" id="file-profile"
+                                                       name="img" onchange="readButtonURL(this)" required>
+                                                <div class="text-center text-muted mb-4">
+                                                    <small>{% trans 'Add_new_company' %}</small>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-mail-bulk"></i></span>
+                                                        </div>
+                                                        <select class="form-select form-control"
+                                                                name="market_id"
+                                                                aria-label="{% trans 'Market' %}"
+                                                                required>
+                                                            {% for market in markets %}
+                                                                <option value="{{ market.market_id }}">{{ market.market_id }}: {{ market.name }}</option>
+                                                            {% endfor %}
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-briefcase"></i></span>
+                                                        </div>
+                                                        <input class="form-control"
+                                                               placeholder="{% trans 'Name' %}"
+                                                               type="text" name="name" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-globe"></i></span>
+                                                        </div>
+                                                        <input class="form-control"
+                                                               placeholder="{% trans 'Site' %}"
+                                                               type="url" name="website" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-users"></i></span>
+                                                        </div>
+                                                        <input class="form-control"
+                                                               placeholder="{% trans 'Size' %}"
+                                                               type="number" name="size" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-money-bill-alt"></i></span>
+                                                        </div>
+                                                        <input class="form-control"
+                                                               placeholder="{% trans 'Revenue' %}"
+                                                               type="text" name="revenue" id="revenueInfo" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-compass"></i></span>
+                                                        </div>
+                                                        <input class="form-control"
+                                                               placeholder="{% trans 'Location' %}"
+                                                               type="text" name="location" required>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="input-group input-group-merge input-group-alternative">
+                                                        <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-pen"></i></span>
+                                                        </div>
+                                                        <textarea class="form-control" style="max-height: 20vh"
+                                                                  placeholder="{% trans 'Description' %}"
+                                                                  type="text" name="description" required>
+                                                        </textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <input type="submit"
+                                                           id="submit-modal-form"
+                                                           class="btn btn-success my-4"
+                                                           value="{% trans 'Add_company' %}" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/js/display-profile-image.js' %}"></script>
+    <script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+    <script src="{% static 'base/jquery/upload-profile-image.js' %}"></script>
+    <script src="{% static 'base/jquery/check-text.js' %}"></script>
+{% endblock extra_script %}

@@ -1,0 +1,325 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination" class="row d-flex align-items-center justify-content-center">
+
+    {% for article in articles %}
+        <div class="col-lg-3 col-md-6">
+            <div type="button" class="btn-icon-clipboard p-3 article">
+                <div class="card-header bg-transparent p-2 d-flex align-items-center justify-content-center">
+                    {% if article.author == request.session.profile.username %}
+                        <p class=" mr-3">
+                            <a href="#!" class="btn btn-sm btn-success" data-toggle="modal"
+                               data-target="#modal-form-article-{{ article.id }}">{% trans 'Update' %}</a>
+                        </p>
+                    {% endif %}
+                    <p class="mr-3">{{ article.type }}</p>
+                    {% if article.author == request.session.profile.username %}
+                        <form method="post" action="{% url 'interface:articles_delete' %}">
+                            {% csrf_token %}
+                            <p>
+                                <input type="hidden" value="{{ article.id }}" name="id">
+                                <input type="submit" class="btn btn-sm btn-default" value="{% trans 'Delete' %}">
+                            </p>
+                        </form>
+                    {% endif %}
+                </div>
+                <div class="pt-4">
+                    <div class="col-3 mr-3 avatar avatar-sm rounded-circle"
+                         style="height:100px; width: 100px">
+                        <img alt="Image placeholder" src="{{ article.img }}"
+                             style="height:100px; width: 100px; object-fit: cover;">
+                    </div>
+                    <div class="col" style="top:-20px">
+                        <div class="row h5 font-weight-300 mb-3 d-flex align-items-center justify-content-center">
+                            {{ article.author }}
+                        </div>
+                        <div class="row ml-0 mt-1">{{ article.name }}</div>
+
+                    </div>
+
+                </div>
+                <div class="d-inline-flex align-items-end justify-content-end" style="width: 100%">
+                    <p class="card-text m-0">
+                        <small class="text-muted">
+                            {% trans 'created' %}: {{ article.date }}
+                        </small>
+                    <p></p>
+                </div>
+                <div class="d-inline-flex align-items-center justify-content-center mb-3"
+                     style="width: 100%">
+                    <p class="card-text m-0 mr-3 mt-3">
+                        <a href="#!" class="btn btn-default" data-toggle="modal"
+                           data-target="#modal-form-rate">{% trans 'Rate' %}</a>
+                    </p>
+                    <p class="card-text m-0  mt-3">
+                        <a href="{{ article.text }}" class="btn btn-success"
+                           target="_blank">{% trans 'Open' %}</a>
+                    </p>
+                </div>
+                <div class="card-footer text-muted d-inline-flex align-items-center justify-content-center bg-transparent pb-2"
+                     style="width: 100%">
+                    {% if article.rating_my %}
+                        <span class="mr-3" data-toggle="tooltip"
+                              data-original-title="{% trans 'My_rate' %}"><i
+                                class="fas fa-star mr-2"
+                                style="color: rgb(136, 152, 170); font-size: 1.2rem"></i>{{ article.rating_my }}</span>
+                    {% endif %}
+                    <span class="mr-3" data-toggle="tooltip"
+                          data-original-title="{% trans 'Avg_rate' %}"><i
+                            class="fas fa-grin-stars mr-2"
+                            style="color: rgb(136, 152, 170); font-size: 1.2rem"></i>{{ article.rating }}</span>
+                    <span><i class="fas fa-users mr-2"
+                             style="color: rgb(136, 152, 170); font-size: 1.2rem"
+                             data-toggle="tooltip"
+                             data-original-title="{% trans 'Amount_rate' %}"></i>{{ article.amount }}</span>
+                </div>
+            </div>
+
+            <form role="form" method="post" id="add-user-form"
+                  action="{% url 'interface:articles_rate' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-form-rate" tabindex="-1" role="dialog"
+                     aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card bg-secondary border-0 mb-0">
+                                    <div class="card-body px-lg-5 py-lg-5">
+                                        <div class="text-center text-muted mb-4">
+                                            {% trans 'Rate_article' %}
+                                        </div>
+
+                                        <input type="hidden" value="{{ article.id }}" name="name">
+                                        <fieldset
+                                                class="starability-heart d-flex align-items-center justify-content-center"
+                                                style="width: 100%">
+                                            <input type="radio" id="no-rate" class="input-no-rate" name="rating"
+                                                   value="0"
+                                                   checked
+                                                   aria-label="No rating."/>
+                                            <input type="radio" id="first-rate1" name="rating" value="1"/>
+                                            <label for="first-rate1" title="Terrible">1 star</label>
+                                            <input type="radio" id="first-rate2" name="rating" value="2"/>
+                                            <label for="first-rate2" title="Not good">2 stars</label>
+                                            <input type="radio" id="first-rate3" name="rating" value="3"/>
+                                            <label for="first-rate3" title="Average">3 stars</label>
+                                            <input type="radio" id="first-rate4" name="rating" value="4"/>
+                                            <label for="first-rate4" title="Very good">4 stars</label>
+                                            <input type="radio" id="first-rate5" name="rating" value="5"/>
+                                            <label for="first-rate5" title="Amazing">5 stars</label>
+                                        </fieldset>
+                                        <div class="text-center">
+                                            <input type="submit"
+                                                   class="btn btn-success my-4"
+                                                   value="{% trans 'Rate' %}"
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+                  action="{% url 'interface:articles_update' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-form-article-{{ article.id }}" tabindex="-2" role="dialog"
+                     aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card bg-secondary border-0 mb-0">
+                                    <div class="card-body px-lg-5 py-lg-5">
+                                        <div class="text-center mb-3 ">
+                                            <img class="btn rounded-circle button-image-upload"
+                                                 id="image-profile-{{ article.id }}" alt="file-profile-{{ article.id }}"
+                                                 src="{{ article.img }}" onclick="openImage(this)"/>
+                                        </div>
+                                        <label for="file-profile-{{ article.id }}"
+                                               style="display: none">image-profile-{{ article.id }}</label>
+                                        <input type="file" style="display: none" id="file-profile-{{ article.id }}"
+                                               name="img_article" onchange="readButtonItemURL(this)">
+                                        <div class="text-center text-muted mb-4">
+                                            <small>{% trans 'Update_your_article' %}</small>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-house-damage"></i></span>
+                                                </div>
+                                                <select class="form-select form-control"
+                                                        name="type"
+                                                        aria-label="{% trans 'Type' %}"
+                                                        required>
+                                                    {% for disaster in disasters %}
+                                                        <option value="{{ disaster.id }}"
+                                                                {% if disaster.name == article.type %}
+                                                                selected
+                                                                {% endif %}
+                                                        >{{ disaster.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-pen"></i></span>
+                                                </div>
+                                                <input class="form-control"
+                                                       placeholder="{% trans 'Name' %}"
+                                                       type="text" name="name" value="{{ article.name }}" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-globe-europe"></i></span>
+                                                </div>
+                                                <select class="form-select form-control"
+                                                        name="language"
+                                                        aria-label="{% trans 'Language' %}"
+                                                        required>
+                                                    {% get_current_language as LANGUAGE_CODE %}
+                                                    {% get_available_languages as LANGUAGES %}
+                                                    {% get_language_info_list for LANGUAGES as languages %}
+                                                    {% for language in languages %}
+                                                        <option value="{{ language.code }}"
+                                                                {% if language.code == article.language %}
+                                                                selected
+                                                                {% endif %}
+                                                        >{{ language.name_local }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <input type="submit"
+                                                   class="btn btn-success my-4"
+                                                   value="{% trans 'Update_article' %}">
+                                            <input type="hidden" value="{{ article.name }}" name="name_old">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+
+    {% if not articles %}
+        <div class="col-lg-3 col-md-6">
+            <div type="button" class="btn-icon-clipboard p-3 article">
+                <div class="card-header bg-transparent p-2 d-flex align-items-center justify-content-center">
+                    {% trans 'Ooops' %}
+                </div>
+                <div class="pt-4">
+                    <div class="col-3 mr-3 avatar avatar-sm rounded-circle"
+                         style="height:100px; width: 100px">
+                        <img alt="Image placeholder" src="{% static 'base/img/arm.jpg' %}"
+                             style="height:100px; width: 100px; object-fit: cover;">
+                    </div>
+                    <div class="col" style="top:-20px">
+                        <div class="row h5 font-weight-300 mb-3 d-flex align-items-center justify-content-center">
+                            {% trans 'Administration' %}
+                        </div>
+                        <div class="row ml-0 mt-1">{% trans 'We_have_a_problem' %}</div>
+
+                    </div>
+
+                </div>
+                <div class="d-inline-flex align-items-end justify-content-end" style="width: 100%">
+                    <p class="card-text m-0">
+                        <small class="text-muted">
+                            {% trans 'created' %}: {% trans 'it_s_a_question' %}
+                        </small>
+                    <p></p>
+                </div>
+                <div class="d-inline-flex align-items-center justify-content-center mb-3"
+                     style="width: 100%">
+                    <p class="card-text m-0 mt-3">
+                        <a href="{% url 'interface:home' %}" class="btn btn-default">{% trans 'Go_to_home' %}</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if articles.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active" href="{{ articles.previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if articles.number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ articles.number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in articles.paginator.page_range %}
+                    {% if articles.number == i %}
+                        <li class="page-item active" aria-current="page">
+                                          <span class="page-link">
+                                              <input type="hidden" value="{{ i }}" class="current-page">
+                                            {{ i }}
+                                            <span class="sr-only">(current)</span>
+                                          </span>
+                        </li>
+                    {% elif i > articles.number|add:'-5' and i < articles.number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active" href="{{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if articles.paginator.num_pages > articles.number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ articles.number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if articles.has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active" href="{{ articles.next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% if filter %}
+    <input type="hidden" value="{% url 'interface:articles_filter' %}" id="name-pagination">
+{% else %}
+    <input type="hidden" value="{% url 'interface:articles' %}" id="name-pagination">
+{% endif %}
+<input type="hidden" value="{{ amount }}" id="amount-refresh">
+<input type="hidden" value="{{ type }}" id="type-refresh">
+<input type="hidden" value="{{ rating }}" id="rating-refresh">
+<input type="hidden" value="{{ csrf_token }}" id="csrf-token">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>

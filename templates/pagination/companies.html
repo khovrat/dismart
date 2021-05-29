@@ -1,0 +1,164 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination">
+    <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Company_toggle' %}">{% trans 'Company' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Market_toggle' %}">{% trans 'Market' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Location_toggle' %}">{% trans 'Location' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Size_toggle' %}">{% trans 'Size' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Revenue_toggle' %}">{% trans 'Revenue' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Website_toggle' %}">{% trans 'Website' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Completeness_toggle' %}">{% trans 'Completeness' %}</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody class="list">
+            {% for company in companies %}
+                <tr style="height: 150px">
+                    <th scope="row">
+                        <div class="media align-items-center">
+                            <a href="#" class="avatar rounded-circle mr-3">
+                                <img alt="Image placeholder" style="height: 100%; object-fit: cover"
+                                     src="{{ company.img }}">
+                            </a>
+                            <div class="media-body">
+                                <span class="name mb-0 text-sm">{{ company.name }}</span>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="budget">
+                        {{ company.market }}
+                    </td>
+                    <td class="budget">
+                        {{ company.location }}
+                    </td>
+                    <td class="budget">
+                        {{ company.size }}
+                    </td>
+                    <td class="budget">
+                        {{ company.revenue }}
+                    </td>
+                    <td class="budget">
+                        <a href="{{ company.website }}" class="link-primary"
+                           target="_blank">{{ company.website }}</a>
+                    </td>
+                    <td>
+                        <div class="d-flex align-items-center">
+                            <span class="completion mr-2">{{ company.completeness }}%</span>
+                            <div>
+                                <div class="progress">
+                                    {% if company.completeness <= 40 %}
+                                        <div class="progress-bar bg-warning" role="progressbar"
+                                             aria-valuenow="{{ company.completeness }}"
+                                             aria-valuemin="0" aria-valuemax="100"
+                                             style="width: {{ company.completeness }}%;"></div>
+                                    {% elif company.completeness <= 80 %}
+                                        <div class="progress-bar bg-default" role="progressbar"
+                                             aria-valuenow="{{ company.completeness }}"
+                                             aria-valuemin="0" aria-valuemax="100"
+                                             style="width: {{ company.completeness }}%;"></div>
+                                    {% else %}
+                                        <div class="progress-bar bg-success" role="progressbar"
+                                             aria-valuenow="{{ company.completeness }}"
+                                             aria-valuemin="0" aria-valuemax="100"
+                                             style="width: {{ company.completeness }}%;"></div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                        </div>
+                    </td>
+                    <td class="text-right">
+                        <div class="dropdown">
+                            <a class="btn btn-sm btn-icon-only text-light" href="#" role="button"
+                               data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-ellipsis-v"></i>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                <form method="post" action="{% url 'interface:companies_action' %}">
+                                    {% csrf_token %}
+                                    <input class="dropdown-item" type="submit"
+                                           value="{% trans 'Detail' %}" name="detail">
+                                    <input class="dropdown-item" type="submit"
+                                           value="{% trans 'Delete' %}" name="delete">
+                                    <input type="hidden" name="company" value="{{ company.id }}">
+                                </form>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if companies.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active" href="{{ companies.previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if companies.number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ companies.number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in companies.paginator.page_range %}
+                    {% if companies.number == i %}
+                        <li class="page-item active" aria-current="page">
+                                          <span class="page-link ">
+                                            {{ i }}
+                                            <span class="sr-only">(current)</span>
+                                          </span>
+                        </li>
+                    {% elif i > companies.number|add:'-5' and i < companies.number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active" href="{{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if companies.paginator.num_pages > companies.number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ companies.number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if companies.has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active" href="{{ companies.next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+<input type="hidden" value="{% url 'interface:companies' %}" id="name-pagination">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>

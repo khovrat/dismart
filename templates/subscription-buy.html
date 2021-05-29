@@ -1,0 +1,57 @@
+{% extends 'wrappers/subscription.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_navbutton %}
+    <div class="mb-3 text-left">
+        <a href="{% url 'interface:sign_up' %}"
+           class="btn btn-sm btn-default">{% trans 'Go_to_sign_up' %}</a>
+    </div>
+{% endblock extra_navbutton %}
+{% block extra_button %}
+    <td class="text-center"></td>
+    <td class="text-center">
+        <a href="{% url 'interface:buy_subscription_free' %}"
+           class="btn btn-round
+           {% if request.session.subscription == "DEFAULT" %}
+               btn-success
+           {% else %}
+               btn-default
+           {% endif %}
+           ">{% trans 'Default_choose' %}</a>
+    </td>
+    <td class="text-center">
+        <a href="{% url 'interface:buy_subscription_maximum' %}"
+           class="btn btn-round
+           {% if request.session.subscription == "MAXIMUM" %}
+               btn-success
+           {% else %}
+               btn-default
+           {% endif %}
+           ">{% trans 'Money_choose' %}</a>
+    </td>
+    <td class="text-center">
+        <a href="{% url 'interface:buy_subscription_ultra' %}"
+           class="btn btn-round
+           {% if request.session.subscription == "ULTRA" %}
+               btn-success
+           {% else %}
+               btn-default
+           {% endif %}
+           ">{% trans 'Money_choose' %}</a>
+    </td>
+{% endblock extra_button %}
+{% block extra_footer %}
+    <div class="col-xl-6">
+        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+            <li class="nav-item">
+                <a href="{{ links.admin_panel }}" class="nav-link" target="_blank">{% trans 'Admin_panel' %}</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://mdbootstrap.com" class="nav-link" target="_blank">MDB5</a>
+            </li>
+        </ul>
+    </div>
+{% endblock extra_footer %}

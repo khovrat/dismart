@@ -1,0 +1,106 @@
+{% extends 'wrappers/authorization.html' %}
+{% load static %}
+{% load i18n %}
+{% block header_authorization %}
+    <h1 class="section-heading text-uppercase text-white text-center display-3">{% trans 'Hi_card_info' %}</h1>
+    <p class="text-white mt-0 mb-0 ">{% trans 'Card_info_description' %}</p>
+    {% if messages %}
+        {% for message in messages %}
+            {% if message.tags == "success" %}
+                <div class="alert alert-success alert-dismissible fade show mb-0 mt-3" role="alert">
+                    <span class="alert-text"><strong>{% trans 'Success_title_card' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% elif message.tags == "warning" %}
+                <div class="alert alert-warning alert-dismissible fade show mb-0 mt-3" role="alert">
+                    <span class="alert-text"><strong>{% trans 'Warning_title_card' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% else %}
+                <div class="alert alert-danger alert-dismissible fade show mb-0 mt-3" role="alert">
+                    <span class="alert-text"><strong>{% trans 'Error_title_card' %}</strong> {{ message }}</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+{% endblock header_authorization %}
+{% block specific_authorization %}
+    <div class="text-center text-muted mb--4">
+        {% trans 'Simple_card_info' %}
+    </div>
+{% endblock specific_authorization %}
+{% block main_authorization %}
+    <div class="card login-card">
+        <div class="card-body scale">
+            <h3 class="text-center text-muted font-weight-light mb-4">{% trans 'EnterCardInfo' %}</h3>
+            <form action="{% url 'interface:make_payment' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="full_name"
+                           class="text-muted text-left font-weight-light scale">{% trans 'FullNameCard' %}</label>
+                    <div class="input-group">
+                        <input type="text" name="full_name" placeholder="{% trans 'YourNameCard' %}"
+                               class="form-control scale" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card_number"
+                           class="text-muted text-left font-weight-light scale">{% trans 'CardNumber' %}</label>
+                    <div class="input-group">
+                        <input type="text" name="card_number" id="credit-card" maxlength="19"
+                               placeholder="{% trans 'YourCard' %}" class="form-control scale" required>
+                    </div>
+                </div>
+                <div class="row mb--3">
+                    <div class="col-sm-8">
+                        <div class="form-group">
+                            <label><span
+                                    class="hidden-xs text-muted text-left font-weight-light scale">{% trans 'ExpirationCard' %}</span></label>
+                            <div class="input-group">
+                                <input id="ex-month" type="text" placeholder="MM" maxlength="2" name="exp_month"
+                                       class="form-control text-muted text-center font-weight-light scale" required>
+                                <input id="ex-year" type="text" placeholder="YYYY" maxlength="4" name="exp_year"
+                                       class="form-control text-muted text-center font-weight-light scale" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="form-group mb-4">
+                            <label data-toggle="tooltip" title="Three-digits code on the back of your card"
+                                   class="text-muted text-center font-weight-light scale">CVV
+                                <i class="mdi mdi-circle"></i>
+                            </label>
+                            <div class="input-group">
+                                <input type="text" name="cvc" maxlength="3" placeholder="" required
+                                       class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-muted font-italic pb-3">
+                    <small>{% trans 'card_expiration' %}
+                        <span id="confirm" class="font-weight-700 text-success" style="display: none">
+                    {% trans 'confirm' %}</span>
+                        <span id="not-confirm" class="font-weight-700 text-warning" style="display: none">
+                    {% trans 'not_confirm' %}</span>
+                    </small>
+                </div>
+                <input type="submit" value="{% trans 'Payment' %}" id="payment-btn"
+                       class="btn btn-success btn-block mb-3 scale" disabled>
+            </form>
+        </div>
+    </div>
+{% endblock main_authorization %}
+{% block footer_authorization %}
+    <div class="col-12 text-right">
+        <a href="{% url 'interface:buy_subscription' %}"
+           class="nav-link"><small>{% trans 'Return_to_subscription' %}</small></a>
+    </div>
+{% endblock footer_authorization %}

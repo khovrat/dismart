@@ -1,0 +1,282 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination" class="row d-flex align-items-center justify-content-center">
+    {% for audience in audiences %}
+        <div class="col-xl-3">
+            <div class="card card-profile">
+                <img src="{{ audience.company.img }}" alt="Image placeholder"
+                     class="card-img-top" style="height:200px; object-fit: cover">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <img src="{{ audience.img }}" class="rounded-circle"
+                                 id="image-profile"
+                                 style="width: 140px; height: 140px;object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-0">
+                    <div class="d-flex justify-content-between">
+                        <form method="post" action="{% url 'interface:audience_delete' %}">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ audience.id }}" name="id_audience">
+                            <input type="submit"
+                                   class="btn btn-sm btn-default  mr-4" value="{% trans 'Delete' %}">
+                        </form>
+                        <a href="#!" data-toggle="modal"
+                           data-target="#modal-form-update-{{ audience.id }}"
+                           class="btn btn-sm btn-success float-right">{% trans 'Update' %}</a>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5" style="display:none;">
+                        <form method="post" action="{% url 'interface:audience_forecast' %}">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ audience.id }}" name="id_audience">
+                            <input href="#!" type="submit" class="btn btn-success" value="{% trans 'Check' %}">
+                        </form>
+
+                    </div>
+                </div>
+
+                <div class="card-body pt-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-profile-stats d-flex justify-content-center ml-lg-4">
+                                <div>
+                                    <span class="heading">{{ audience.size }}</span>
+                                    <span class="description">{% trans 'Size' %}</span>
+                                </div>
+                                <div>
+                                    <span class="heading">{{ audience.age_left }} - {{ audience.age_right }}</span>
+                                    <span class="description">{% trans 'Age_group' %}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h5 class="h3">
+                            <i class="fas fa-users mr-2"></i>{{ audience.type }}
+                        </h5>
+                        <div>
+                            <i class="fas fa-briefcase mr-2"></i>{{ audience.company.name }}
+                        </div>
+                        <div class="h5 font-weight-300 clamp-this-module pt-2" style="height: 80px">
+                            <i class="fas fa-pen mr-2"></i>{{ audience.features }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+                  action="{% url 'interface:audience_update' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-form-update-{{ audience.id }}" tabindex="-2" role="dialog"
+                     aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card bg-secondary border-0 mb-0">
+                                    <div class="card-body px-lg-5 py-lg-5">
+                                        <div class="text-center text-muted mb-4">
+                                            <small>{% trans 'Update_your_audience' %}</small>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                             <span class="input-group-text">
+                                                 <i class="fas fa-house-damage"></i></span>
+                                                </div>
+                                                <select class="form-select form-control"
+                                                        name="type"
+                                                        aria-label="{% trans 'Type' %}"
+                                                        required>
+                                                    {% for type in types %}
+                                                        <option value="{{ type.id }}"
+                                                                {% if type.name == audience.type %}
+                                                                selected
+                                                                {% endif %}
+                                                        >{{ type.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-baby"></i></span>
+                                                </div>
+                                                <input class="form-control"
+                                                       placeholder="{% trans 'Age_left' %}"
+                                                       type="text" name="age_left" id="age-left"
+                                                       value="{{ audience.age_left }}"
+                                                       required>
+                                                <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-male"></i></span>
+                                                </div>
+                                                <input class="form-control"
+                                                       placeholder="{% trans 'Age_right' %}"
+                                                       type="text" name="age_right" id="age-right"
+                                                       value="{{ audience.age_right }}"
+                                                       required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-stopwatch"></i></span>
+                                                </div>
+                                                <input class="form-control"
+                                                       placeholder="{% trans 'Size' %}"
+                                                       type="text" name="size" id="size" value="{{ audience.size }}"
+                                                       required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-pen"></i></span>
+                                                </div>
+                                                <textarea class="form-control" style="max-height: 20vh"
+                                                          placeholder="{% trans 'Features' %}"
+                                                          type="text" name="features"
+                                                          required>{{ audience.features }}</textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <input type="submit"
+                                                   class="btn btn-success my-4"
+                                                   value="{% trans 'Create_audience' %}">
+                                            <input type="hidden" value="{{ audience.id }}" name="id_audience">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+
+    {% if not audiences %}
+        <div class="col-xl-4">
+            <div class="card card-profile">
+                <img src="{% static 'base/img/arm.jpg' %}" alt="Image placeholder"
+                     class="card-img-top">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <img src="{% static 'base/img/arm.jpg' %}" class="rounded-circle"
+                                 id="image-profile"
+                                 style="width: 140px; height: 140px;object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-7 ml-lg-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-profile-stats d-flex justify-content-center">
+                                <div>
+                                    <span class="heading">∞</span>
+                                    <span class="description">{% trans 'Size' %}</span>
+                                </div>
+                                <div>
+                                    <span class="heading">∞ - ∞</span>
+                                    <span class="description">{% trans 'Age_group' %}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h5 class="h3">
+                            {% trans 'Ooops' %}
+                        </h5>
+                        <div class="h5 font-weight-300 clamp-this-module">
+                            {% trans 'We_have_a_problem' %}
+                        </div>
+                        <div>
+                            <i class="fas fa-briefcase mr-2"></i>Dismart
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if audiences.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active" href="{{ audiences.previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if audiences.number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ audiences.number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in audiences.paginator.page_range %}
+                    {% if audiences.number == i %}
+                        <li class="page-item active" aria-current="page">
+                                          <span class="page-link">
+                                              <input type="hidden" value="{{ i }}" class="current-page">
+                                            {{ i }}
+                                            <span class="sr-only">(current)</span>
+                                          </span>
+                        </li>
+                    {% elif i > audiences.number|add:'-5' and i < audiences.number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active" href="{{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if audiences.paginator.num_pages > audiences.number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ audiences.number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if audiences.has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active" href="{{ audiences.next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% if filter %}
+    <input type="hidden" value="{% url 'interface:audience_filter' %}" id="name-pagination">
+{% else %}
+    <input type="hidden" value="{% url 'interface:audience' %}" id="name-pagination">
+{% endif %}
+<input type="hidden" value="{{ type }}" id="type-refresh">
+<input type="hidden" value="{{ size }}" id="size-refresh">
+<input type="hidden" value="{{ age_left }}" id="age-left-refresh">
+<input type="hidden" value="{{ age_right }}" id="age-right-refresh">
+<input type="hidden" value="{{ csrf_token }}" id="csrf-token">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+<script src="{% static 'base/jquery/check-text.js' %}"></script>
+<script src="{% static 'base/js/clamp.js' %}"></script>
+<script src="{% static 'base/js/clamp-audience.js' %}"></script>

@@ -1,0 +1,113 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_links %}
+    <link rel="stylesheet" href="{% static 'base/css/button-styles.css' %}" type="text/css">
+{% endblock extra_links %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ request.session.profile.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_aid' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Aid_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock extra_wrapper %}
+{% block container %}
+    <input type="hidden" value="{{ csrf_token }}" id="csrf-token">
+
+    <div class="container-fluid mt--6" style="min-height: 60vh">
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{% trans 'Aid' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row d-flex align-items-center justify-content-center">
+
+            <div class="card m-5" style="width: 30rem; height: 40rem">
+                <img
+                        src="{% static 'base/img/advices.jpg' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:245px"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Advices' %}</h5>
+                    <p class="card-text">
+                        {% trans 'Advices_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'Advices_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'Advices_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'Advices_char_3' %}</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="{% url 'interface:advices' %}" class="btn btn-default">{% trans 'Check' %}</a>
+                </div>
+            </div>
+            <div class="card m-5" style="width: 30rem; height: 40rem">
+                <img
+                        src="{% static 'base/img/articles.jpg' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:245px"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Articles' %}</h5>
+                    <p class="card-text">
+                        {% trans 'Articles_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'Articles_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'Articles_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'Articles_char_3' %}</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="{% url 'interface:articles' %}" class="btn btn-default">{% trans 'Check' %}</a>
+                </div>
+            </div>
+            <div class="card m-5" style="width: 30rem; height: 40rem">
+                <img
+                        src="{% static 'base/img/news.jpg' %}"
+                        class="card-img-top"
+                        alt="..."
+                        style="height:245px"
+                />
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'News' %}</h5>
+                    <p class="card-text">
+                        {% trans 'News_description' %}
+                    </p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">{% trans 'News_char_1' %}</li>
+                    <li class="list-group-item">{% trans 'News_char_2' %}</li>
+                    <li class="list-group-item">{% trans 'News_char_3' %}</li>
+                </ul>
+                <div class="card-body text-center">
+                    <a href="{% url 'interface:news' %}" class="btn btn-default">{% trans 'Check' %}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+    <script src="{% static 'base/jquery/ajax-filter-advice.js' %}"></script>
+{% endblock extra_script %}

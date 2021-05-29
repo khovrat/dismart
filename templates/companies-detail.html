@@ -1,0 +1,320 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ company.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{{ company.name }}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Company_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    <div class="container-fluid mt--6">
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i
+                                    class="fas fa-home"></i></a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a
+                                    href="{% url 'interface:profile' %}">{% trans 'Profile' %}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page"><a
+                                    href="{% url 'interface:companies' %}">{% trans 'Companies' %}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">{{ company.name }}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Success_title_companies_detail' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif message.tags == "warning" %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Warning_title_companies_detail' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Error_title_companies_detail' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="row">
+            <div class="col-xl-4 order-xl-1">
+                <div class="card card-profile">
+                    <img src="{% static 'assets/argon/img/theme/img-1-1000x600.jpg' %}" alt="Image placeholder"
+                         class="card-img-top">
+                    <form method="post" enctype="multipart/form-data"
+                          action="{% url 'interface:companies_change_image' %}">
+                        {% csrf_token %}
+                        <div class="row justify-content-center">
+                            <div class="col-lg-3 order-lg-2">
+                                <div class="card-profile-image">
+                                    <img src="{{ company.img }}" class="rounded-circle"
+                                         id="image-profile"
+                                         style="width: 140px; height: 140px;object-fit: cover;">
+                                    <input type="file" style="display: none" id="file-profile" name="img"
+                                           onchange="readURL(this);">
+                                    <input type="hidden" id="old-image-profile" name="old_img" value="">
+                                    <input type="hidden" id="old-image-profile" name="name" value="{{ company.name }}">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-0">
+                            <div class="d-flex justify-content-between">
+                                <a href="{% url 'interface:companies' %}"
+                                   class="btn btn-sm btn-default  mr-4 ">{% trans 'Companies' %}</a>
+                            </div>
+                            <div class="d-flex justify-content-center mt-5" style="display:none;">
+                                <input type="submit" class="btn btn-sm btn-success  mr-4 "
+                                       id="image-button-profile-save"
+                                       style="display:none;" value="{% trans 'Save' %}">
+                                <a href="#" class="btn btn-sm btn-default float-right" id="image-button-profile-cancel"
+                                   style="display:none;" onclick="cancelUpload()">{% trans 'Cancel' %}</a>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="card-body pt-0">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <span class="heading">{{ company.users_count }}</span>
+                                        <span class="description">{% trans 'Users' %}</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">{{ company.size }}</span>
+                                        <span class="description">{% trans 'Size' %}</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">{{ company.revenue }}</span>
+                                        <span class="description">{% trans 'Revenue' %}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="h3">
+                                {{ company.name }}
+                            </h5>
+                            <div class="h5 font-weight-300">
+                                <i class="fas fa-globe mr-2"></i>{% trans 'site' %}: <a href="{{ company.website }}"
+                                                                                        class="link-primary"
+                                                                                        target="_blank">{{ company.website }}</a>
+                            </div>
+                            <div class="h5 mt-4">
+                                <i class="fas fa-mail-bulk mr-2"></i>{{ company.market }}
+                            </div>
+                            <div>
+                                <i class="fas fa-compass mr-2"></i>{{ company.location }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 order-xl-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">{% trans 'Edit_company' %} </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <a href="#" class="btn btn-sm btn-success" id="reset-password-enter"
+                                   onclick="submitEditCompany()">
+                                    {% trans 'Save' %}</a>
+                                <a href="#" class="btn btn-sm btn-default" id="users-enter"
+                                   onclick="openUsers()">
+                                    {% trans 'Open_users' %}</a>
+                                <a href="#" class="btn btn-sm btn-default" id="users-cancel"
+                                   style="display: none" onclick="closeUsers()">
+                                    {% trans 'Close_users' %}</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <form method="post" action="{% url 'interface:companies_change' %}">
+                            {% csrf_token %}
+                            <h6 class="heading-small text-muted mb-4">{% trans 'Company_information' %}</h6>
+                            <div class="pl-lg-4">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-username">{% trans 'Name' %}</label>
+                                            <input type="text" id="input-username" class="form-control"
+                                                   placeholder="{% trans 'Name' %}"
+                                                   value="{{ company.name }}" name="name_new">
+                                            <input type="hidden" value="{{ company.name }}" name="name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-email">{% trans 'Site' %}</label>
+                                            <input type="url" id="input-email" class="form-control"
+                                                   placeholder="{% trans 'Site' %}"
+                                                   value="{{ company.website }}" name="website">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-first-name">{% trans 'Size' %}</label>
+                                            <input type="number" id="input-first-name" class="form-control"
+                                                   placeholder="{% trans 'Size' %}"
+                                                   value="{{ company.size }}" name="size">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-last-name">{% trans 'Revenue' %}</label>
+                                            <input type="text" id="revenueInfo" class="form-control"
+                                                   placeholder="{% trans 'Revenue' %}"
+                                                   value="{{ company.revenue }}" name="revenue">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-first-name">{% trans 'Location' %}</label>
+                                            <input type="text" id="input-first-name" class="form-control"
+                                                   placeholder="{% trans 'Location' %}"
+                                                   value="{{ company.location }}" name="location">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label"
+                                                   for="input-last-name">{% trans 'Description' %}</label>
+                                            <textarea type="text" id="input-last-name" class="form-control"
+                                                      placeholder="{% trans 'Description' %}"
+                                                      style="max-height: 35vh; min-height: 10vh"
+                                                      name="description">{{ company.description }}</textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="submit" id="submit-edit-company" style="display: none;">
+                        </form>
+                        <div id="users-form" style="display:none;">
+                            <hr class="my-4"/>
+                            <h6 class="heading-small text-muted mb-4">{% trans 'Users_info' %}</h6>
+                            <div class="card">
+                                <div class="card-header">
+                                    <div class="row align-items-center">
+                                        <div class="col-8">
+                                            <h3 class="mb-0">{% trans 'Users' %} </h3>
+                                        </div>
+                                        <div class="col-4 text-right">
+                                            <a href="#" class="btn btn-sm btn-default" data-toggle="modal"
+                                               data-target="#modal-form">{% trans 'Add' %}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <form role="form" method="post" id="add-user-form"
+                                      action="{% url 'interface:companies_add_users' %}">
+                                    {% csrf_token %}
+                                    <div class="modal fade" id="modal-form" tabindex="-1" role="dialog"
+                                         aria-labelledby="modal-form" aria-hidden="true">
+                                        <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                                            <div class="modal-content">
+                                                <div class="modal-body p-0">
+                                                    <div class="card bg-secondary border-0 mb-0">
+                                                        <div class="card-body px-lg-5 py-lg-5">
+                                                            <div class="text-center text-muted mb-4">
+                                                                <small>{% trans 'Add_new_user_to_company' %}</small>
+                                                            </div>
+
+                                                            <input type="hidden" value="{{ company.name }}" name="name">
+                                                            <div class="form-group">
+                                                                <div class="input-group input-group-merge input-group-alternative">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-user-astronaut"></i></span>
+                                                                    </div>
+                                                                    <select class="form-select form-control"
+                                                                            name="username"
+                                                                            aria-label="{% trans 'Username' %}"
+                                                                            required>
+                                                                        {% for user in users %}
+                                                                            <option value="{{ user.username }}">{{ user.username }}</option>
+                                                                        {% endfor %}
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <div class="input-group input-group-merge input-group-alternative">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-briefcase"></i></span>
+                                                                    </div>
+                                                                    <input class="form-control"
+                                                                           placeholder="{% trans 'Position' %}"
+                                                                           type="text" name="position" required>
+                                                                </div>
+                                                            </div>
+                                                            <div class="text-center">
+                                                                <input type="submit"
+                                                                       class="btn btn-success my-4"
+                                                                       value="{% trans 'Add_user' %}">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                <input type="hidden" value="{% url 'interface:companies_detail' %}"
+                                       id="name-pagination">
+                                {% include 'pagination/companies-detail.html' %}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/js/reset-password.js' %}"></script>
+    <script src="{% static 'base/js/submit-edit.js' %}"></script>
+    <script src="{% static 'base/js/company-user.js' %}"></script>
+    <script src="{% static 'base/js/display-profile-image.js' %}"></script>
+    <script src="{% static 'base/js/submit-user-add.js' %}"></script>
+    <script src="{% static 'base/jquery/upload-profile-image.js' %}"></script>
+    <script src="{% static 'base/jquery/check-text.js' %}"></script>
+    <script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+{% endblock extra_script %}

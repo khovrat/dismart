@@ -1,0 +1,141 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ company.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_forecast_company' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Forecast_company_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    <div class="container-fluid mt--6">
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                        <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                            <li class="breadcrumb-item">
+                                <a href="{% url 'interface:home' %}"><i class="fas fa-home"></i></a>
+                            </li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="{% url 'interface:disasters' %}">{% trans 'Disasters' %}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                <a href="{% url 'interface:modelling' %}">{% trans 'Modelling' %}</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">
+                                {% trans 'Forecast_company' %}</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-4 order-xl-1">
+                <div class="card card-profile">
+                    <img src="{{ company.market.img }}" alt="Image placeholder"
+                         class="card-img-top" style="height:200px; object-fit: cover">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-3 order-lg-2">
+                            <div class="card-profile-image">
+                                <img src="{{ company.img }}" class="rounded-circle"
+                                     id="image-profile"
+                                     style="width: 140px; height: 140px;object-fit: cover;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-0"></div>
+                    <div class="card-body pt-0 mt-6">
+                        <div class="row">
+                            <div class="col">
+                                <div class="card-profile-stats d-flex justify-content-center">
+                                    <div>
+                                        <span class="heading">{{ company.users_count }}</span>
+                                        <span class="description">{% trans 'Users' %}</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">{{ company.size }}</span>
+                                        <span class="description">{% trans 'Size' %}</span>
+                                    </div>
+                                    <div>
+                                        <span class="heading">{{ company.revenue }}</span>
+                                        <span class="description">{% trans 'Revenue' %}</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <h5 class="h3">
+                                {{ company.name }}
+                            </h5>
+                            <div class="h5 font-weight-300">
+                                <i class="fas fa-globe mr-2"></i>{% trans 'site' %}: <a href="{{ company.website }}"
+                                                                                        class="link-primary"
+                                                                                        target="_blank">{{ company.website }}</a>
+                            </div>
+                            <div class="h5 mt-4">
+                                <i class="fas fa-mail-bulk mr-2"></i>{{ company.market.name }}
+                            </div>
+                            <div>
+                                <i class="fas fa-compass mr-2"></i>{{ company.location }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-8 order-xl-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="row align-items-center">
+                            <div class="col-8">
+                                <h3 class="mb-0">{% trans 'Forecast' %} </h3>
+                            </div>
+                            <div class="col-4 text-right">
+                                <button class="btn btn-sm btn-success" id="download-chart" disabled>
+                                    {% trans 'Save' %}</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body d-flex align-content-center justify-content-center" id="chart-loading">
+                        {% include 'charts/forecast-company.html' %}
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/jquery/download-chart.js' %}"></script>
+<script>
+        setInterval(get_data, 10000);
+        function get_data() {
+            var isTrueSet = ($('#ajax-stop').val() === 'true');
+            if (!isTrueSet) {
+                $.ajax({
+                    type: "GET",
+                    url: $('#key-url').attr('href'),
+                    data: {
+                        key: $('#key-input').val()
+                    },
+                    success: function (response) {
+                        $('#chart-loading').html(response);
+                    },
+                    error: function () {
+                    }
+                });
+            } else {
+                $('#download-chart').prop('disabled', false)
+            }
+        }
+
+    </script>
+{% endblock extra_script %}

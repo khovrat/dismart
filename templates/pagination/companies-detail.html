@@ -1,0 +1,142 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination">
+    <div class="table-responsive">
+        <table class="table align-items-center table-flush">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'User_toggle' %}">{% trans 'User' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Position_toggle' %}">{% trans 'Position' %}</th>
+                <th scope="col" data-toggle="tooltip"
+                    data-original-title="{% trans 'Date_joined_toggle' %}">{% trans 'Date_joined' %}</th>
+                <th scope="col"></th>
+            </tr>
+            </thead>
+            <tbody class="list">
+            {% for user in company.users %}
+                <tr style="height: 150px">
+                    <th scope="row">
+                        <div class="media align-items-center">
+                            <a href="#"
+                               class="avatar rounded-circle mr-3">
+                                <img alt="Image placeholder"
+                                     style="height: 100%; object-fit: cover"
+                                     src="{{ user.img }}">
+                            </a>
+                            <div class="media-body">
+                                <span class="name mb-0 text-sm">{{ user.first_name }} {{ user.last_name }}</span>
+                            </div>
+                        </div>
+                    </th>
+                    <td class="budget">
+                        {{ user.position }}
+                    </td>
+                    <td class="budget">
+                        {{ user.date_joined }}
+                    </td>
+                    <td class="text-right">
+                        {% if user.username != request.session.profile.username %}
+                            <div class="dropdown">
+                                <a class="btn btn-sm btn-icon-only text-light"
+                                   href="#"
+                                   role="button"
+                                   data-toggle="dropdown"
+                                   aria-haspopup="true"
+                                   aria-expanded="false">
+                                    <i class="fas fa-ellipsis-v"></i>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
+                                    <form method="post"
+                                          action="{% url 'interface:companies_delete_users' %}">
+                                        {% csrf_token %}
+                                        <input class="dropdown-item"
+                                               type="submit"
+                                               value="{% trans 'Delete' %}"
+                                               name="delete">
+                                        <input type="hidden"
+                                               name="username"
+                                               value="{{ user.username }}">
+                                        <input type="hidden"
+                                               name="position"
+                                               value="{{ user.position }}">
+                                        <input type="hidden" name="name"
+                                               value="{{ company.name }}">
+                                    </form>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if company.users.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active"
+                           href="{{ company.users.previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if company.users.number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ company.users.number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in company.users.paginator.page_range %}
+                    {% if company.users.number == i %}
+                        <li class="page-item active"
+                            aria-current="page">
+                                                      <span class="page-link">
+                                                        {{ i }}
+                                                        <span class="sr-only">(current)</span>
+                                                      </span>
+                        </li>
+                    {% elif i > company.users.number|add:'-5' and i < company.users.number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active"
+                                                 href="{{ i }}">{{ i }}</a>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                {% if company.users.paginator.num_pages > company.users.number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ company.users.number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if company.users.has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active"
+                           href="{{ company.users.next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+<input type="hidden" value="{% url 'interface:companies_detail' %}" id="name-pagination">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>

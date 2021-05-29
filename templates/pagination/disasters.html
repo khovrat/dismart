@@ -1,0 +1,337 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination" class="row d-flex align-items-center justify-content-center">
+    {% for disaster in disasters %}
+        <div class="col-xl-4">
+            <div class="card card-profile">
+                <img src="{{ disaster.img }}" alt="Image placeholder"
+                     class="card-img-top">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <img src="{{ disaster.img }}" class="rounded-circle"
+                                 id="image-profile"
+                                 style="width: 140px; height: 140px;object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-header text-center border-0 pt-8 pt-md-4 pb-0 pb-md-0">
+                    <div class="d-flex justify-content-between">
+                        <form method="post" action="{% url 'interface:disasters_delete' %}">
+                            {% csrf_token %}
+                            <input type="hidden" value="{{ disaster.id }}" name="id_disaster">
+                            <input type="submit"
+                                   class="btn btn-sm btn-default  mr-4" value="{% trans 'Delete' %}">
+                        </form>
+                        <a href="#!" data-toggle="modal"
+                           data-target="#modal-form-update-{{ disaster.id }}"
+                           class="btn btn-sm btn-success float-right">{% trans 'Update' %}</a>
+                    </div>
+                    <div class="d-flex justify-content-center mt-5" style="display:none;">
+                            <a  href="#!" data-toggle="modal"
+                                data-target="#modal-form-company"
+                                type="submit" class="btn btn-success">{% trans 'Check' %}</a>
+
+                    </div>
+                </div>
+
+                <div class="card-body pt-0">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-profile-stats d-flex justify-content-center ml-lg-4">
+                                <div>
+                                    <span class="heading">{{ disaster.term }}</span>
+                                    <span class="description">{% trans 'Term' %}</span>
+                                </div>
+                                <div>
+                                    <span class="heading">{{ disaster.intensity }}</span>
+                                    <span class="description">{% trans 'Intensity' %}</span>
+                                </div>
+                                <div>
+                                    <span class="heading">{{ disaster.readiness_degree }}</span>
+                                    <span class="description">{% trans 'Readiness' %}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h5 class="h3">
+                            <i class="fas fa-house-damage mr-2"></i>{{ disaster.type }}
+                        </h5>
+                        <div class="h5 font-weight-300 clamp-this-module" style="height: 60px">
+                            <i class="fas fa-pen mr-2"></i>{{ disaster.about }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+                  action="{% url 'interface:disasters_update' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-form-update-{{ disaster.id }}" tabindex="-2" role="dialog"
+                     aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card bg-secondary border-0 mb-0">
+                                    <div class="card-body px-lg-5 py-lg-5">
+                                        <div class="text-center text-muted mb-4">
+                                            <small>{% trans 'Update_your_disaster' %}</small>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                             <span class="input-group-text">
+                                                 <i class="fas fa-house-damage"></i></span>
+                                                </div>
+                                                <select class="form-select form-control"
+                                                        name="type"
+                                                        aria-label="{% trans 'Type' %}"
+                                                        required>
+                                                    {% for type in types %}
+                                                        <option value="{{ type.id }}"
+                                                                {% if type.name == disaster.type %}
+                                                                selected
+                                                                {% endif %}
+                                                        >{{ type.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                 <span class="input-group-text"><i
+                                                         class="fas fa-battery-half" data-toggle="tooltip"
+                                                         data-original-title="{% trans 'Intensity_tip' %}"></i></span>
+                                                </div>
+                                                <div class="range w d-flex align-items-center justify-content-center">
+                                                    <input type="range" class="form-range ml-4" min="1" max="100"
+                                                           step="1"
+                                                           id="form-rating" name="intensity"
+                                                           value="{{ disaster.intensity }}" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                 <span class="input-group-text"><i
+                                                         class="fas fa-users" data-toggle="tooltip"
+                                                         data-original-title="{% trans 'Readiness_tip' %}"></i></span>
+                                                </div>
+                                                <div class="range w d-flex align-items-center justify-content-center">
+                                                    <input type="range" class="form-range ml-4" min="1" max="100"
+                                                           step="1"
+                                                           id="form-rating" name="readiness"
+                                                           value="{{ disaster.readiness_degree }}" required/>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="fas fa-stopwatch"></i></span>
+                                                </div>
+                                                <input class="form-control"
+                                                       placeholder="{% trans 'Term' %}"
+                                                       type="text" name="term" id="termInfo" value="{{ disaster.term }}"
+                                                       required>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i
+                                                                                class="fas fa-pen"></i></span>
+                                                </div>
+                                                <textarea class="form-control" style="max-height: 20vh"
+                                                          placeholder="{% trans 'About' %}"
+                                                          type="text" name="about" required>{{ disaster.about }}
+                                                        </textarea>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <input type="submit"
+                                                   class="btn btn-success my-4"
+                                                   value="{% trans 'Update_disaster' %}">
+                                            <input type="hidden" value="{{ disaster.id }}" name="id_disaster">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
+                  action="{% url 'interface:modelling' %}">
+                {% csrf_token %}
+                <div class="modal fade" id="modal-form-company" tabindex="-2" role="dialog"
+                     aria-labelledby="modal-form" aria-hidden="true">
+                    <div class="modal-dialog modal- modal-dialog-centered modal-sm" role="document">
+                        <div class="modal-content">
+                            <div class="modal-body p-0">
+                                <div class="card bg-secondary border-0 mb-0">
+                                    <div class="card-body px-lg-5 py-lg-5">
+                                        <div class="text-center text-muted mb-4">
+                                            <small>{% trans 'Check_your_company' %}</small>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <div class="input-group input-group-merge input-group-alternative">
+                                                <div class="input-group-prepend">
+                                             <span class="input-group-text">
+                                                 <i class="fas fa-house-damage"></i></span>
+                                                </div>
+                                                <select class="form-select form-control"
+                                                        name="company"
+                                                        aria-label="{% trans 'Company' %}"
+                                                        required>
+                                                    {% for company in companies %}
+                                                        <option value="{{ company.id }}"
+                                                        >{{ company.name }}</option>
+                                                    {% endfor %}
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="text-center">
+                                            <input type="submit"
+                                                   class="btn btn-success my-4"
+                                                   value="{% trans 'Check' %}">
+                                            <input type="hidden" value="{{ disaster.id }}" name="id_disaster">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endfor %}
+
+    {% if not disasters %}
+        <div class="col-xl-4">
+            <div class="card card-profile">
+                <img src="{% static 'base/img/arm.jpg' %}" alt="Image placeholder"
+                     class="card-img-top">
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 order-lg-2">
+                        <div class="card-profile-image">
+                            <img src="{% static 'base/img/arm.jpg' %}" class="rounded-circle"
+                                 id="image-profile"
+                                 style="width: 140px; height: 140px;object-fit: cover;">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body pt-7 ml-lg-4">
+                    <div class="row">
+                        <div class="col">
+                            <div class="card-profile-stats d-flex justify-content-center">
+                                <div>
+                                    <span class="heading">∞</span>
+                                    <span class="description">{% trans 'Term' %}</span>
+                                </div>
+                                <div>
+                                    <span class="heading">∞</span>
+                                    <span class="description">{% trans 'Intensity' %}</span>
+                                </div>
+                                <div>
+                                    <span class="heading">∞</span>
+                                    <span class="description">{% trans 'Readiness' %}</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <h5 class="h3">
+                            {% trans 'Ooops' %}
+                        </h5>
+                        <div class="h5 font-weight-300 clamp-this-module">
+                            {% trans 'We_have_a_problem' %}
+                        </div>
+                        <div>
+                            <i class="fas fa-briefcase mr-2"></i>Dismart
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if disasters.has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active" href="{{ disasters.previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if disasters.number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ disasters.number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in disasters.paginator.page_range %}
+                    {% if disasters.number == i %}
+                        <li class="page-item active" aria-current="page">
+                                          <span class="page-link">
+                                              <input type="hidden" value="{{ i }}" class="current-page">
+                                            {{ i }}
+                                            <span class="sr-only">(current)</span>
+                                          </span>
+                        </li>
+                    {% elif i > disasters.number|add:'-5' and i < disasters.number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active" href="{{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if disasters.paginator.num_pages > disasters.number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ disasters.number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if disasters.has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active" href="{{ disasters.next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% if filter %}
+    <input type="hidden" value="{% url 'interface:disasters_filter' %}" id="name-pagination">
+{% else %}
+    <input type="hidden" value="{% url 'interface:disasters' %}" id="name-pagination">
+{% endif %}
+<input type="hidden" value="{{ type }}" id="type-refresh">
+<input type="hidden" value="{{ intensity }}" id="intensity-refresh">
+<input type="hidden" value="{{ readiness }}" id="readiness-refresh">
+<input type="hidden" value="{{ term }}" id="term-refresh">
+<input type="hidden" value="{{ csrf_token }}" id="csrf-token">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+<script src="{% static 'base/jquery/check-text.js' %}"></script>
+<script src="{% static 'base/js/clamp.js' %}"></script>
+<script src="{% static 'base/js/clamp-disasters.js' %}"></script>

@@ -11,12 +11,13 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
 import dj_database_url
+import django_heroku
 from pathlib import Path
 from decouple import config
+from django.utils.translation import ugettext_lazy as _
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -29,6 +30,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+ADMINS = [(config("MY_NAME"), config("MY_EMAIL"))]
 
 # Application definition
 
@@ -39,7 +41,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "dismart.apps.DismartConfig",
+    "client_side.apps.interface_interaction.apps.InterfaceInteractionConfig",
 ]
 
 MIDDLEWARE = [
@@ -50,6 +52,8 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    "django.middleware.locale.LocaleMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
 ]
 
 ROOT_URLCONF = "client_side.urls"
@@ -72,14 +76,12 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "client_side.wsgi.application"
 
-
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
-    "default": dj_database_url.config(conn_max_age=600, default=config("DB_URL"))
+    "default": dj_database_url.config(conn_max_age=600, default=config("DB_ID"))
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -101,11 +103,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LOCALE_PATHS = (os.path.join(BASE_DIR, "locale"),)
+
+LANGUAGE_CODE = "en"
+
+LANGUAGES = (
+    ("en", _("English")),
+    ("uk", _("Ukrainian")),
+    ("de", _("German")),
+    ("ru", _("Russian")),
+    ("be", _("Belarusian")),
+)
 
 TIME_ZONE = "UTC"
 
@@ -115,13 +126,36 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+FIREBASE_CONFIG = {
+    'apiKey': config("FIREBASE_API_KEY"),
+    'authDomain': config("FIREBASE_AUTH_DOMAIN"),
+    'projectId': config("FIREBASE_PROJECT_ID"),
+    'storageBucket': config("FIREBASE_SOTRAGE_BUCKET"),
+    'messagingSenderId': config("FIREBASE_MSG_SENDER_ID"),
+    'appId': config("FIREBASE_APP_ID"),
+    'measurementId': config("FIREBASE_MEASUREMENT_ID"),
+    'databaseURL': config("FIREBASE_DB_URL"),
+}
+
+SESSION_COOKIE_AGE = 60 * 60 * 24 * 30  # One month
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
+NEWS_API = config("NEWS_API_KEY")
+
+django_heroku.settings(locals())

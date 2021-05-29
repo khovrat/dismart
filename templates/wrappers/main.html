@@ -1,0 +1,222 @@
+{% load static %}
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Save your business from disasters">
+    <meta name="author" content="Artem Khovrat">
+    <title>Dismart</title>
+    <link rel="icon" href="{% static 'base/img/favicon.jpg' %}" type="image/png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"/>
+    <link rel="stylesheet" href="{% static 'assets/argon/vendor/nucleo/css/nucleo.css' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'assets/argon/vendor/@fortawesome/fontawesome-free/css/all.min.css' %}"
+          type="text/css">
+    <link href="{% static 'assets/start_bootstrap/css/main-styles.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="{% static 'assets/argon/css/argon.css?v=1.2.0' %}" type="text/css">
+    <link rel="stylesheet" href="{% static 'base/css/styles.css' %}" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'base/rating/css/starability-all.min.css' %}"/>
+    {% block extra_links %}
+    {% endblock extra_links %}
+</head>
+
+<body class="bg-white">
+<nav id="navbar-main"
+     class="navbar navbar-horizontal navbar-transparent navbar-main navbar-expand-lg navbar-light navbar-fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'interface:index' %}">
+            <img id="logo"
+                 src="{% static 'base/img/white-green-logo-short.png' %}"
+                 data-dark="{% static 'base/img/white-green-logo-short.png' %}"
+                 data-white="{% static 'base/img/white-green-logo-short.png' %}"
+                 alt="Logo">
+        </a>
+        {% block extra_navbar %}
+        {% endblock extra_navbar %}
+        <div class="navbar-collapse navbar-custom-collapse collapse" id="navbar-collapse">
+            <hr class="d-lg-none"/>
+            <ul class="navbar-nav align-items-lg-center ml-lg-auto">
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="{{ links.facebook }}" target="_blank"
+                       data-toggle="tooltip" data-original-title="{% trans 'Like_us_on_Facebook' %}">
+                        <i class="fab fa-facebook-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Facebook</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="{{ links.instagram }}"
+                       target="_blank" data-toggle="tooltip" data-original-title="{% trans 'Follow_us_on_Instagram' %}">
+                        <i class="fab fa-instagram-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Instagram</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="{{ links.twitter }}" target="_blank"
+                       data-toggle="tooltip" data-original-title="{% trans 'Follow_us_on_Twitter' %}">
+                        <i class="fab fa-twitter-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Twitter</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="{{ links.github }}" target="_blank"
+                       data-toggle="tooltip" data-original-title="{% trans 'Star_us_on_Github' %}">
+                        <i class="fab fa-github-square"></i>
+                        <span class="nav-link-inner--text d-lg-none">Github</span>
+                    </a>
+                </li>
+                <li class="nav-item d-none d-lg-block ml-lg-4">
+                    {% if not request.session.profile %}
+                        <a href="{% url 'interface:sign_in' %}"
+                           class="btn btn-neutral btn-icon">
+                        <span class="btn-inner--icon">
+                            <i class="fas fa-user-tie mr-2"></i>
+                        </span>
+                            <span class="nav-link-inner--text">{% trans 'Sign_in' %}</span>
+                        </a>
+                    {% else %}
+                        <a href="{% url 'interface:sign_out' %}"
+                           class="btn btn-neutral btn-icon">
+                        <span class="btn-inner--icon">
+                            <i class="fas fa-user-tie mr-2"></i>
+                        </span>
+                            <span class="nav-link-inner--text">{% trans 'Sign_out' %}</span>
+                        </a>
+                    {% endif %}
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon"
+                       href="#"
+                       data-toggle="tooltip"
+                       data-original-title="{% trans 'Font_size_up' %}"
+                       onclick="changeFontSize(1)">
+                        <i class="fas fa-level-up-alt"></i>
+                        <span class="nav-link-inner--text d-lg-none">Font size up</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon"
+                       href="#"
+                       data-toggle="tooltip"
+                       data-original-title="{% trans 'Font_size_down' %}"
+                       onclick="changeFontSize(-1)">
+                        <i class="fas fa-level-down-alt"></i>
+                        <span class="nav-link-inner--text d-lg-none">Font size down</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <div class="dropdown">
+                        <a class="nav-link nav-link-icon dropdown-toggle"
+                           data-toggle="tooltip"
+                           data-original-title="{% trans 'Change_language' %}"
+                           id="dropdownExampleAnimation"
+                           data-mdb-toggle="dropdown">
+                            <i class="fas fa-globe"></i>
+                            <span class="nav-link-inner--text d-lg-none">Language</span>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownExampleAnimation">
+                            <form action="{% url 'set_language' %}" method="post">
+                                {% csrf_token %}
+
+                                <li class="nav-item">
+                                    <input name="next" type="hidden" value="{{ redirect_to }}">
+                                    {% get_current_language as LANGUAGE_CODE %}
+                                    {% get_available_languages as LANGUAGES %}
+                                    {% get_language_info_list for LANGUAGES as languages %}
+                                    {% for language in languages %}
+                                        <button type="submit"
+                                                name="language"
+                                                value="{{ language.code }}"
+                                                lang="{{ language.code }}"
+                                                {% if language.code == LANGUAGE_CODE %}
+                                                class="dropdown-item btn-default"
+                                                {% else %}
+                                                class="dropdown-item"
+                                                {% endif %}
+                                        >
+                                            {% with 'base/img/flags/'|add:language.code|add:'.png' as image_static %}
+                                                <img id="language-flag"
+                                                     class="pr-2"
+                                                     style="filter: brightness(90%);"
+                                                     src="{% static image_static %}"
+                                                     alt="{{ language.name }}">
+                                            {% endwith %}
+                                            {{ language.name_local }}
+                                        </button>
+                                    {% endfor %}
+                                </li>
+                            </form>
+                        </ul>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon"
+                       href="#"
+                       data-toggle="tooltip"
+                       id="play"
+                       data-original-title="{% trans 'Play_text' %}">
+                        <i class="fas fa-play-circle"></i>
+                        <span class="nav-link-inner--text d-lg-none">Play site</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon"
+                       href="#"
+                       data-toggle="tooltip"
+                       id="pause"
+                       data-original-title="{% trans 'Pause_text' %}">
+                        <i class="fas fa-pause-circle"></i>
+                        <span class="nav-link-inner--text d-lg-none">Pause site</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon"
+                       href="#"
+                       data-toggle="tooltip"
+                       id="stop"
+                       data-original-title="{% trans 'Stop_text' %}">
+                        <i class="fas fa-stop-circle"></i>
+                        <span class="nav-link-inner--text d-lg-none">Stop site</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+{% block extra_wrapper %}
+{% endblock extra_wrapper %}
+{% block container %}
+{% endblock container %}
+<footer class="py-5" id="footer-main">
+    <div class="container">
+        <div class="row align-items-center justify-content-xl-between">
+            <div class="col-xl-6">
+                <div class="copyright text-center text-xl-left text-muted">
+                    &copy; 2021 <a href="{{ links.github }}" class="font-weight-bold ml-1 footer-copyright"
+                                   target="_blank"> Artem
+                    Khovrat</a>
+                </div>
+            </div>
+            {% block extra_footer %}
+            {% endblock extra_footer %}
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+<script src="{% static 'assets/argon/vendor/jquery/dist/jquery.min.js' %}"></script>
+<script src="{% static 'assets/argon/vendor/bootstrap/dist/js/bootstrap.bundle.min.js' %}"></script>
+<script src="{% static 'assets/argon/vendor/js-cookie/js.cookie.js' %}"></script>
+<script src="{% static 'assets/argon/vendor/jquery.scrollbar/jquery.scrollbar.min.js' %}"></script>
+<script src="{% static 'assets/argon/vendor/jquery-scroll-lock/dist/jquery-scrollLock.min.js' %}"></script>
+<script src="{% static 'assets/argon/js/argon.js?v=1.2.0' %}"></script>
+<script src="{% static 'base/js/change-font-size.js' %}"></script>
+<script src="{% static 'base/js/read-text.js' %}"></script>
+<script src="{% static 'base/jquery/change-navbar.js' %}"></script>
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+{% block extra_script %}
+{% endblock extra_script %}
+</body>
+</html>

@@ -1,8 +1,12 @@
 tmp/
 venv/
 data/
+migrations/
+batches/
+static/
 __pycache__
 .mypy_cache/
 .env
 .log
 .idea
+*.bat

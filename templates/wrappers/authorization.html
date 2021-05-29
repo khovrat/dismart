@@ -1,0 +1,73 @@
+{% extends 'wrappers/main.html' %}
+{% load static %}
+{% load i18n %}
+{% block container %}
+    <div class="main-content main-content-dark">
+        <div class="header bg-gradient-primary py-7 py-lg-7 pt-lg-9 pt-5">
+            <div class="container">
+                <div class="header-body text-center mb-7 text-center">
+                    <div class="row text-center">
+                        <div class="col-xl-5 col-lg-6 col-md-0 px-5 text-center display ml-auto mr-auto mt-2">
+                            <div class="row welcome-container text-center">
+                                <div class=" welcome-text text-center">
+                                    {% block header_authorization %}
+                                    {% endblock header_authorization %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="separator separator-bottom separator-skew zindex-100">
+                <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+                </svg>
+            </div>
+        </div>
+        <div class="container mt--8 pb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-5 col-md-7">
+                    <div class="card bg-secondary border-0 mb-0">
+                        <div class="card-header bg-transparent pb-5">
+                            {% block specific_authorization %}
+                            {% endblock specific_authorization %}
+                        </div>
+                        <div class="card-body px-lg-5 py-lg-5">
+                            {% block main_authorization %}
+                            {% endblock main_authorization %}
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        {% block footer_authorization %}
+                        {% endblock footer_authorization %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_footer %}
+    <div class="col-xl-6">
+        <ul class="nav nav-footer justify-content-center justify-content-xl-end">
+            <li class="nav-item">
+                <a href="{{ links.admin_panel }}" class="nav-link" target="_blank">{% trans 'Admin_panel' %}</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://www.creative-tim.com" class="nav-link" target="_blank">Creative Tim</a>
+            </li>
+            <li class="nav-item">
+                <a href="https://mdbootstrap.com" class="nav-link" target="_blank">MDB5</a>
+            </li>
+        </ul>
+    </div>
+{% endblock extra_footer %}
+{% block extra_script %}
+    <script src="{% static 'base/js/check-block-submit.js' %}"></script>
+    <script src="{% static 'base/js/check-password-strong.js' %}"></script>
+    <script src="{% static 'base/js/check-policy.js' %}"></script>
+    <script src="{% static 'base/jquery/check-text.js' %}"></script>
+    <script src="{% static 'base/jquery/confirm-password.js' %}"></script>
+    <script src="{% static 'base/jquery/change-card-number.js' %}"></script>
+    <script src="{% static 'base/jquery/confirm-card-date.js' %}"></script>
+{% endblock extra_script %}

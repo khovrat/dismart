@@ -1,0 +1,136 @@
+{% extends 'wrappers/main.html' %}
+{% load static %}
+{% load i18n %}
+{% block container %}
+<div class="main-content main-content-dark">
+    <div class="header bg-gradient-primary py-7 py-lg-5 pt-lg-9 pt-5">
+        <div class="container">
+            <div class="header-body text-center mb-7 text-center">
+                <div class="row text-center">
+                    <div class="col-xl-5 col-lg-6 col-md-0 px-5 text-center display ml-auto mr-auto mt-2">
+                        <div class="row welcome-container text-center">
+                            <div class=" welcome-text text-center">
+                                <h1 class="section-heading text-uppercase text-white text-center display-3">{% trans 'Hi_subscription' %}</h1>
+                                <p class="text-white mt-0 mb-0 ">{% trans 'Choose_your_plan' %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="separator separator-bottom separator-skew zindex-100">
+            <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1"
+                 xmlns="http://www.w3.org/2000/svg">
+                <polygon class="fill-white" points="2560 0 2560 100 0 100"></polygon>
+            </svg>
+        </div>
+    </div>
+    <div class="container-fluid mt--6">
+        <div class="row mt--5">
+            {% if messages %}
+                {% for message in messages %}
+                    {% if message.tags == "success" %}
+                        <div class="alert alert-success alert-dismissible fade show" role="alert">
+                            <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                            <span class="alert-text"><strong>{% trans 'Success_subscription' %}</strong> {{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% elif message.tags == "warning" %}
+                        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                            <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                            <span class="alert-text"><strong>{% trans 'Warning_title_subscription' %}</strong> {{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% else %}
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                            <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                            <span class="alert-text"><strong>{% trans 'Error_title_subscription' %}</strong> {{ message }}</span>
+                            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            {% endif %}
+            <div class="col-md-10 ml-auto mr-auto">
+                <div class="card card-upgrade">
+
+                    <div class="card-header text-center border-bottom-0">
+                        {% block extra_navbutton %}
+                        {% endblock extra_navbutton %}
+                        <h4 class="card-title">{% trans 'Subscription_plan_header' %}</h4>
+                        <p class="card-category">{% trans 'Subscription_plan_description' %}</p>
+                    </div>
+                    <div class="card-body">
+
+                        <div class="table-responsive table-upgrade">
+                            <table class="table">
+                                <thead>
+                                <tr>
+                                    <th></th>
+                                    <th class="text-center">{% trans 'Free' %}</th>
+                                    <th class="text-center">{% trans 'Maximum' %}</th>
+                                    <th class="text-center">{% trans 'Ultra' %}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{% trans 'First_feature_name' %}</td>
+                                    <td class="text-center">{% trans 'First_feature_free' %}</td>
+                                    <td class="text-center">{% trans 'First_feature_maximum' %}</td>
+                                    <td class="text-center">{% trans 'First_feature_ultra' %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% trans 'Second_feature_name' %}</td>
+                                    <td class="text-center">{% trans 'Second_feature_free' %}</td>
+                                    <td class="text-center">{% trans 'Second_feature_maximum' %}</td>
+                                    <td class="text-center">{% trans 'Second_feature_ultra' %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% trans 'Third_feature_name' %}</td>
+                                    <td class="text-center">{% trans 'Third_feature_free' %}</td>
+                                    <td class="text-center">{% trans 'Third_feature_maximum' %}</td>
+                                    <td class="text-center">{% trans 'Third_feature_ultra' %}</td>
+                                </tr>
+                                <tr>
+                                    <td>{% trans 'Fourth_feature_name' %}</td>
+                                    <td class="text-center"><i class="ni ni-fat-remove text-danger"></i></td>
+                                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>{% trans 'Fifth_feature_name' %}</td>
+                                    <td class="text-center"><i class="ni ni-fat-remove text-danger"></i></td>
+                                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td>{% trans 'Sixth_feature_name' %}</td>
+                                    <td class="text-center"><i class="ni ni-fat-remove text-danger"></i></td>
+                                    <td class="text-center"><i class="ni ni-fat-remove text-danger"></i></td>
+                                    <td class="text-center"><i class="ni ni-check-bold text-success"></i></td>
+                                </tr>
+                                <tr>
+                                    <td></td>
+                                    <td class="text-center">{% trans 'Free_price' %}</td>
+                                    <td class="text-center">{% trans 'Maximum_price' %}</td>
+                                    <td class="text-center">{% trans 'Ultra_price' %}</td>
+                                </tr>
+                                <tr>
+                                    {% block extra_button %}
+                                    {% endblock extra_button %}
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock container %}

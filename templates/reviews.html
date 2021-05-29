@@ -1,0 +1,92 @@
+{% extends 'wrappers/navbar.html' %}
+{% load static %}
+{% load i18n %}
+{% block extra_links %}
+    <link rel="stylesheet" href="{% static 'base/css/button-styles.css' %}" type="text/css">
+{% endblock extra_links %}
+{% block extra_wrapper %}
+
+    <div class="header pb-6 d-flex align-items-center article"
+         style="background-image: url('{{ request.session.profile.img }}'); background-size: cover">
+        <span class="mask bg-gradient-default opacity-7"></span>
+        <div class="container-fluid d-flex align-items-center welcome-container pt-200">
+            <div class="row welcome-container">
+                <div class="col-lg-12 col-md-10 welcome-text">
+                    <h1 class="display-2 text-white scale">{% trans 'Hi_reviews' %}</h1>
+                    <p class="text-white mt-0 mb-5 scale">{% trans 'Reviews_description' %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock extra_wrapper %}
+{% block container %}
+    <div class="container-fluid mt--6" style="min-height: 60vh">
+        <div class="header bg-transparent">
+            <div class="container-fluid">
+                <div class="header-body">
+                    <div class="col-lg-6 col-7">
+                        <nav aria-label="breadcrumb" class="d-none d-md-inline-block ml-md-4">
+                            <ol class="breadcrumb breadcrumb-links breadcrumb-dark">
+                                <li class="breadcrumb-item"><a href="{% url 'interface:home' %}"><i
+                                        class="fas fa-home"></i></a></li>
+                                <li class="breadcrumb-item active" aria-current="page"><a
+                                        href="{% url 'interface:profile' %}">{% trans 'Profile' %}</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">{% trans 'Reviews' %}</li>
+                            </ol>
+                        </nav>
+                    </div>
+                    <div class="d-flex align-items-end justify-content-end mb-4 mt--5">
+                        <a href="{% url 'interface:home' %}#email" class="btn btn-sm btn-success">{% trans 'New' %}</a>
+                        <a href="{% url 'interface:reviews' %}" id="cancel-filter-link" class="btn btn-sm btn-success"
+                           style="display:none">{% trans 'Cancel_Filter_my' %}</a>
+                        <a href="{% url 'interface:reviews_personal' %}" id="filter-link"
+                           class="btn btn-sm btn-success">{% trans 'Filter_my' %}</a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        {% if messages %}
+            {% for message in messages %}
+                {% if message.tags == "success" %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Success_title_reviews' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% elif message.tags == "warning" %}
+                    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Warning_title_reviews' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% else %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <span class="alert-icon"><i class="ni ni-like-2"></i></span>
+                        <span class="alert-text"><strong>{% trans 'Error_title_reviews' %}</strong> {{ message }}</span>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+        <div class="row d-flex align-items-center justify-content-center">
+            {% include 'pagination/reviews.html' %}
+            {% if review_user %}
+                <input type="hidden" value="{% url 'interface:reviews_personal' %}" id="name-pagination">
+            {% else %}
+                <input type="hidden" value="{% url 'interface:reviews' %}" id="name-pagination">
+            {% endif %}
+        </div>
+    </div>
+{% endblock container %}
+{% block extra_script %}
+    <script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+    <script src="{% static 'base/jquery/ajax-filter.js' %}"></script>
+{% endblock extra_script %}

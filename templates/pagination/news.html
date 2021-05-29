@@ -1,0 +1,129 @@
+{% load static %}
+{% load i18n %}
+<div id="content-pagination" class="row d-flex align-items-center justify-content-center">
+    {% for item_news in news %}
+        <div class="card text-center mr-5 mb-5" style="max-width: 400px;">
+            <div class="card-header">{{ item_news.source }}</div>
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                {% if item_news.image %}
+                    <img
+                            src="{{ item_news.image }}"
+                            style="width: 100%; height: 30vh; object-fit: cover"
+                    />
+                {% else %}
+                    <img
+                            src="{% static 'base/img/arm.jpg' %}"
+                            style="width: 100%; height: 30vh; object-fit: cover"
+                    />
+                    <a href="#!">
+                        <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                    </a>
+                {% endif %}
+            </div>
+            <div class="card-body">
+                <h5 class="card-title clamp-this-module-one">{{ item_news.title }}</h5>
+                <p class="card-text clamp-this-module" style="height: 82px">
+                    {{ item_news.description }}
+                </p>
+                <a href="{{ item_news.url }}" target="_blank" class="btn btn-default">{% trans 'Read' %}</a>
+            </div>
+            <div class="card-footer text-muted">
+                {{ item_news.publishedat }}
+            </div>
+        </div>
+    {% endfor %}
+    {% if not news %}
+        <div class="card text-center mr-5 mb-5" style="max-width: 400px;">
+            <div class="card-header">{% trans 'Ooops' %}</div>
+            <div class="bg-image hover-overlay ripple" data-mdb-ripple-color="light">
+                <img
+                        src="{% static 'base/img/arm.jpg' %}"
+                        class="img-fluid"
+                />
+                <a href="#!">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                </a>
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{% trans 'We_have_a_problem' %}</h5>
+                <p class="card-text">
+                    {% trans 'We_have_a_problem_description' %}
+                </p>
+            </div>
+            <div class="card-footer text-muted">
+                <span>{% trans 'My_god' %}</span>
+            </div>
+        </div>
+    {% endif %}
+    <div class="card-footer py-4">
+        <nav aria-label="...">
+            <ul class="pagination justify-content-end mb-0">
+                {% if has_previous %}
+                    <li class="page-item ">
+                        <a class="page-link page-link-active" href="{{ previous_page_number }}"
+                           tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">
+                            <i class="fas fa-angle-left"></i>
+                            <span class="sr-only">{% trans 'Prvious_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+                {% if number|add:'-4' > 1 %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ number|add:'-5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% for i in paginator.page_range %}
+                    {% if number == i %}
+                        <li class="page-item active" aria-current="page">
+                                          <span class="page-link">
+                                              <input type="hidden" value="{{ i }}" class="current-page">
+                                            {{ i }}
+                                            <span class="sr-only">(current)</span>
+                                          </span>
+                        </li>
+                    {% elif i > number|add:'-5' and i < number|add:'5' %}
+                        <li class="page-item"><a class="page-link page-link-active" href="{{ i }}">{{ i }}</a></li>
+                    {% endif %}
+                {% endfor %}
+                {% if paginator.num_pages > number|add:'4' %}
+                    <li class="page-item"><a class="page-link page-link-active"
+                                             href="{{ number|add:'5' }}">&hellip;</a>
+                    </li>
+                {% endif %}
+                {% if has_next %}
+                    <li class="page-item">
+                        <a class="page-link page-link-active" href="{{ next_page_number }}">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">
+                            <i class="fas fa-angle-right"></i>
+                            <span class="sr-only">{% trans 'Next_page' %}</span>
+                        </a>
+                    </li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</div>
+{% if filter %}
+    <input type="hidden" value="{% url 'interface:news_filter' %}" id="name-pagination">
+{% else %}
+    <input type="hidden" value="{% url 'interface:news' %}" id="name-pagination">
+{% endif %}
+<input type="hidden" value="{{ language }}" id="language-refresh">
+<input type="hidden" value="{{ type }}" id="type-refresh">
+<input type="hidden" value="{{ sort }}" id="sort-refresh">
+<script src="{% static 'base/jquery/ajax-pagination.js' %}"></script>
+<script src="{% static 'base/js/clamp.js' %}"></script>
+<script src="{% static 'base/js/clamp-news.js' %}"></script>

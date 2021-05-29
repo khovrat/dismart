@@ -1,0 +1,2315 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-29 12:28+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\client_side\apps\interface_interaction\views.py:49
+msgid "Sign_out_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:70
+msgid "Sign_in_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:72
+msgid "Sign_in_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:101
+msgid "Sign_up_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:103
+msgid "Sign_up_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:105
+msgid "Sign_up_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:120
+msgid "Forgot_password_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:122
+#: .\client_side\apps\interface_interaction\views.py:218
+msgid "Make_payment_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:124
+#: .\client_side\apps\interface_interaction\views.py:220
+msgid "Make_payment_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:216
+msgid "Make_payment_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:238
+msgid "Lower_subscription_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:240
+msgid "Lower_subscription_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:242
+msgid "Lower_subscription_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:258
+msgid "Review_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:260
+#: .\client_side\apps\interface_interaction\views.py:262
+msgid "Review_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:282
+msgid "Workplace_info_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:284
+msgid "Count_info_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:302
+msgid "User_info_successful_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:304
+msgid "User_info_warning_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:306
+msgid "User_info_error_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:320
+msgid "Password_successful_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:322
+msgid "Password_warning_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:324
+msgid "Password_error_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:353
+msgid "Image_successful_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:355
+msgid "Image_warning_change_server"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:357
+msgid "Image_warning_change_file"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:359
+msgid "Image_error_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:386
+#: .\client_side\apps\interface_interaction\views.py:439
+msgid "Companies_info_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:397
+msgid "Action_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:399
+msgid "Action_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:411
+msgid "Delete_company_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:413
+msgid "Delete_company_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:458
+msgid "Company_info_successful_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:460
+msgid "Company_info_warning_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:462
+msgid "Company_info_error_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:488
+msgid "Image_company_successful_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:490
+msgid "Image_company_warning_change_server"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:492
+msgid "Image_company_warning_change_file"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:494
+msgid "Company_error_change"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:509
+msgid "Delete_users_company_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:511
+msgid "Delete_users_company_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:513
+msgid "Delete_users_company_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:528
+msgid "Add_users_company_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:530
+msgid "Add_users_company_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:532
+msgid "Add_users_company_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:566
+msgid "Add_company_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:568
+msgid "Add_company_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:570
+msgid "Add_company_warning_files"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:572
+msgid "Add_company_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:591
+msgid "Reviews_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:614
+msgid "Reviews_personal_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:645
+msgid "Advices_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:678
+msgid "Advices_filter_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:693
+msgid "Advices_rate_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:695
+msgid "Advices_rate_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:697
+msgid "Advices_rate_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:723
+msgid "Articles_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:752
+msgid "Create_article_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:754
+msgid "Create_article_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:756
+msgid "Create_article_warning_files"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:758
+msgid "Create_article_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:795
+msgid "Articles_filter_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:810
+msgid "Articles_rate_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:812
+msgid "Articles_rate_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:814
+msgid "Articles_rate_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:827
+msgid "Delete_articles_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:829
+msgid "Delete_articles_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:831
+#: .\client_side\apps\interface_interaction\views.py:1047
+msgid "Delete_articles_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:860
+msgid "Update_article_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:862
+msgid "Update_article_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:864
+msgid "Update_article_warning_files"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:866
+msgid "Update_article_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:880
+msgid "Get_search_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:894
+#: .\client_side\apps\interface_interaction\views.py:943
+msgid "View_news_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:905
+msgid "View_news_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:930
+msgid "Filter_search_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:986
+msgid "Disasters_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1004
+msgid "Create_disasters_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1006
+#: .\client_side\apps\interface_interaction\views.py:1008
+msgid "Create_disasters_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1026
+msgid "Update_disasters_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1028
+#: .\client_side\apps\interface_interaction\views.py:1030
+msgid "Update_disasters_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1043
+msgid "Delete_disasters_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1045
+msgid "Delete_disasters_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1088
+msgid "Disasters_filter_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1100
+msgid "Modelling_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1126
+msgid "Audience_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1144
+msgid "Create_audience_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1146
+#: .\client_side\apps\interface_interaction\views.py:1148
+msgid "Create_audience_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1166
+msgid "Update_audience_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1168
+#: .\client_side\apps\interface_interaction\views.py:1170
+msgid "Update_audience_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1183
+msgid "Delete_audience_successful"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1185
+msgid "Delete_audience_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1187
+msgid "Delete_audience_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1227
+msgid "Audience_filter_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1242
+msgid "Audience_forecast_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1255
+msgid "Company_forecast_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1268
+msgid "Company_forecast_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1307
+msgid "Company_stresstest_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1319
+msgid "Company_stresstest_error"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1332
+msgid "Market_forecast_warning"
+msgstr ""
+
+#: .\client_side\apps\interface_interaction\views.py:1344
+msgid "Market_forecast_error"
+msgstr ""
+
+#: .\client_side\settings.py:114
+msgid "English"
+msgstr "English"
+
+#: .\client_side\settings.py:115
+msgid "Ukrainian"
+msgstr "Ukrainian"
+
+#: .\client_side\settings.py:116
+msgid "German"
+msgstr "German"
+
+#: .\client_side\settings.py:117
+msgid "Russian"
+msgstr "Russian"
+
+#: .\client_side\settings.py:118
+msgid "Belarusian"
+msgstr "Belarusian"
+
+#: .\templates\advices.html:15
+msgid "Hi_advice"
+msgstr ""
+
+#: .\templates\advices.html:16
+msgid "Advice_description"
+msgstr ""
+
+#: .\templates\advices.html:35 .\templates\aid.html:33
+#: .\templates\articles.html:34 .\templates\news.html:40
+#: .\templates\wrappers\navbar.html:39 .\templates\wrappers\navbar.html:45
+#: .\templates\wrappers\navbar.html:100 .\templates\wrappers\navbar.html:106
+msgid "Aid"
+msgstr ""
+
+#: .\templates\advices.html:36 .\templates\aid.html:49
+#: .\templates\home.html:117 .\templates\welcome.html:117
+msgid "Advices"
+msgstr ""
+
+#: .\templates\advices.html:43 .\templates\articles.html:45
+#: .\templates\audience.html:48 .\templates\disasters.html:44
+#: .\templates\news.html:68
+msgid "Filter"
+msgstr ""
+
+#: .\templates\advices.html:45 .\templates\articles.html:47
+#: .\templates\audience.html:50 .\templates\disasters.html:46
+#: .\templates\news.html:70
+msgid "Cancel_Filter"
+msgstr ""
+
+#: .\templates\advices.html:55
+msgid "Success_title_advices"
+msgstr ""
+
+#: .\templates\advices.html:63
+msgid "Warning_title_advices"
+msgstr ""
+
+#: .\templates\advices.html:71
+msgid "Error_title_advices"
+msgstr ""
+
+#: .\templates\advices.html:98
+msgid "Filter_advices_title"
+msgstr ""
+
+#: .\templates\advices.html:105 .\templates\articles.html:232
+#: .\templates\disasters.html:105 .\templates\news.html:131
+msgid "Disaster_type_tip"
+msgstr ""
+
+#: .\templates\advices.html:110 .\templates\articles.html:137
+#: .\templates\articles.html:237 .\templates\audience.html:114
+#: .\templates\audience.html:191 .\templates\disasters.html:110
+#: .\templates\disasters.html:193 .\templates\news.html:136
+#: .\templates\pagination\articles.html:155
+#: .\templates\pagination\audience.html:90
+#: .\templates\pagination\disasters.html:89
+msgid "Type"
+msgstr ""
+
+#: .\templates\advices.html:123 .\templates\articles.html:250
+msgid "Rate_tip"
+msgstr ""
+
+#: .\templates\advices.html:135 .\templates\articles.html:262
+msgid "Amount_tip"
+msgstr ""
+
+#: .\templates\advices.html:149
+msgid "Filter_advices"
+msgstr ""
+
+#: .\templates\aid.html:15
+msgid "Hi_aid"
+msgstr ""
+
+#: .\templates\aid.html:16
+msgid "Aid_description"
+msgstr ""
+
+#: .\templates\aid.html:51
+msgid "Advices_description"
+msgstr ""
+
+#: .\templates\aid.html:55
+msgid "Advices_char_1"
+msgstr ""
+
+#: .\templates\aid.html:56
+msgid "Advices_char_2"
+msgstr ""
+
+#: .\templates\aid.html:57
+msgid "Advices_char_3"
+msgstr ""
+
+#: .\templates\aid.html:60 .\templates\aid.html:82 .\templates\aid.html:104
+#: .\templates\modelling.html:81 .\templates\modelling.html:104
+#: .\templates\modelling.html:129 .\templates\modelling.html:152
+#: .\templates\pagination\audience.html:34
+#: .\templates\pagination\disasters.html:33
+#: .\templates\pagination\disasters.html:202
+msgid "Check"
+msgstr ""
+
+#: .\templates\aid.html:71 .\templates\articles.html:35
+#: .\templates\articles.html:85 .\templates\home.html:111
+#: .\templates\profile.html:108 .\templates\welcome.html:111
+msgid "Articles"
+msgstr ""
+
+#: .\templates\aid.html:73
+msgid "Articles_description"
+msgstr ""
+
+#: .\templates\aid.html:77
+msgid "Articles_char_1"
+msgstr ""
+
+#: .\templates\aid.html:78
+msgid "Articles_char_2"
+msgstr ""
+
+#: .\templates\aid.html:79
+msgid "Articles_char_3"
+msgstr ""
+
+#: .\templates\aid.html:93 .\templates\news.html:41
+msgid "News"
+msgstr ""
+
+#: .\templates\aid.html:95 .\templates\news.html:21
+msgid "News_description"
+msgstr ""
+
+#: .\templates\aid.html:99
+msgid "News_char_1"
+msgstr ""
+
+#: .\templates\aid.html:100
+msgid "News_char_2"
+msgstr ""
+
+#: .\templates\aid.html:101
+msgid "News_char_3"
+msgstr ""
+
+#: .\templates\articles.html:15
+msgid "Hi_article"
+msgstr ""
+
+#: .\templates\articles.html:16
+msgid "Article_description"
+msgstr ""
+
+#: .\templates\articles.html:42 .\templates\audience.html:45
+#: .\templates\companies-detail.html:241 .\templates\companies.html:78
+#: .\templates\disasters.html:41
+msgid "Add"
+msgstr ""
+
+#: .\templates\articles.html:57
+msgid "Success_title_articles"
+msgstr ""
+
+#: .\templates\articles.html:65
+msgid "Warning_title_articles"
+msgstr ""
+
+#: .\templates\articles.html:73
+msgid "Error_title_articles"
+msgstr ""
+
+#: .\templates\articles.html:119 .\templates\articles.html:197
+#: .\templates\companies.html:97
+msgid "Image_required"
+msgstr ""
+
+#: .\templates\articles.html:126
+msgid "Create_your_article"
+msgstr ""
+
+#: .\templates\articles.html:153 .\templates\companies-detail.html:169
+#: .\templates\companies-detail.html:171 .\templates\companies.html:130
+#: .\templates\pagination\articles.html:174
+msgid "Name"
+msgstr ""
+
+#: .\templates\articles.html:166 .\templates\news.html:155
+#: .\templates\pagination\articles.html:187
+msgid "Language"
+msgstr ""
+
+#: .\templates\articles.html:185
+msgid "Text"
+msgstr ""
+
+#: .\templates\articles.html:205
+msgid "Create_article"
+msgstr ""
+
+#: .\templates\articles.html:225
+msgid "Filter_articles_title"
+msgstr ""
+
+#: .\templates\articles.html:276
+msgid "Filter_articles"
+msgstr ""
+
+#: .\templates\audience.html:15
+msgid "Hi_audience"
+msgstr ""
+
+#: .\templates\audience.html:16
+msgid "Audience_description"
+msgstr ""
+
+#: .\templates\audience.html:35 .\templates\disasters.html:34
+#: .\templates\forecast-audience.html:30 .\templates\forecast-company.html:30
+#: .\templates\forecast-market.html:30 .\templates\modelling.html:63
+#: .\templates\profile.html:112 .\templates\stresstest-company.html:30
+#: .\templates\wrappers\navbar.html:52 .\templates\wrappers\navbar.html:58
+#: .\templates\wrappers\navbar.html:113 .\templates\wrappers\navbar.html:119
+msgid "Disasters"
+msgstr ""
+
+#: .\templates\audience.html:37 .\templates\forecast-audience.html:32
+#: .\templates\forecast-company.html:32 .\templates\forecast-market.html:32
+#: .\templates\modelling.html:64 .\templates\stresstest-company.html:32
+msgid "Modelling"
+msgstr ""
+
+#: .\templates\audience.html:38 .\templates\forecast-audience.html:34
+msgid "Audience"
+msgstr ""
+
+#: .\templates\audience.html:60
+msgid "Success_title_audience"
+msgstr ""
+
+#: .\templates\audience.html:68
+msgid "Warning_title_audience"
+msgstr ""
+
+#: .\templates\audience.html:76
+msgid "Error_title_audience"
+msgstr ""
+
+#: .\templates\audience.html:102
+msgid "Filter_audience_title"
+msgstr ""
+
+#: .\templates\audience.html:109
+msgid "Audience_type_tip"
+msgstr ""
+
+#: .\templates\audience.html:127
+msgid "Size_tip"
+msgstr ""
+
+#: .\templates\audience.html:143 .\templates\audience.html:207
+#: .\templates\pagination\audience.html:109
+msgid "Age_left"
+msgstr ""
+
+#: .\templates\audience.html:151 .\templates\audience.html:215
+#: .\templates\pagination\audience.html:118
+msgid "Age_right"
+msgstr ""
+
+#: .\templates\audience.html:159 .\templates\disasters.html:161
+msgid "Filter_disasters"
+msgstr ""
+
+#: .\templates\audience.html:180
+msgid "Create_your_audience"
+msgstr ""
+
+#: .\templates\audience.html:227 .\templates\companies-detail.html:112
+#: .\templates\companies-detail.html:190 .\templates\companies-detail.html:192
+#: .\templates\companies.html:152 .\templates\forecast-audience.html:63
+#: .\templates\forecast-company.html:65 .\templates\forecast-market.html:52
+#: .\templates\pagination\audience.html:46
+#: .\templates\pagination\audience.html:131
+#: .\templates\pagination\audience.html:184
+#: .\templates\pagination\companies.html:15
+#: .\templates\stresstest-company.html:65
+msgid "Size"
+msgstr ""
+
+#: .\templates\audience.html:239 .\templates\pagination\audience.html:143
+msgid "Features"
+msgstr ""
+
+#: .\templates\audience.html:246 .\templates\pagination\audience.html:151
+msgid "Create_audience"
+msgstr ""
+
+#: .\templates\card.html:5
+msgid "Hi_card_info"
+msgstr ""
+
+#: .\templates\card.html:6
+msgid "Card_info_description"
+msgstr ""
+
+#: .\templates\card.html:11
+msgid "Success_title_card"
+msgstr ""
+
+#: .\templates\card.html:18
+msgid "Warning_title_card"
+msgstr ""
+
+#: .\templates\card.html:25
+msgid "Error_title_card"
+msgstr ""
+
+#: .\templates\card.html:36
+msgid "Simple_card_info"
+msgstr ""
+
+#: .\templates\card.html:42
+msgid "EnterCardInfo"
+msgstr ""
+
+#: .\templates\card.html:47
+msgid "FullNameCard"
+msgstr ""
+
+#: .\templates\card.html:49
+msgid "YourNameCard"
+msgstr ""
+
+#: .\templates\card.html:55
+msgid "CardNumber"
+msgstr ""
+
+#: .\templates\card.html:58
+msgid "YourCard"
+msgstr ""
+
+#: .\templates\card.html:65
+msgid "ExpirationCard"
+msgstr ""
+
+#: .\templates\card.html:88
+msgid "card_expiration"
+msgstr ""
+
+#: .\templates\card.html:90
+msgid "confirm"
+msgstr ""
+
+#: .\templates\card.html:92
+msgid "not_confirm"
+msgstr ""
+
+#: .\templates\card.html:95
+msgid "Payment"
+msgstr ""
+
+#: .\templates\card.html:104
+msgid "Return_to_subscription"
+msgstr ""
+
+#: .\templates\companies-detail.html:13
+msgid "Company_description"
+msgstr ""
+
+#: .\templates\companies-detail.html:29 .\templates\companies.html:32
+#: .\templates\profile.html:28 .\templates\reviews.html:33
+#: .\templates\subscription-change.html:14
+#: .\templates\subscription-change.html:74 .\templates\wrappers\navbar.html:26
+#: .\templates\wrappers\navbar.html:32 .\templates\wrappers\navbar.html:87
+#: .\templates\wrappers\navbar.html:93
+msgid "Profile"
+msgstr ""
+
+#: .\templates\companies-detail.html:31 .\templates\companies-detail.html:91
+#: .\templates\companies.html:33 .\templates\home.html:105
+#: .\templates\profile.html:85 .\templates\welcome.html:105
+msgid "Companies"
+msgstr ""
+
+#: .\templates\companies-detail.html:43
+msgid "Success_title_companies_detail"
+msgstr ""
+
+#: .\templates\companies-detail.html:51
+msgid "Warning_title_companies_detail"
+msgstr ""
+
+#: .\templates\companies-detail.html:59
+msgid "Error_title_companies_detail"
+msgstr ""
+
+#: .\templates\companies-detail.html:96 .\templates\companies-detail.html:150
+#: .\templates\forecast-company.html:102 .\templates\forecast-market.html:77
+#: .\templates\profile.html:92 .\templates\profile.html:149
+msgid "Save"
+msgstr ""
+
+#: .\templates\companies-detail.html:98 .\templates\profile.html:94
+msgid "Cancel"
+msgstr ""
+
+#: .\templates\companies-detail.html:108 .\templates\companies-detail.html:237
+#: .\templates\forecast-company.html:61 .\templates\home.html:99
+#: .\templates\stresstest-company.html:61 .\templates\welcome.html:99
+msgid "Users"
+msgstr ""
+
+#: .\templates\companies-detail.html:116 .\templates\companies-detail.html:199
+#: .\templates\companies-detail.html:201 .\templates\companies.html:163
+#: .\templates\forecast-company.html:69
+#: .\templates\pagination\companies.html:17
+#: .\templates\stresstest-company.html:69
+msgid "Revenue"
+msgstr ""
+
+#: .\templates\companies-detail.html:126 .\templates\forecast-company.html:79
+#: .\templates\stresstest-company.html:79
+msgid "site"
+msgstr ""
+
+#: .\templates\companies-detail.html:145
+msgid "Edit_company"
+msgstr ""
+
+#: .\templates\companies-detail.html:153
+msgid "Open_users"
+msgstr ""
+
+#: .\templates\companies-detail.html:156
+msgid "Close_users"
+msgstr ""
+
+#: .\templates\companies-detail.html:163
+msgid "Company_information"
+msgstr ""
+
+#: .\templates\companies-detail.html:179 .\templates\companies-detail.html:181
+#: .\templates\companies.html:141
+msgid "Site"
+msgstr ""
+
+#: .\templates\companies-detail.html:210 .\templates\companies-detail.html:212
+#: .\templates\companies.html:174 .\templates\pagination\companies.html:13
+msgid "Location"
+msgstr ""
+
+#: .\templates\companies-detail.html:219 .\templates\companies-detail.html:221
+#: .\templates\companies.html:185
+msgid "Description"
+msgstr ""
+
+#: .\templates\companies-detail.html:232
+msgid "Users_info"
+msgstr ""
+
+#: .\templates\companies-detail.html:256
+msgid "Add_new_user_to_company"
+msgstr ""
+
+#: .\templates\companies-detail.html:268 .\templates\profile.html:168
+#: .\templates\profile.html:170
+msgid "Username"
+msgstr ""
+
+#: .\templates\companies-detail.html:283
+#: .\templates\pagination\companies-detail.html:11
+msgid "Position"
+msgstr ""
+
+#: .\templates\companies-detail.html:290
+msgid "Add_user"
+msgstr ""
+
+#: .\templates\companies.html:15
+msgid "Hi_companies"
+msgstr ""
+
+#: .\templates\companies.html:16
+msgid "Companies_description"
+msgstr ""
+
+#: .\templates\companies.html:44
+msgid "Success_title_companies"
+msgstr ""
+
+#: .\templates\companies.html:52
+msgid "Warning_title_companies"
+msgstr ""
+
+#: .\templates\companies.html:60
+msgid "Error_title_companies"
+msgstr ""
+
+#: .\templates\companies.html:74
+msgid "Companies_table"
+msgstr ""
+
+#: .\templates\companies.html:104
+msgid "Add_new_company"
+msgstr ""
+
+#: .\templates\companies.html:115 .\templates\pagination\companies.html:11
+msgid "Market"
+msgstr ""
+
+#: .\templates\companies.html:194
+msgid "Add_company"
+msgstr ""
+
+#: .\templates\disasters.html:15 .\templates\home.html:13
+#: .\templates\welcome.html:13
+msgid "Hi_disaster"
+msgstr ""
+
+#: .\templates\disasters.html:16
+msgid "Disaster_description"
+msgstr ""
+
+#: .\templates\disasters.html:56
+msgid "Success_title_disasters"
+msgstr ""
+
+#: .\templates\disasters.html:64
+msgid "Warning_title_disasters"
+msgstr ""
+
+#: .\templates\disasters.html:72
+msgid "Error_title_disasters"
+msgstr ""
+
+#: .\templates\disasters.html:98
+msgid "Filter_disasters_title"
+msgstr ""
+
+#: .\templates\disasters.html:123 .\templates\disasters.html:207
+#: .\templates\pagination\disasters.html:106
+msgid "Intensity_tip"
+msgstr ""
+
+#: .\templates\disasters.html:136 .\templates\disasters.html:221
+#: .\templates\pagination\disasters.html:121
+msgid "Readiness_tip"
+msgstr ""
+
+#: .\templates\disasters.html:149
+msgid "Term_tip"
+msgstr ""
+
+#: .\templates\disasters.html:182
+msgid "Create_your_disaster"
+msgstr ""
+
+#: .\templates\disasters.html:237 .\templates\pagination\disasters.html:44
+#: .\templates\pagination\disasters.html:138
+#: .\templates\pagination\disasters.html:235
+msgid "Term"
+msgstr ""
+
+#: .\templates\disasters.html:249 .\templates\home.html:126
+#: .\templates\pagination\disasters.html:150 .\templates\welcome.html:126
+msgid "About"
+msgstr ""
+
+#: .\templates\disasters.html:256
+msgid "Create_disaster"
+msgstr ""
+
+#: .\templates\forecast-audience.html:12
+msgid "Hi_forecast_audience"
+msgstr ""
+
+#: .\templates\forecast-audience.html:13
+msgid "Forecast_audience_description"
+msgstr ""
+
+#: .\templates\forecast-audience.html:36 .\templates\forecast-company.html:98
+#: .\templates\forecast-market.html:73
+msgid "Forecast"
+msgstr ""
+
+#: .\templates\forecast-audience.html:67
+#: .\templates\pagination\audience.html:50
+#: .\templates\pagination\audience.html:188
+msgid "Age_group"
+msgstr ""
+
+#: .\templates\forecast-audience.html:91
+msgid "Indicators"
+msgstr ""
+
+#: .\templates\forecast-audience.html:101
+#: .\templates\stresstest-company.html:108
+msgid "Indicator_toggle"
+msgstr ""
+
+#: .\templates\forecast-audience.html:101
+#: .\templates\stresstest-company.html:108
+msgid "Indicator"
+msgstr ""
+
+#: .\templates\forecast-audience.html:103
+#: .\templates\stresstest-company.html:110
+msgid "Importance_toggle"
+msgstr ""
+
+#: .\templates\forecast-audience.html:103
+#: .\templates\stresstest-company.html:110
+msgid "Importance"
+msgstr ""
+
+#: .\templates\forecast-audience.html:105
+#: .\templates\stresstest-company.html:112
+msgid "Value_toggle"
+msgstr ""
+
+#: .\templates\forecast-audience.html:105
+#: .\templates\stresstest-company.html:112
+msgid "Value"
+msgstr ""
+
+#: .\templates\forecast-audience.html:122
+#: .\templates\stresstest-company.html:129
+msgid "Not_important"
+msgstr ""
+
+#: .\templates\forecast-audience.html:125
+#: .\templates\stresstest-company.html:132
+msgid "Important"
+msgstr ""
+
+#: .\templates\forecast-audience.html:128
+#: .\templates\stresstest-company.html:135
+msgid "So_important"
+msgstr ""
+
+#: .\templates\forecast-company.html:12
+msgid "Hi_forecast_company"
+msgstr ""
+
+#: .\templates\forecast-company.html:13
+msgid "Forecast_company_description"
+msgstr ""
+
+#: .\templates\forecast-company.html:34
+msgid "Forecast_company"
+msgstr ""
+
+#: .\templates\forecast-market.html:12
+msgid "Hi_forecast_market"
+msgstr ""
+
+#: .\templates\forecast-market.html:13
+msgid "Forecast_market_description"
+msgstr ""
+
+#: .\templates\forecast-market.html:34
+msgid "Forecast_market"
+msgstr ""
+
+#: .\templates\forgot-password.html:5
+msgid "Hi_forgot_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:6
+msgid "Forgot_password_description"
+msgstr ""
+
+#: .\templates\forgot-password.html:11
+msgid "Success_title_forgot_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:18
+msgid "Warning_title_forgot_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:25
+msgid "Error_title_forgot_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:36
+msgid "Simple_forgot_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:49 .\templates\sign-in.html:50
+#: .\templates\sign-up.html:50
+msgid "Username_placeholder"
+msgstr ""
+
+#: .\templates\forgot-password.html:59 .\templates\sign-in.html:59
+#: .\templates\sign-up.html:96
+msgid "Password_placeholder"
+msgstr ""
+
+#: .\templates\forgot-password.html:64 .\templates\profile.html:222
+#: .\templates\sign-up.html:101
+msgid "password_strength"
+msgstr ""
+
+#: .\templates\forgot-password.html:66 .\templates\profile.html:225
+#: .\templates\sign-up.html:103
+msgid "strong"
+msgstr ""
+
+#: .\templates\forgot-password.html:68 .\templates\profile.html:228
+#: .\templates\sign-up.html:105
+msgid "medium"
+msgstr ""
+
+#: .\templates\forgot-password.html:70 .\templates\profile.html:231
+#: .\templates\sign-up.html:107
+msgid "weak"
+msgstr ""
+
+#: .\templates\forgot-password.html:79 .\templates\sign-up.html:116
+msgid "Password_confirm_placeholder"
+msgstr ""
+
+#: .\templates\forgot-password.html:85 .\templates\profile.html:243
+#: .\templates\sign-up.html:122
+msgid "password_confirm"
+msgstr ""
+
+#: .\templates\forgot-password.html:87 .\templates\profile.html:246
+#: .\templates\sign-up.html:124
+msgid "matching"
+msgstr ""
+
+#: .\templates\forgot-password.html:89 .\templates\profile.html:249
+#: .\templates\sign-up.html:126
+msgid "not_matching"
+msgstr ""
+
+#: .\templates\forgot-password.html:98 .\templates\sign-up.html:135
+msgid "I_agree_with_the"
+msgstr ""
+
+#: .\templates\forgot-password.html:99 .\templates\sign-up.html:136
+msgid "Privacy_policy"
+msgstr ""
+
+#: .\templates\forgot-password.html:110 .\templates\profile.html:152
+msgid "Reset_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:117
+msgid "I_remember_password"
+msgstr ""
+
+#: .\templates\forgot-password.html:120 .\templates\sign-in.html:85
+msgid "Create_new_account"
+msgstr ""
+
+#: .\templates\home.html:14 .\templates\welcome.html:14
+msgid "Project_short_description"
+msgstr ""
+
+#: .\templates\home.html:17 .\templates\welcome.html:17
+msgid "Buy_subscription"
+msgstr ""
+
+#: .\templates\home.html:19 .\templates\welcome.html:19
+msgid "Read_full_description"
+msgstr ""
+
+#: .\templates\home.html:31
+msgid "Success_home"
+msgstr ""
+
+#: .\templates\home.html:39
+msgid "Warning_title_home"
+msgstr ""
+
+#: .\templates\home.html:47
+msgid "Error_title_home"
+msgstr ""
+
+#: .\templates\home.html:58 .\templates\home.html:92
+#: .\templates\welcome.html:58 .\templates\welcome.html:92
+msgid "Services"
+msgstr ""
+
+#: .\templates\home.html:59 .\templates\home.html:93
+#: .\templates\welcome.html:59 .\templates\welcome.html:93
+msgid "Services_description"
+msgstr ""
+
+#: .\templates\home.html:67
+msgid "Services_1_home"
+msgstr ""
+
+#: .\templates\home.html:68
+msgid "Services_1_home_description"
+msgstr ""
+
+#: .\templates\home.html:75
+msgid "Services_2_home"
+msgstr ""
+
+#: .\templates\home.html:76
+msgid "Services_2_home_description"
+msgstr ""
+
+#: .\templates\home.html:83
+msgid "Services_3_home"
+msgstr ""
+
+#: .\templates\home.html:84
+msgid "Services_3_home_description"
+msgstr ""
+
+#: .\templates\home.html:127 .\templates\welcome.html:127
+msgid "About_description"
+msgstr ""
+
+#: .\templates\home.html:137 .\templates\welcome.html:137
+msgid "About_part_1"
+msgstr ""
+
+#: .\templates\home.html:139 .\templates\welcome.html:139
+msgid "About_part_1_description"
+msgstr ""
+
+#: .\templates\home.html:150 .\templates\welcome.html:150
+msgid "About_part_2"
+msgstr ""
+
+#: .\templates\home.html:152 .\templates\welcome.html:152
+msgid "About_part_2_description"
+msgstr ""
+
+#: .\templates\home.html:163 .\templates\welcome.html:163
+msgid "About_part_3"
+msgstr ""
+
+#: .\templates\home.html:165 .\templates\home.html:178
+#: .\templates\welcome.html:165 .\templates\welcome.html:178
+msgid "About_part_3_description"
+msgstr ""
+
+#: .\templates\home.html:176 .\templates\welcome.html:176
+msgid "About_part_4"
+msgstr ""
+
+#: .\templates\home.html:182
+msgid "Watch_video"
+msgstr ""
+
+#: .\templates\home.html:186 .\templates\welcome.html:186
+msgid "Story"
+msgstr ""
+
+#: .\templates\home.html:195 .\templates\welcome.html:195
+msgid "Team_members"
+msgstr ""
+
+#: .\templates\home.html:196 .\templates\welcome.html:196
+msgid "Team_members_description"
+msgstr ""
+
+#: .\templates\home.html:206 .\templates\home.html:228
+#: .\templates\home.html:250 .\templates\welcome.html:206
+#: .\templates\welcome.html:228 .\templates\welcome.html:250
+msgid "Artem_Khovrat"
+msgstr ""
+
+#: .\templates\home.html:207
+msgid "Director"
+msgstr ""
+
+#: .\templates\home.html:208
+msgid "Me_director_description"
+msgstr ""
+
+#: .\templates\home.html:229
+msgid "Engineer"
+msgstr ""
+
+#: .\templates\home.html:230
+msgid "Me_engineer_description"
+msgstr ""
+
+#: .\templates\home.html:251
+msgid "Translator"
+msgstr ""
+
+#: .\templates\home.html:252
+msgid "Me_translator_description"
+msgstr ""
+
+#: .\templates\home.html:270 .\templates\welcome.html:270
+#: .\templates\welcome.html:278 .\templates\welcome.html:287
+#: .\templates\welcome.html:296
+msgid "Choose_plan"
+msgstr ""
+
+#: .\templates\home.html:271 .\templates\welcome.html:271
+msgid "Choose_plan_description"
+msgstr ""
+
+#: .\templates\home.html:275 .\templates\welcome.html:275
+#: .\templates\wrappers\subscription.html:75
+msgid "Free"
+msgstr ""
+
+#: .\templates\home.html:276 .\templates\welcome.html:276
+msgid "Free_Description"
+msgstr ""
+
+#: .\templates\home.html:283 .\templates\home.html:296
+#: .\templates\home.html:309
+msgid "Change_plan"
+msgstr ""
+
+#: .\templates\home.html:289 .\templates\welcome.html:284
+#: .\templates\wrappers\subscription.html:76
+msgid "Maximum"
+msgstr ""
+
+#: .\templates\home.html:290 .\templates\welcome.html:285
+msgid "Maximum_description"
+msgstr ""
+
+#: .\templates\home.html:302 .\templates\welcome.html:293
+#: .\templates\wrappers\subscription.html:77
+msgid "Ultra"
+msgstr ""
+
+#: .\templates\home.html:303 .\templates\welcome.html:294
+msgid "Ultra_description"
+msgstr ""
+
+#: .\templates\home.html:320
+msgid "SendYourFeedback"
+msgstr ""
+
+#: .\templates\home.html:322
+msgid "SendYourFeedbackDesciption"
+msgstr ""
+
+#: .\templates\home.html:331
+msgid "PressYourMessage"
+msgstr ""
+
+#: .\templates\home.html:332
+msgid "Enter_review"
+msgstr ""
+
+#: .\templates\home.html:337
+msgid "Enter_email"
+msgstr ""
+
+#: .\templates\home.html:342
+msgid "Send_message"
+msgstr ""
+
+#: .\templates\modelling.html:15
+msgid "Hi_modelling"
+msgstr ""
+
+#: .\templates\modelling.html:16
+msgid "Modelling_description"
+msgstr ""
+
+#: .\templates\modelling.html:31
+msgid "Success_title_modelling"
+msgstr ""
+
+#: .\templates\modelling.html:39
+msgid "Warning_title_modelling"
+msgstr ""
+
+#: .\templates\modelling.html:47
+msgid "Error_title_modelling"
+msgstr ""
+
+#: .\templates\modelling.html:84
+msgid "Company_forecast"
+msgstr ""
+
+#: .\templates\modelling.html:86
+msgid "Company_forecast_description"
+msgstr ""
+
+#: .\templates\modelling.html:90
+msgid "Company_forecast_char_1"
+msgstr ""
+
+#: .\templates\modelling.html:91
+msgid "Company_forecast_char_2"
+msgstr ""
+
+#: .\templates\modelling.html:92
+msgid "Company_forecast_char_3"
+msgstr ""
+
+#: .\templates\modelling.html:108
+msgid "Company_stresstest"
+msgstr ""
+
+#: .\templates\modelling.html:110
+msgid "Company_stresstest_description"
+msgstr ""
+
+#: .\templates\modelling.html:114
+msgid "Company_stresstest_char_1"
+msgstr ""
+
+#: .\templates\modelling.html:115
+msgid "Company_stresstest_char_2"
+msgstr ""
+
+#: .\templates\modelling.html:116
+msgid "Company_stresstest_char_3"
+msgstr ""
+
+#: .\templates\modelling.html:132
+msgid "Market_forecast"
+msgstr ""
+
+#: .\templates\modelling.html:134
+msgid "Market_forecast_description"
+msgstr ""
+
+#: .\templates\modelling.html:138
+msgid "Market_forecast_char_1"
+msgstr ""
+
+#: .\templates\modelling.html:139
+msgid "Market_forecast_char_2"
+msgstr ""
+
+#: .\templates\modelling.html:140
+msgid "Market_forecast_char_3"
+msgstr ""
+
+#: .\templates\modelling.html:155
+msgid "Audience_modelling"
+msgstr ""
+
+#: .\templates\modelling.html:157
+msgid "Audience_modelling_description"
+msgstr ""
+
+#: .\templates\modelling.html:161
+msgid "Audience_modelling_char_1"
+msgstr ""
+
+#: .\templates\modelling.html:162
+msgid "Audience_modelling_char_2"
+msgstr ""
+
+#: .\templates\modelling.html:163
+msgid "Audience_modelling_char_3"
+msgstr ""
+
+#: .\templates\modelling.html:178 .\templates\modelling.html:265
+msgid "Enter_info"
+msgstr ""
+
+#: .\templates\modelling.html:187 .\templates\modelling.html:275
+msgid "Info"
+msgstr ""
+
+#: .\templates\modelling.html:197
+msgid "Data_placeholder"
+msgstr ""
+
+#: .\templates\modelling.html:204 .\templates\modelling.html:245
+msgid "Make_forecast"
+msgstr ""
+
+#: .\templates\modelling.html:224
+msgid "Select_method"
+msgstr ""
+
+#: .\templates\modelling.html:235
+msgid "Method"
+msgstr ""
+
+#: .\templates\modelling.html:237
+msgid "Fast"
+msgstr ""
+
+#: .\templates\modelling.html:238
+msgid "Slow"
+msgstr ""
+
+#: .\templates\modelling.html:282
+msgid "Testing"
+msgstr ""
+
+#: .\templates\news.html:20
+msgid "Hi_news"
+msgstr ""
+
+#: .\templates\news.html:62
+msgid "Go_to_aid"
+msgstr ""
+
+#: .\templates\news.html:65
+msgid "Sort"
+msgstr ""
+
+#: .\templates\news.html:81
+msgid "Success_title_news"
+msgstr ""
+
+#: .\templates\news.html:89
+msgid "Warning_title_news"
+msgstr ""
+
+#: .\templates\news.html:97
+msgid "Error_title_news"
+msgstr ""
+
+#: .\templates\news.html:124 .\templates\news.html:170
+#: .\templates\news.html:226
+msgid "Filter_news"
+msgstr ""
+
+#: .\templates\news.html:150
+msgid "Language_tip"
+msgstr ""
+
+#: .\templates\news.html:191
+msgid "Sort_news"
+msgstr ""
+
+#: .\templates\news.html:198
+msgid "Sort_tip"
+msgstr ""
+
+#: .\templates\news.html:203
+msgid "Sort_type"
+msgstr ""
+
+#: .\templates\news.html:209
+msgid "Sort_date"
+msgstr ""
+
+#: .\templates\news.html:214
+msgid "Sort_relevance"
+msgstr ""
+
+#: .\templates\news.html:219
+msgid "Sort_popular"
+msgstr ""
+
+#: .\templates\pagination\advices.html:22
+#: .\templates\pagination\articles.html:52
+#: .\templates\pagination\articles.html:114
+msgid "Rate"
+msgstr ""
+
+#: .\templates\pagination\advices.html:26
+#: .\templates\pagination\articles.html:63
+msgid "My_rate"
+msgstr ""
+
+#: .\templates\pagination\advices.html:29
+#: .\templates\pagination\articles.html:68
+msgid "Avg_rate"
+msgstr ""
+
+#: .\templates\pagination\advices.html:32
+#: .\templates\pagination\articles.html:74
+msgid "Amount_rate"
+msgstr ""
+
+#: .\templates\pagination\advices.html:46
+msgid "Rate_your_advice"
+msgstr ""
+
+#: .\templates\pagination\advices.html:71
+msgid "Rate_advice"
+msgstr ""
+
+#: .\templates\pagination\advices.html:85
+#: .\templates\pagination\articles.html:222
+#: .\templates\pagination\audience.html:195
+#: .\templates\pagination\disasters.html:250
+#: .\templates\pagination\news.html:37 .\templates\pagination\reviews.html:45
+msgid "Ooops"
+msgstr ""
+
+#: .\templates\pagination\advices.html:96
+#: .\templates\pagination\articles.html:234
+#: .\templates\pagination\audience.html:198
+#: .\templates\pagination\disasters.html:253
+#: .\templates\pagination\news.html:48 .\templates\pagination\reviews.html:40
+msgid "We_have_a_problem"
+msgstr ""
+
+#: .\templates\pagination\advices.html:98 .\templates\pagination\news.html:50
+#: .\templates\pagination\reviews.html:42
+msgid "We_have_a_problem_description"
+msgstr ""
+
+#: .\templates\pagination\advices.html:102 .\templates\pagination\news.html:54
+msgid "My_god"
+msgstr ""
+
+#: .\templates\pagination\advices.html:114
+#: .\templates\pagination\advices.html:121
+#: .\templates\pagination\articles.html:263
+#: .\templates\pagination\articles.html:270
+#: .\templates\pagination\audience.html:216
+#: .\templates\pagination\audience.html:223
+#: .\templates\pagination\companies-detail.html:85
+#: .\templates\pagination\companies-detail.html:92
+#: .\templates\pagination\companies.html:111
+#: .\templates\pagination\companies.html:118
+#: .\templates\pagination\disasters.html:271
+#: .\templates\pagination\disasters.html:278
+#: .\templates\pagination\news.html:66 .\templates\pagination\news.html:73
+#: .\templates\pagination\reviews.html:60
+#: .\templates\pagination\reviews.html:67
+msgid "Prvious_page"
+msgstr ""
+
+#: .\templates\pagination\advices.html:152
+#: .\templates\pagination\advices.html:159
+#: .\templates\pagination\articles.html:301
+#: .\templates\pagination\articles.html:308
+#: .\templates\pagination\audience.html:254
+#: .\templates\pagination\audience.html:261
+#: .\templates\pagination\companies-detail.html:126
+#: .\templates\pagination\companies-detail.html:133
+#: .\templates\pagination\companies.html:148
+#: .\templates\pagination\companies.html:155
+#: .\templates\pagination\disasters.html:309
+#: .\templates\pagination\disasters.html:316
+#: .\templates\pagination\news.html:104 .\templates\pagination\news.html:111
+#: .\templates\pagination\reviews.html:98
+#: .\templates\pagination\reviews.html:105
+msgid "Next_page"
+msgstr ""
+
+#: .\templates\pagination\articles.html:12
+#: .\templates\pagination\audience.html:28
+#: .\templates\pagination\disasters.html:28
+msgid "Update"
+msgstr ""
+
+#: .\templates\pagination\articles.html:21
+#: .\templates\pagination\audience.html:24
+#: .\templates\pagination\companies-detail.html:56
+#: .\templates\pagination\companies.html:92
+#: .\templates\pagination\disasters.html:24
+msgid "Delete"
+msgstr ""
+
+#: .\templates\pagination\articles.html:44
+#: .\templates\pagination\articles.html:242
+msgid "created"
+msgstr ""
+
+#: .\templates\pagination\articles.html:56
+msgid "Open"
+msgstr ""
+
+#: .\templates\pagination\articles.html:89
+msgid "Rate_article"
+msgstr ""
+
+#: .\templates\pagination\articles.html:144
+msgid "Update_your_article"
+msgstr ""
+
+#: .\templates\pagination\articles.html:205
+msgid "Update_article"
+msgstr ""
+
+#: .\templates\pagination\articles.html:232
+msgid "Administration"
+msgstr ""
+
+#: .\templates\pagination\articles.html:242
+msgid "it_s_a_question"
+msgstr ""
+
+#: .\templates\pagination\articles.html:249
+#: .\templates\subscription-change.html:25
+msgid "Go_to_home"
+msgstr ""
+
+#: .\templates\pagination\audience.html:79
+msgid "Update_your_audience"
+msgstr ""
+
+#: .\templates\pagination\companies-detail.html:9
+msgid "User_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies-detail.html:9
+msgid "User"
+msgstr ""
+
+#: .\templates\pagination\companies-detail.html:11
+msgid "Position_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies-detail.html:13
+msgid "Date_joined_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies-detail.html:13
+msgid "Date_joined"
+msgstr ""
+
+#: .\templates\pagination\companies.html:9
+msgid "Company_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:9
+#: .\templates\pagination\disasters.html:190
+msgid "Company"
+msgstr ""
+
+#: .\templates\pagination\companies.html:11
+msgid "Market_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:13
+msgid "Location_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:15
+msgid "Size_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:17
+msgid "Revenue_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:19
+msgid "Website_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:19
+msgid "Website"
+msgstr ""
+
+#: .\templates\pagination\companies.html:21
+msgid "Completeness_toggle"
+msgstr ""
+
+#: .\templates\pagination\companies.html:21
+msgid "Completeness"
+msgstr ""
+
+#: .\templates\pagination\companies.html:90
+msgid "Detail"
+msgstr ""
+
+#: .\templates\pagination\disasters.html:48
+#: .\templates\pagination\disasters.html:239
+msgid "Intensity"
+msgstr ""
+
+#: .\templates\pagination\disasters.html:52
+#: .\templates\pagination\disasters.html:243
+msgid "Readiness"
+msgstr ""
+
+#: .\templates\pagination\disasters.html:78
+msgid "Update_your_disaster"
+msgstr ""
+
+#: .\templates\pagination\disasters.html:158
+msgid "Update_disaster"
+msgstr ""
+
+#: .\templates\pagination\disasters.html:179
+msgid "Check_your_company"
+msgstr ""
+
+#: .\templates\pagination\news.html:28
+msgid "Read"
+msgstr ""
+
+#: .\templates\pagination\reviews.html:21
+msgid "Created"
+msgstr ""
+
+#: .\templates\profile.html:12
+msgid "Hi_profile"
+msgstr ""
+
+#: .\templates\profile.html:13
+msgid "Profile_description"
+msgstr ""
+
+#: .\templates\profile.html:39
+msgid "Success_title_profile"
+msgstr ""
+
+#: .\templates\profile.html:47
+msgid "Warning_title_profile"
+msgstr ""
+
+#: .\templates\profile.html:55
+msgid "Error_title_profile"
+msgstr ""
+
+#: .\templates\profile.html:87 .\templates\reviews.html:34
+msgid "Reviews"
+msgstr ""
+
+#: .\templates\profile.html:104
+msgid "Ratings"
+msgstr ""
+
+#: .\templates\profile.html:122
+msgid "joined"
+msgstr ""
+
+#: .\templates\profile.html:144
+msgid "Edit_profile"
+msgstr ""
+
+#: .\templates\profile.html:155
+msgid "Cancel_reset_password"
+msgstr ""
+
+#: .\templates\profile.html:162
+msgid "User_information"
+msgstr ""
+
+#: .\templates\profile.html:177
+msgid "Email_address"
+msgstr ""
+
+#: .\templates\profile.html:179
+msgid "Email"
+msgstr ""
+
+#: .\templates\profile.html:188 .\templates\profile.html:190
+msgid "First_name"
+msgstr ""
+
+#: .\templates\profile.html:197 .\templates\profile.html:199
+msgid "Last_name"
+msgstr ""
+
+#: .\templates\profile.html:211
+msgid "Reset_Password_Form"
+msgstr ""
+
+#: .\templates\profile.html:217 .\templates\profile.html:219
+msgid "New_Password"
+msgstr ""
+
+#: .\templates\profile.html:239 .\templates\profile.html:241
+msgid "Confirm_New_Password"
+msgstr ""
+
+#: .\templates\profile.html:259
+msgid "Send_New_Password"
+msgstr ""
+
+#: .\templates\reviews.html:15
+msgid "Hi_reviews"
+msgstr ""
+
+#: .\templates\reviews.html:16
+msgid "Reviews_description"
+msgstr ""
+
+#: .\templates\reviews.html:39
+msgid "New"
+msgstr ""
+
+#: .\templates\reviews.html:41
+msgid "Cancel_Filter_my"
+msgstr ""
+
+#: .\templates\reviews.html:43
+msgid "Filter_my"
+msgstr ""
+
+#: .\templates\reviews.html:55
+msgid "Success_title_reviews"
+msgstr ""
+
+#: .\templates\reviews.html:63
+msgid "Warning_title_reviews"
+msgstr ""
+
+#: .\templates\reviews.html:71
+msgid "Error_title_reviews"
+msgstr ""
+
+#: .\templates\sign-in.html:5
+msgid "Hi_sign_in"
+msgstr ""
+
+#: .\templates\sign-in.html:6
+msgid "Sign_in_description"
+msgstr ""
+
+#: .\templates\sign-in.html:11
+msgid "Success_title_sign_in"
+msgstr ""
+
+#: .\templates\sign-in.html:18
+msgid "Warning_title_sign_in"
+msgstr ""
+
+#: .\templates\sign-in.html:25
+msgid "Error_title_sign_in"
+msgstr ""
+
+#: .\templates\sign-in.html:36
+msgid "Simple_sign_in_header"
+msgstr ""
+
+#: .\templates\sign-in.html:41
+msgid "Simple_sign_in"
+msgstr ""
+
+#: .\templates\sign-in.html:66
+msgid "Remember_me"
+msgstr ""
+
+#: .\templates\sign-in.html:74 .\templates\wrappers\main.html:78
+msgid "Sign_in"
+msgstr ""
+
+#: .\templates\sign-in.html:82
+msgid "Forgot_password"
+msgstr ""
+
+#: .\templates\sign-up.html:5
+msgid "Hi_sign_up"
+msgstr ""
+
+#: .\templates\sign-up.html:6
+msgid "Sign_up_description"
+msgstr ""
+
+#: .\templates\sign-up.html:11
+msgid "Success_title_sign_up"
+msgstr ""
+
+#: .\templates\sign-up.html:18
+msgid "Warning_title_sign_up"
+msgstr ""
+
+#: .\templates\sign-up.html:25
+msgid "Error_title_sign_up"
+msgstr ""
+
+#: .\templates\sign-up.html:36
+msgid "Simple_sign_up_header"
+msgstr ""
+
+#: .\templates\sign-up.html:41
+msgid "Simple_sign_up"
+msgstr ""
+
+#: .\templates\sign-up.html:60
+msgid "First_name_placeholder"
+msgstr ""
+
+#: .\templates\sign-up.html:68
+msgid "Last_name_placeholder"
+msgstr ""
+
+#: .\templates\sign-up.html:77
+msgid "Email_placeholder"
+msgstr ""
+
+#: .\templates\sign-up.html:86
+msgid "Image_placeholder"
+msgstr ""
+
+#: .\templates\sign-up.html:147
+msgid "Create_account"
+msgstr ""
+
+#: .\templates\sign-up.html:154
+msgid "I_have_an_account"
+msgstr ""
+
+#: .\templates\stresstest-company.html:12
+msgid "Hi_stresstest_company"
+msgstr ""
+
+#: .\templates\stresstest-company.html:13
+msgid "Stresstest_company_description"
+msgstr ""
+
+#: .\templates\stresstest-company.html:34
+msgid "Stresstest_company"
+msgstr ""
+
+#: .\templates\stresstest-company.html:98
+msgid "Stress_test"
+msgstr ""
+
+#: .\templates\subscription-buy.html:7
+msgid "Go_to_sign_up"
+msgstr ""
+
+#: .\templates\subscription-buy.html:20 .\templates\subscription-change.html:39
+#: .\templates\subscription-info.html:14
+msgid "Default_choose"
+msgstr ""
+
+#: .\templates\subscription-buy.html:30 .\templates\subscription-buy.html:40
+#: .\templates\subscription-change.html:50
+#: .\templates\subscription-change.html:61
+#: .\templates\subscription-info.html:18 .\templates\subscription-info.html:22
+msgid "Money_choose"
+msgstr ""
+
+#: .\templates\subscription-buy.html:47 .\templates\subscription-info.html:29
+#: .\templates\welcome.html:360 .\templates\wrappers\authorization.html:54
+msgid "Admin_panel"
+msgstr ""
+
+#: .\templates\subscription-change.html:9
+#: .\templates\subscription-change.html:69 .\templates\wrappers\navbar.html:12
+#: .\templates\wrappers\navbar.html:18 .\templates\wrappers\navbar.html:73
+#: .\templates\wrappers\navbar.html:79
+msgid "Home"
+msgstr ""
+
+#: .\templates\subscription-change.html:23
+msgid "Go_to_profile"
+msgstr ""
+
+#: .\templates\subscription-info.html:7
+msgid "Go_to_welcome"
+msgstr ""
+
+#: .\templates\welcome.html:31
+msgid "Success_welcome"
+msgstr ""
+
+#: .\templates\welcome.html:39
+msgid "Warning_title_welcome"
+msgstr ""
+
+#: .\templates\welcome.html:47
+msgid "Error_title_welcome"
+msgstr ""
+
+#: .\templates\welcome.html:67
+msgid "Services_1"
+msgstr ""
+
+#: .\templates\welcome.html:68
+msgid "Services_1_description"
+msgstr ""
+
+#: .\templates\welcome.html:75
+msgid "Services_2"
+msgstr ""
+
+#: .\templates\welcome.html:76
+msgid "Services_2_description"
+msgstr ""
+
+#: .\templates\welcome.html:83
+msgid "Services_3"
+msgstr ""
+
+#: .\templates\welcome.html:84
+msgid "Services_3_description"
+msgstr ""
+
+#: .\templates\welcome.html:207
+msgid "Founder"
+msgstr ""
+
+#: .\templates\welcome.html:208
+msgid "Me_founder_description"
+msgstr ""
+
+#: .\templates\welcome.html:229
+msgid "Developer"
+msgstr ""
+
+#: .\templates\welcome.html:230
+msgid "Me_developer_description"
+msgstr ""
+
+#: .\templates\welcome.html:251
+msgid "Designer"
+msgstr ""
+
+#: .\templates\welcome.html:252
+msgid "Me_designer_description"
+msgstr ""
+
+#: .\templates\welcome.html:305
+msgid "Footer_header"
+msgstr ""
+
+#: .\templates\welcome.html:306
+msgid "Footer_description"
+msgstr ""
+
+#: .\templates\welcome.html:312
+msgid "Sign_up"
+msgstr ""
+
+#: .\templates\wrappers\main.html:45
+msgid "Like_us_on_Facebook"
+msgstr ""
+
+#: .\templates\wrappers\main.html:52
+msgid "Follow_us_on_Instagram"
+msgstr ""
+
+#: .\templates\wrappers\main.html:59
+msgid "Follow_us_on_Twitter"
+msgstr ""
+
+#: .\templates\wrappers\main.html:66
+msgid "Star_us_on_Github"
+msgstr ""
+
+#: .\templates\wrappers\main.html:86
+msgid "Sign_out"
+msgstr ""
+
+#: .\templates\wrappers\main.html:94
+msgid "Font_size_up"
+msgstr ""
+
+#: .\templates\wrappers\main.html:104
+msgid "Font_size_down"
+msgstr ""
+
+#: .\templates\wrappers\main.html:114
+msgid "Change_language"
+msgstr ""
+
+#: .\templates\wrappers\main.html:160
+msgid "Play_text"
+msgstr ""
+
+#: .\templates\wrappers\main.html:170
+msgid "Pause_text"
+msgstr ""
+
+#: .\templates\wrappers\main.html:180
+msgid "Stop_text"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:13
+msgid "Hi_subscription"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:14
+msgid "Choose_your_plan"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:35
+msgid "Success_subscription"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:43
+msgid "Warning_title_subscription"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:51
+msgid "Error_title_subscription"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:65
+msgid "Subscription_plan_header"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:66
+msgid "Subscription_plan_description"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:82
+msgid "First_feature_name"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:83
+msgid "First_feature_free"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:84
+msgid "First_feature_maximum"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:85
+msgid "First_feature_ultra"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:88
+msgid "Second_feature_name"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:89
+msgid "Second_feature_free"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:90
+msgid "Second_feature_maximum"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:91
+msgid "Second_feature_ultra"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:94
+msgid "Third_feature_name"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:95
+msgid "Third_feature_free"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:96
+msgid "Third_feature_maximum"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:97
+msgid "Third_feature_ultra"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:100
+msgid "Fourth_feature_name"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:106
+msgid "Fifth_feature_name"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:112
+msgid "Sixth_feature_name"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:119
+msgid "Free_price"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:120
+msgid "Maximum_price"
+msgstr ""
+
+#: .\templates\wrappers\subscription.html:121
+msgid "Ultra_price"
+msgstr ""

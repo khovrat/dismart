@@ -1,0 +1,71 @@
+{% load static %}
+{% load i18n %}
+<style>
+    .loader {
+        border: 16px solid #f3f3f3; /* Light grey */
+        border-top: 16px solid #3498db; /* Blue */
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        animation: spin 2s linear infinite;
+    }
+
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<input type="hidden" value="{{ stop|yesno:"true,false" }}" id="ajax-stop">
+{% if data %}
+    <canvas id="chart" style="display: block; box-sizing: border-box; height: 384px; width: 768px;"
+            width="960"
+            height="480"></canvas>
+    {% for dataset in data.datasets %}
+        <div style="display: none">
+            <span id="label-dataset-{{ forloop.counter0 }}">{{ dataset.label }}</span>
+            <input type="text" id="data-dataset-{{ forloop.counter0 }}" value="{{ dataset.data | safe }}">
+            <span id="color-dataset-{{ forloop.counter0 }}">{{ dataset.borderColor }}</span>
+        </div>
+    {% endfor %}
+    <span style="display: none" id="length-dataset">{{ data.datasets|length }}</span>
+{% else %}
+    <div class="loader"></div>
+    <input type="hidden" value="{{ key }}" id="key-input">
+    <a href="{% url 'interface:company_forecast_done' %}" style="display:none" id="key-url"></a>
+{% endif %}
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script>
+    var ctx = document.getElementById('chart').getContext('2d');
+    var lenght = document.getElementById('length-dataset').innerText;
+    var datasets_core = [];
+    for (var i = 0; i < lenght; i++) {
+        data = JSON.parse(document.getElementById('data-dataset-' + i).value);
+        datasets_core.push(
+            {
+                label: document.getElementById('label-dataset-' + i).innerText,
+                data: data,
+                borderColor: document.getElementById('color-dataset-' + i).innerText
+            }
+        );
+    }
+
+    let chart = new Chart(ctx, {
+        type: "line",
+        data: {
+            labels: {{ data.labels | safe }},
+            datasets: datasets_core
+        },
+        options: {
+            title: {
+                text: 'Forecast',
+                display: true
+            }
+        }
+    });
+</script>
