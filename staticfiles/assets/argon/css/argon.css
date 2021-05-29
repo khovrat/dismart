@@ -8782,7 +8782,7 @@ button.bg-primary:focus
 
 .bg-secondary
 {
-    background-color: #f7fafc !important;
+    background: #edf0f2 !important;
 }
 
 a.bg-secondary:hover,
@@ -20449,10 +20449,7 @@ textarea[resize='horizontal']
 {
     font-size: .5rem;
 }
-.icon-xs + .icon-text
-{
-    width: calc(100% - $icon-size-xs - 1);
-}
+
 
 .icon-shape
 {
@@ -24154,7 +24151,7 @@ button.bg-lighter:focus
 
 .bg-gradient-primary
 {
-    background: linear-gradient(87deg, #5e72e4 0, #825ee4 100%) !important;
+    background: #172b4d !important;
 }
 
 .bg-gradient-secondary
