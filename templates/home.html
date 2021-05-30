@@ -273,7 +273,7 @@
                 <div class="card text-center">
                     <div class="card-body p-5">
                         <h4 class="scale">{% trans 'Free' %}</h4>
-                        <p class="scale">{% trans 'Free_Description' %}</p>
+                        <p class="scale" style="height: 55px">{% trans 'Free_Description' %}</p>
 
                         <form action="{% url 'interface:change_subscription' %}">
                             <button class="btn btn-default"
@@ -287,7 +287,7 @@
                 <div class="card text-center">
                     <div class="card-body p-5">
                         <h4 class="scale">{% trans 'Maximum' %}</h4>
-                        <p class="scale">{% trans 'Maximum_description' %}</p>
+                        <p class="scale" style="height: 55px">{% trans 'Maximum_description' %}</p>
                         <form action="{% url 'interface:change_subscription' %}">
                             <button class="btn btn-default"
                                     {% if request.session.profile.subscription == 'MAXIMUM' %}
@@ -300,7 +300,7 @@
                 <div class="card text-center">
                     <div class="card-body p-5">
                         <h4 class="scale">{% trans 'Ultra' %}</h4>
-                        <p class="scale">{% trans 'Ultra_description' %}</p>
+                        <p class="scale" style="height: 55px">{% trans 'Ultra_description' %}</p>
                         <form action="{% url 'interface:change_subscription' %}">
                             <button class="btn btn-default"
                                     {% if request.session.profile.subscription == 'ULTRA' %}
