@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-29 12:28+0300\n"
+"POT-Creation-Date: 2021-05-30 12:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -22,417 +22,417 @@ msgstr ""
 
 #: .\client_side\apps\interface_interaction\views.py:49
 msgid "Sign_out_error"
-msgstr ""
+msgstr "Памылка выхаду"
 
 #: .\client_side\apps\interface_interaction\views.py:70
 msgid "Sign_in_warning"
-msgstr ""
+msgstr "Нейкія праблемы з аўтарызацыяй"
 
 #: .\client_side\apps\interface_interaction\views.py:72
 msgid "Sign_in_error"
-msgstr ""
+msgstr "Памылка аўтарызацыі"
 
 #: .\client_side\apps\interface_interaction\views.py:101
 msgid "Sign_up_successful"
-msgstr ""
+msgstr "Рэгістрацыя прайшла паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:103
 msgid "Sign_up_warning"
-msgstr ""
+msgstr "Нейкія праблемы з рэгістрацыяй"
 
 #: .\client_side\apps\interface_interaction\views.py:105
 msgid "Sign_up_error"
-msgstr ""
+msgstr "Памылка рэгістрацыі"
 
 #: .\client_side\apps\interface_interaction\views.py:120
 msgid "Forgot_password_successful"
-msgstr ""
+msgstr "Пароль быў паспяхова зменены"
 
 #: .\client_side\apps\interface_interaction\views.py:122
 #: .\client_side\apps\interface_interaction\views.py:218
 msgid "Make_payment_warning"
-msgstr ""
+msgstr "Нейкая памылка з ажыццяўленнем плацяжу"
 
 #: .\client_side\apps\interface_interaction\views.py:124
 #: .\client_side\apps\interface_interaction\views.py:220
 msgid "Make_payment_error"
-msgstr ""
+msgstr "Памылка ажыццяўлення плацяжу"
 
 #: .\client_side\apps\interface_interaction\views.py:216
 msgid "Make_payment_successful"
-msgstr ""
+msgstr "Плацёж ажыццёўлены паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:238
 msgid "Lower_subscription_successful"
-msgstr ""
+msgstr "Тарыф паспяхова паніжаны"
 
 #: .\client_side\apps\interface_interaction\views.py:240
 msgid "Lower_subscription_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры зніжэнні тарыфу"
 
 #: .\client_side\apps\interface_interaction\views.py:242
 msgid "Lower_subscription_error"
-msgstr ""
+msgstr "Памылка пры зніжэнні тарыфу"
 
 #: .\client_side\apps\interface_interaction\views.py:258
 msgid "Review_successful"
-msgstr ""
+msgstr "Водгук паспяхова дададзены"
 
 #: .\client_side\apps\interface_interaction\views.py:260
 #: .\client_side\apps\interface_interaction\views.py:262
 msgid "Review_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры стварэнні водгуку"
 
 #: .\client_side\apps\interface_interaction\views.py:282
 msgid "Workplace_info_warning"
-msgstr ""
+msgstr "Нейкая праблема з рабочымі"
 
 #: .\client_side\apps\interface_interaction\views.py:284
 msgid "Count_info_warning"
-msgstr ""
+msgstr "Нейкая праблема пры падліку паказчыкаў"
 
 #: .\client_side\apps\interface_interaction\views.py:302
 msgid "User_info_successful_change"
-msgstr ""
+msgstr "Дадзеныя карыстальніка паспяхова зменены"
 
 #: .\client_side\apps\interface_interaction\views.py:304
 msgid "User_info_warning_change"
-msgstr ""
+msgstr "Нейкія праблемы пры змене дадзеных карыстальніка"
 
 #: .\client_side\apps\interface_interaction\views.py:306
 msgid "User_info_error_change"
-msgstr ""
+msgstr "Памылка пры змене дадзеных карыстальніка"
 
 #: .\client_side\apps\interface_interaction\views.py:320
 msgid "Password_successful_change"
-msgstr ""
+msgstr "Пароль паспяхова зменены"
 
 #: .\client_side\apps\interface_interaction\views.py:322
 msgid "Password_warning_change"
-msgstr ""
+msgstr "Нейкія праблемы пры змене пароля"
 
 #: .\client_side\apps\interface_interaction\views.py:324
 msgid "Password_error_change"
-msgstr ""
+msgstr "Памылка пры змене пароля"
 
 #: .\client_side\apps\interface_interaction\views.py:353
 msgid "Image_successful_change"
-msgstr ""
+msgstr "Малюнак паспяхова зменена"
 
 #: .\client_side\apps\interface_interaction\views.py:355
 msgid "Image_warning_change_server"
-msgstr ""
+msgstr "Нейкія праблемы пры змене малюнка"
 
 #: .\client_side\apps\interface_interaction\views.py:357
 msgid "Image_warning_change_file"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы малюнка"
 
 #: .\client_side\apps\interface_interaction\views.py:359
 msgid "Image_error_change"
-msgstr ""
+msgstr "Памылка змены малюнка"
 
 #: .\client_side\apps\interface_interaction\views.py:386
 #: .\client_side\apps\interface_interaction\views.py:439
 msgid "Companies_info_warning"
-msgstr ""
+msgstr "Нейкія праблемы з дадзенымі кампаній"
 
 #: .\client_side\apps\interface_interaction\views.py:397
 msgid "Action_warning"
-msgstr ""
+msgstr "Нейкія праблемы з дзеяннямі кампаній"
 
 #: .\client_side\apps\interface_interaction\views.py:399
 msgid "Action_error"
-msgstr ""
+msgstr "Памылка дзеянняў кампаній"
 
 #: .\client_side\apps\interface_interaction\views.py:411
 msgid "Delete_company_successful"
-msgstr ""
+msgstr "Выдаленне кампаніі прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:413
 msgid "Delete_company_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры выдаленні кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:458
 msgid "Company_info_successful_change"
-msgstr ""
+msgstr "Дадзеныя кампаніі зменена паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:460
 msgid "Company_info_warning_change"
-msgstr ""
+msgstr "Нейкія праблемы пры змене дадзеных кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:462
 msgid "Company_info_error_change"
-msgstr ""
+msgstr "Памылка пры змене дадзеных кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:488
 msgid "Image_company_successful_change"
-msgstr ""
+msgstr "Выява кампаніі зменена паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:490
 msgid "Image_company_warning_change_server"
-msgstr ""
+msgstr "Нейкія праблемы пры змене малюнка кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:492
 msgid "Image_company_warning_change_file"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы новага малюнка кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:494
 msgid "Company_error_change"
-msgstr ""
+msgstr "Памылка змены кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:509
 msgid "Delete_users_company_successful"
-msgstr ""
+msgstr "Выдаленне карыстальніка прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:511
 msgid "Delete_users_company_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры выдаленні карыстальніка"
 
 #: .\client_side\apps\interface_interaction\views.py:513
 msgid "Delete_users_company_error"
-msgstr ""
+msgstr "Памылка пры выдаленні карыстальніка"
 
 #: .\client_side\apps\interface_interaction\views.py:528
 msgid "Add_users_company_successful"
-msgstr ""
+msgstr "Даданне карыстальніка прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:530
 msgid "Add_users_company_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры даданні карыстальніка"
 
 #: .\client_side\apps\interface_interaction\views.py:532
 msgid "Add_users_company_error"
-msgstr ""
+msgstr "Памылка пры даданні карыстальніка"
 
 #: .\client_side\apps\interface_interaction\views.py:566
 msgid "Add_company_successful"
-msgstr ""
+msgstr "Даданне кампаніі прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:568
 msgid "Add_company_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры даданні кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:570
 msgid "Add_company_warning_files"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы малюнка кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:572
 msgid "Add_company_error"
-msgstr ""
+msgstr "Памылка пры даданні кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:591
 msgid "Reviews_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы водгукаў"
 
 #: .\client_side\apps\interface_interaction\views.py:614
 msgid "Reviews_personal_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы ўласных водгукаў"
 
 #: .\client_side\apps\interface_interaction\views.py:645
 msgid "Advices_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы саветаў"
 
 #: .\client_side\apps\interface_interaction\views.py:678
 msgid "Advices_filter_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры фільтрацыі саветаў"
 
 #: .\client_side\apps\interface_interaction\views.py:693
 msgid "Advices_rate_successful"
-msgstr ""
+msgstr "Прадастаўленне рэйтынгавага бала прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:695
 msgid "Advices_rate_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры прадастаўленні рэйтынгавага бала"
 
 #: .\client_side\apps\interface_interaction\views.py:697
 msgid "Advices_rate_error"
-msgstr ""
+msgstr "Памылка пры прадастаўленні рэйтынгавага бала"
 
 #: .\client_side\apps\interface_interaction\views.py:723
 msgid "Articles_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы артыкулаў"
 
 #: .\client_side\apps\interface_interaction\views.py:752
 msgid "Create_article_successful"
-msgstr ""
+msgstr "Артыкул паспяхова дададзеная"
 
 #: .\client_side\apps\interface_interaction\views.py:754
 msgid "Create_article_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры стварэнні артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:756
 msgid "Create_article_warning_files"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы малюнка артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:758
 msgid "Create_article_error"
-msgstr ""
+msgstr "Памылка стварэння артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:795
 msgid "Articles_filter_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры фільтрацыі артыкулаў"
 
 #: .\client_side\apps\interface_interaction\views.py:810
 msgid "Articles_rate_successful"
-msgstr ""
+msgstr "Прадастаўленне бала артыкула прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:812
 msgid "Articles_rate_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры прадастаўленні бала артыкуле"
 
 #: .\client_side\apps\interface_interaction\views.py:814
 msgid "Articles_rate_error"
-msgstr ""
+msgstr "Памылка пры прадастаўленні бала артыкуле"
 
 #: .\client_side\apps\interface_interaction\views.py:827
 msgid "Delete_articles_successful"
-msgstr ""
+msgstr "Выдаленне артыкула прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:829
 msgid "Delete_articles_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры выдаленні артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:831
 #: .\client_side\apps\interface_interaction\views.py:1047
 msgid "Delete_articles_error"
-msgstr ""
+msgstr "Памылка пры выдаленні артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:860
 msgid "Update_article_successful"
-msgstr ""
+msgstr "Абнаўленне артыкула прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:862
 msgid "Update_article_warning"
-msgstr ""
+msgstr "Нейкія праблемы падчас абнаўлення артыкуле"
 
 #: .\client_side\apps\interface_interaction\views.py:864
 msgid "Update_article_warning_files"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы новага малюнка артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:866
 msgid "Update_article_error"
-msgstr ""
+msgstr "Памылка абнаўлення артыкула"
 
 #: .\client_side\apps\interface_interaction\views.py:880
 msgid "Get_search_warning"
-msgstr ""
+msgstr "Нейкія праблемы пошуку"
 
 #: .\client_side\apps\interface_interaction\views.py:894
 #: .\client_side\apps\interface_interaction\views.py:943
 msgid "View_news_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы новостей"
 
 #: .\client_side\apps\interface_interaction\views.py:905
 msgid "View_news_error"
-msgstr ""
+msgstr "Памылка загрузкі новостей"
 
 #: .\client_side\apps\interface_interaction\views.py:930
 msgid "Filter_search_warning"
-msgstr ""
+msgstr "Нейкія праблемы фільтрацыі новостей"
 
 #: .\client_side\apps\interface_interaction\views.py:986
 msgid "Disasters_warning"
-msgstr ""
+msgstr "Нейкія праблемы загрузкі катастроф"
 
 #: .\client_side\apps\interface_interaction\views.py:1004
 msgid "Create_disasters_successful"
-msgstr ""
+msgstr "Катастрофа дададзеная паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:1006
 #: .\client_side\apps\interface_interaction\views.py:1008
 msgid "Create_disasters_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры даданні катастрофы"
 
 #: .\client_side\apps\interface_interaction\views.py:1026
 msgid "Update_disasters_successful"
-msgstr ""
+msgstr "Абнаўленне катастрофы прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:1028
 #: .\client_side\apps\interface_interaction\views.py:1030
 msgid "Update_disasters_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры абнаўленні катастроф"
 
 #: .\client_side\apps\interface_interaction\views.py:1043
 msgid "Delete_disasters_successful"
-msgstr ""
+msgstr "Выдаленне катастрофы прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:1045
 msgid "Delete_disasters_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры выдаленні катастрофы"
 
 #: .\client_side\apps\interface_interaction\views.py:1088
 msgid "Disasters_filter_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры фільтрацыі катастроф"
 
 #: .\client_side\apps\interface_interaction\views.py:1100
 msgid "Modelling_error"
-msgstr ""
+msgstr "Памылка мадэляванне"
 
 #: .\client_side\apps\interface_interaction\views.py:1126
 msgid "Audience_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры загрузцы аўдыторый"
 
 #: .\client_side\apps\interface_interaction\views.py:1144
 msgid "Create_audience_successful"
-msgstr ""
+msgstr "Стварэнне аўдыторыі прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:1146
 #: .\client_side\apps\interface_interaction\views.py:1148
 msgid "Create_audience_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры стварэнні аўдыторыі"
 
 #: .\client_side\apps\interface_interaction\views.py:1166
 msgid "Update_audience_successful"
-msgstr ""
+msgstr "Абнаўленне аўдыторыі прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:1168
 #: .\client_side\apps\interface_interaction\views.py:1170
 msgid "Update_audience_warning"
-msgstr ""
+msgstr "Нейкія праблемы абнаўлення аўдыторыі"
 
 #: .\client_side\apps\interface_interaction\views.py:1183
 msgid "Delete_audience_successful"
-msgstr ""
+msgstr "Выдаленне аўдыторыі прайшло паспяхова"
 
 #: .\client_side\apps\interface_interaction\views.py:1185
 msgid "Delete_audience_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры выдаленні аўдыторыі"
 
 #: .\client_side\apps\interface_interaction\views.py:1187
 msgid "Delete_audience_error"
-msgstr ""
+msgstr "Памылка выдалення аўдыторыі"
 
 #: .\client_side\apps\interface_interaction\views.py:1227
 msgid "Audience_filter_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры фільтрацыі аўдыторыі"
 
 #: .\client_side\apps\interface_interaction\views.py:1242
 msgid "Audience_forecast_error"
-msgstr ""
+msgstr "Памылка прагназавання паводзінаў аўдыторый"
 
 #: .\client_side\apps\interface_interaction\views.py:1255
 msgid "Company_forecast_warning"
-msgstr ""
+msgstr "Нейкія праблемы пры прагназаванні паказчыкаў кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:1268
 msgid "Company_forecast_error"
-msgstr ""
+msgstr "Памылка мадэлявання паказчыкаў кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:1307
 msgid "Company_stresstest_warning"
-msgstr ""
+msgstr "Нейкія праблемы з правядзеннем стрэс тэставання кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:1319
 msgid "Company_stresstest_error"
-msgstr ""
+msgstr "Памылка правядзення стрэс тэставання кампаніі"
 
 #: .\client_side\apps\interface_interaction\views.py:1332
 msgid "Market_forecast_warning"
-msgstr ""
+msgstr "Нейкія праблемы з мадэляваннем рынкавых паказчыкаў"
 
 #: .\client_side\apps\interface_interaction\views.py:1344
 msgid "Market_forecast_error"
-msgstr ""
+msgstr "Памылка мадэлявання рынкавых паказчыкаў"
 
 #: .\client_side\settings.py:114
 msgid "English"
@@ -440,239 +440,240 @@ msgstr "Англійская"
 
 #: .\client_side\settings.py:115
 msgid "Ukrainian"
-msgstr "Украінская"
+msgstr "Украінскі"
 
 #: .\client_side\settings.py:116
 msgid "German"
-msgstr "Нямецкая"
+msgstr "Нямецкі"
 
 #: .\client_side\settings.py:117
 msgid "Russian"
-msgstr "Руская"
+msgstr "Рускі"
 
 #: .\client_side\settings.py:118
 msgid "Belarusian"
-msgstr "Беларуская"
+msgstr "Беларускі"
 
 #: .\templates\advices.html:15
 msgid "Hi_advice"
-msgstr ""
+msgstr "Парады"
 
 #: .\templates\advices.html:16
 msgid "Advice_description"
 msgstr ""
+"Ніжэй прыведзены спіс саветаў, у выпадку чаго скарыстайцеся фільтраваннем"
 
 #: .\templates\advices.html:35 .\templates\aid.html:33
 #: .\templates\articles.html:34 .\templates\news.html:40
 #: .\templates\wrappers\navbar.html:39 .\templates\wrappers\navbar.html:45
 #: .\templates\wrappers\navbar.html:100 .\templates\wrappers\navbar.html:106
 msgid "Aid"
-msgstr ""
+msgstr "Дапамога"
 
 #: .\templates\advices.html:36 .\templates\aid.html:49
 #: .\templates\home.html:117 .\templates\welcome.html:117
 msgid "Advices"
-msgstr ""
+msgstr "Парады"
 
 #: .\templates\advices.html:43 .\templates\articles.html:45
-#: .\templates\audience.html:48 .\templates\disasters.html:44
+#: .\templates\audience.html:47 .\templates\disasters.html:44
 #: .\templates\news.html:68
 msgid "Filter"
-msgstr ""
+msgstr "Фільтраванне"
 
 #: .\templates\advices.html:45 .\templates\articles.html:47
-#: .\templates\audience.html:50 .\templates\disasters.html:46
+#: .\templates\audience.html:49 .\templates\disasters.html:46
 #: .\templates\news.html:70
 msgid "Cancel_Filter"
-msgstr ""
+msgstr "Адмена фільтрацыі"
 
 #: .\templates\advices.html:55
 msgid "Success_title_advices"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\advices.html:63
 msgid "Warning_title_advices"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\advices.html:71
 msgid "Error_title_advices"
-msgstr ""
+msgstr "Праблема: "
 
 #: .\templates\advices.html:98
 msgid "Filter_advices_title"
-msgstr ""
+msgstr "Фільтраванне"
 
 #: .\templates\advices.html:105 .\templates\articles.html:232
 #: .\templates\disasters.html:105 .\templates\news.html:131
 msgid "Disaster_type_tip"
-msgstr ""
+msgstr "Тып катастрофы абярыце"
 
 #: .\templates\advices.html:110 .\templates\articles.html:137
-#: .\templates\articles.html:237 .\templates\audience.html:114
-#: .\templates\audience.html:191 .\templates\disasters.html:110
+#: .\templates\articles.html:237 .\templates\audience.html:113
+#: .\templates\audience.html:190 .\templates\disasters.html:110
 #: .\templates\disasters.html:193 .\templates\news.html:136
 #: .\templates\pagination\articles.html:155
 #: .\templates\pagination\audience.html:90
 #: .\templates\pagination\disasters.html:89
 msgid "Type"
-msgstr ""
+msgstr "Тып"
 
 #: .\templates\advices.html:123 .\templates\articles.html:250
 msgid "Rate_tip"
-msgstr ""
+msgstr "Рэйтынгавы бал ад 1 да 5"
 
 #: .\templates\advices.html:135 .\templates\articles.html:262
 msgid "Amount_tip"
-msgstr ""
+msgstr "Колькасць людзей, якія паставілі адзнаку"
 
 #: .\templates\advices.html:149
 msgid "Filter_advices"
-msgstr ""
+msgstr "Фільтр"
 
 #: .\templates\aid.html:15
 msgid "Hi_aid"
-msgstr ""
+msgstr "Дапамога"
 
 #: .\templates\aid.html:16
 msgid "Aid_description"
-msgstr ""
+msgstr "У нас ёсць тры тыпу дапамогі, калі вам трэба"
 
 #: .\templates\aid.html:51
 msgid "Advices_description"
-msgstr ""
+msgstr "Першакласныя парады, якія могуць спатрэбіцца ў любы час"
 
 #: .\templates\aid.html:55
 msgid "Advices_char_1"
-msgstr ""
+msgstr "правераныя"
 
 #: .\templates\aid.html:56
 msgid "Advices_char_2"
-msgstr ""
+msgstr "Дасведчаныя"
 
 #: .\templates\aid.html:57
 msgid "Advices_char_3"
-msgstr ""
+msgstr "Унікальнасць"
 
 #: .\templates\aid.html:60 .\templates\aid.html:82 .\templates\aid.html:104
-#: .\templates\modelling.html:81 .\templates\modelling.html:104
-#: .\templates\modelling.html:129 .\templates\modelling.html:152
+#: .\templates\modelling.html:80 .\templates\modelling.html:104
+#: .\templates\modelling.html:129 .\templates\modelling.html:153
 #: .\templates\pagination\audience.html:34
 #: .\templates\pagination\disasters.html:33
 #: .\templates\pagination\disasters.html:202
 msgid "Check"
-msgstr ""
+msgstr "Выбраць"
 
 #: .\templates\aid.html:71 .\templates\articles.html:35
 #: .\templates\articles.html:85 .\templates\home.html:111
 #: .\templates\profile.html:108 .\templates\welcome.html:111
 msgid "Articles"
-msgstr ""
+msgstr "Артыкулы"
 
 #: .\templates\aid.html:73
 msgid "Articles_description"
-msgstr ""
+msgstr "Першакласныя артыкула створаныя нашымі карыстальнікамі"
 
 #: .\templates\aid.html:77
 msgid "Articles_char_1"
-msgstr ""
+msgstr "Крэатыўнасць"
 
 #: .\templates\aid.html:78
 msgid "Articles_char_2"
-msgstr ""
+msgstr "Даступнасць"
 
 #: .\templates\aid.html:79
 msgid "Articles_char_3"
-msgstr ""
+msgstr "Шчырасць"
 
 #: .\templates\aid.html:93 .\templates\news.html:41
 msgid "News"
-msgstr ""
+msgstr "Навіны"
 
 #: .\templates\aid.html:95 .\templates\news.html:21
 msgid "News_description"
-msgstr ""
+msgstr "Усе неабходныя вам навіны ў залежнасці ад тыпу"
 
 #: .\templates\aid.html:99
 msgid "News_char_1"
-msgstr ""
+msgstr "Інфарматыўнасць"
 
 #: .\templates\aid.html:100
 msgid "News_char_2"
-msgstr ""
+msgstr "Дакладнасць"
 
 #: .\templates\aid.html:101
 msgid "News_char_3"
-msgstr ""
+msgstr "Хуткасць"
 
 #: .\templates\articles.html:15
 msgid "Hi_article"
-msgstr ""
+msgstr "Артыкулы"
 
 #: .\templates\articles.html:16
 msgid "Article_description"
-msgstr ""
+msgstr "Ніжэй можаце азнаёміцца ​​з лепшымі працамі нашых карыстальнікаў"
 
-#: .\templates\articles.html:42 .\templates\audience.html:45
+#: .\templates\articles.html:42 .\templates\audience.html:44
 #: .\templates\companies-detail.html:241 .\templates\companies.html:78
 #: .\templates\disasters.html:41
 msgid "Add"
-msgstr ""
+msgstr "Дадаць"
 
 #: .\templates\articles.html:57
 msgid "Success_title_articles"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\articles.html:65
 msgid "Warning_title_articles"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\articles.html:73
 msgid "Error_title_articles"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\articles.html:119 .\templates\articles.html:197
 #: .\templates\companies.html:97
 msgid "Image_required"
-msgstr ""
+msgstr "Выява з'яўляецца абавязковым"
 
 #: .\templates\articles.html:126
 msgid "Create_your_article"
-msgstr ""
+msgstr "Ствары ўласную артыкул"
 
 #: .\templates\articles.html:153 .\templates\companies-detail.html:169
 #: .\templates\companies-detail.html:171 .\templates\companies.html:130
 #: .\templates\pagination\articles.html:174
 msgid "Name"
-msgstr ""
+msgstr "Назва"
 
 #: .\templates\articles.html:166 .\templates\news.html:155
 #: .\templates\pagination\articles.html:187
 msgid "Language"
-msgstr ""
+msgstr "Мова"
 
 #: .\templates\articles.html:185
 msgid "Text"
-msgstr ""
+msgstr "Спасылка на тэкст"
 
 #: .\templates\articles.html:205
 msgid "Create_article"
-msgstr ""
+msgstr "Стварыць"
 
 #: .\templates\articles.html:225
 msgid "Filter_articles_title"
-msgstr ""
+msgstr "Фільтраванне артыкулаў"
 
 #: .\templates\articles.html:276
 msgid "Filter_articles"
-msgstr ""
+msgstr "Фільтр"
 
 #: .\templates\audience.html:15
 msgid "Hi_audience"
-msgstr ""
+msgstr "Аўдыторыі"
 
 #: .\templates\audience.html:16
 msgid "Audience_description"
-msgstr ""
+msgstr "Ніжэй можаце ўбачыць даступныя вам аўдыторыі"
 
 #: .\templates\audience.html:35 .\templates\disasters.html:34
 #: .\templates\forecast-audience.html:30 .\templates\forecast-company.html:30
@@ -681,61 +682,61 @@ msgstr ""
 #: .\templates\wrappers\navbar.html:52 .\templates\wrappers\navbar.html:58
 #: .\templates\wrappers\navbar.html:113 .\templates\wrappers\navbar.html:119
 msgid "Disasters"
-msgstr ""
+msgstr "Катастрофы"
 
-#: .\templates\audience.html:37 .\templates\forecast-audience.html:32
+#: .\templates\audience.html:36 .\templates\forecast-audience.html:32
 #: .\templates\forecast-company.html:32 .\templates\forecast-market.html:32
 #: .\templates\modelling.html:64 .\templates\stresstest-company.html:32
 msgid "Modelling"
-msgstr ""
+msgstr "Мадэляванне"
 
-#: .\templates\audience.html:38 .\templates\forecast-audience.html:34
+#: .\templates\audience.html:37 .\templates\forecast-audience.html:34
 msgid "Audience"
-msgstr ""
+msgstr "Аўдыторыі"
 
-#: .\templates\audience.html:60
+#: .\templates\audience.html:59
 msgid "Success_title_audience"
-msgstr ""
+msgstr "Поспех: "
 
-#: .\templates\audience.html:68
+#: .\templates\audience.html:67
 msgid "Warning_title_audience"
-msgstr ""
+msgstr "Увага: "
 
-#: .\templates\audience.html:76
+#: .\templates\audience.html:75
 msgid "Error_title_audience"
-msgstr ""
+msgstr "Памылка: "
 
-#: .\templates\audience.html:102
+#: .\templates\audience.html:101
 msgid "Filter_audience_title"
-msgstr ""
+msgstr "Фільтраванне аўдыторый"
 
-#: .\templates\audience.html:109
+#: .\templates\audience.html:108
 msgid "Audience_type_tip"
-msgstr ""
+msgstr "Вылучыце тып аўдыторыі"
 
-#: .\templates\audience.html:127
+#: .\templates\audience.html:126
 msgid "Size_tip"
-msgstr ""
+msgstr "Пакажыце памер"
 
-#: .\templates\audience.html:143 .\templates\audience.html:207
+#: .\templates\audience.html:142 .\templates\audience.html:206
 #: .\templates\pagination\audience.html:109
 msgid "Age_left"
-msgstr ""
+msgstr "Меншы ўзрост"
 
-#: .\templates\audience.html:151 .\templates\audience.html:215
+#: .\templates\audience.html:150 .\templates\audience.html:214
 #: .\templates\pagination\audience.html:118
 msgid "Age_right"
-msgstr ""
+msgstr "Большы стагоддзе"
 
-#: .\templates\audience.html:159 .\templates\disasters.html:161
+#: .\templates\audience.html:158 .\templates\disasters.html:161
 msgid "Filter_disasters"
-msgstr ""
+msgstr "Фільтраванне катастроф"
 
-#: .\templates\audience.html:180
+#: .\templates\audience.html:179
 msgid "Create_your_audience"
-msgstr ""
+msgstr "Стварыце уласны профіль аўдыторыі"
 
-#: .\templates\audience.html:227 .\templates\companies-detail.html:112
+#: .\templates\audience.html:226 .\templates\companies-detail.html:112
 #: .\templates\companies-detail.html:190 .\templates\companies-detail.html:192
 #: .\templates\companies.html:152 .\templates\forecast-audience.html:63
 #: .\templates\forecast-company.html:65 .\templates\forecast-market.html:52
@@ -745,87 +746,87 @@ msgstr ""
 #: .\templates\pagination\companies.html:15
 #: .\templates\stresstest-company.html:65
 msgid "Size"
-msgstr ""
+msgstr "Памер"
 
-#: .\templates\audience.html:239 .\templates\pagination\audience.html:143
+#: .\templates\audience.html:238 .\templates\pagination\audience.html:143
 msgid "Features"
-msgstr ""
+msgstr "Асаблівасці"
 
-#: .\templates\audience.html:246 .\templates\pagination\audience.html:151
+#: .\templates\audience.html:245 .\templates\pagination\audience.html:151
 msgid "Create_audience"
-msgstr ""
+msgstr "Стварыць аўдыторыю"
 
 #: .\templates\card.html:5
 msgid "Hi_card_info"
-msgstr ""
+msgstr "Ваша банкаўская карта"
 
 #: .\templates\card.html:6
 msgid "Card_info_description"
-msgstr ""
+msgstr "Тут апішыце дадзеныя вашай карты"
 
 #: .\templates\card.html:11
 msgid "Success_title_card"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\card.html:18
 msgid "Warning_title_card"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\card.html:25
 msgid "Error_title_card"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\card.html:36
 msgid "Simple_card_info"
-msgstr ""
+msgstr "Вось сюды дадзеныя карты"
 
 #: .\templates\card.html:42
 msgid "EnterCardInfo"
-msgstr ""
+msgstr "Вядзіце інфармацыю аб картцы"
 
 #: .\templates\card.html:47
 msgid "FullNameCard"
-msgstr ""
+msgstr "Поўнае імя"
 
 #: .\templates\card.html:49
 msgid "YourNameCard"
-msgstr ""
+msgstr "Ваша поўнае імя"
 
 #: .\templates\card.html:55
 msgid "CardNumber"
-msgstr ""
+msgstr "Нумар карты"
 
 #: .\templates\card.html:58
 msgid "YourCard"
-msgstr ""
+msgstr "Ваша карта"
 
 #: .\templates\card.html:65
 msgid "ExpirationCard"
-msgstr ""
+msgstr "Калі выбегла карты"
 
 #: .\templates\card.html:88
 msgid "card_expiration"
-msgstr ""
+msgstr "Увядзіце дату заканчэння"
 
 #: .\templates\card.html:90
 msgid "confirm"
-msgstr ""
+msgstr "пацверджана"
 
 #: .\templates\card.html:92
 msgid "not_confirm"
-msgstr ""
+msgstr "не пацверджаны"
 
 #: .\templates\card.html:95
 msgid "Payment"
-msgstr ""
+msgstr "Аплаціць"
 
 #: .\templates\card.html:104
 msgid "Return_to_subscription"
-msgstr ""
+msgstr "Вярнуцца да падпіску"
 
 #: .\templates\companies-detail.html:13
 msgid "Company_description"
-msgstr ""
+msgstr "Апісанне кампаніі"
 
 #: .\templates\companies-detail.html:29 .\templates\companies.html:32
 #: .\templates\profile.html:28 .\templates\reviews.html:33
@@ -834,41 +835,41 @@ msgstr ""
 #: .\templates\wrappers\navbar.html:32 .\templates\wrappers\navbar.html:87
 #: .\templates\wrappers\navbar.html:93
 msgid "Profile"
-msgstr ""
+msgstr "Профіль"
 
 #: .\templates\companies-detail.html:31 .\templates\companies-detail.html:91
 #: .\templates\companies.html:33 .\templates\home.html:105
 #: .\templates\profile.html:85 .\templates\welcome.html:105
 msgid "Companies"
-msgstr ""
+msgstr "Кампаніі"
 
 #: .\templates\companies-detail.html:43
 msgid "Success_title_companies_detail"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\companies-detail.html:51
 msgid "Warning_title_companies_detail"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\companies-detail.html:59
 msgid "Error_title_companies_detail"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\companies-detail.html:96 .\templates\companies-detail.html:150
 #: .\templates\forecast-company.html:102 .\templates\forecast-market.html:77
 #: .\templates\profile.html:92 .\templates\profile.html:149
 msgid "Save"
-msgstr ""
+msgstr "Захаваць"
 
 #: .\templates\companies-detail.html:98 .\templates\profile.html:94
 msgid "Cancel"
-msgstr ""
+msgstr "Адмяніць"
 
 #: .\templates\companies-detail.html:108 .\templates\companies-detail.html:237
 #: .\templates\forecast-company.html:61 .\templates\home.html:99
 #: .\templates\stresstest-company.html:61 .\templates\welcome.html:99
 msgid "Users"
-msgstr ""
+msgstr "Карыстальнікі"
 
 #: .\templates\companies-detail.html:116 .\templates\companies-detail.html:199
 #: .\templates\companies-detail.html:201 .\templates\companies.html:163
@@ -876,769 +877,776 @@ msgstr ""
 #: .\templates\pagination\companies.html:17
 #: .\templates\stresstest-company.html:69
 msgid "Revenue"
-msgstr ""
+msgstr "Прыбытак"
 
 #: .\templates\companies-detail.html:126 .\templates\forecast-company.html:79
 #: .\templates\stresstest-company.html:79
 msgid "site"
-msgstr ""
+msgstr "сайт"
 
 #: .\templates\companies-detail.html:145
 msgid "Edit_company"
-msgstr ""
+msgstr "Рэдагаваць"
 
 #: .\templates\companies-detail.html:153
 msgid "Open_users"
-msgstr ""
+msgstr "Адкрыць карыстальнікаў"
 
 #: .\templates\companies-detail.html:156
 msgid "Close_users"
-msgstr ""
+msgstr "Зачыніць карыстальнікаў"
 
+# :.\templates\companies-detail.html: 163
 #: .\templates\companies-detail.html:163
 msgid "Company_information"
-msgstr ""
+msgstr "Інфармацыя аб кампаніі"
 
 #: .\templates\companies-detail.html:179 .\templates\companies-detail.html:181
 #: .\templates\companies.html:141
 msgid "Site"
-msgstr ""
+msgstr "Сайт"
 
 #: .\templates\companies-detail.html:210 .\templates\companies-detail.html:212
 #: .\templates\companies.html:174 .\templates\pagination\companies.html:13
 msgid "Location"
-msgstr ""
+msgstr "Месца размяшчэння"
 
 #: .\templates\companies-detail.html:219 .\templates\companies-detail.html:221
 #: .\templates\companies.html:185
 msgid "Description"
-msgstr ""
+msgstr "Апісанне"
 
 #: .\templates\companies-detail.html:232
 msgid "Users_info"
-msgstr ""
+msgstr "Інфармацыя пра карыстальнікаў"
 
 #: .\templates\companies-detail.html:256
 msgid "Add_new_user_to_company"
-msgstr ""
+msgstr "Дадаць новага карыстальніка"
 
 #: .\templates\companies-detail.html:268 .\templates\profile.html:168
 #: .\templates\profile.html:170
 msgid "Username"
-msgstr ""
+msgstr "Імя карыстальніка"
 
 #: .\templates\companies-detail.html:283
 #: .\templates\pagination\companies-detail.html:11
 msgid "Position"
-msgstr ""
+msgstr "Пасада"
 
 #: .\templates\companies-detail.html:290
 msgid "Add_user"
-msgstr ""
+msgstr "Дадаць"
 
 #: .\templates\companies.html:15
 msgid "Hi_companies"
-msgstr ""
+msgstr "Кампаніі"
 
 #: .\templates\companies.html:16
 msgid "Companies_description"
-msgstr ""
+msgstr "Тут усе кампаніі, адкрытыя для вас"
 
 #: .\templates\companies.html:44
 msgid "Success_title_companies"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\companies.html:52
 msgid "Warning_title_companies"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\companies.html:60
 msgid "Error_title_companies"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\companies.html:74
 msgid "Companies_table"
-msgstr ""
+msgstr "Кампаніі"
 
 #: .\templates\companies.html:104
 msgid "Add_new_company"
-msgstr ""
+msgstr "Дадаць новую"
 
 #: .\templates\companies.html:115 .\templates\pagination\companies.html:11
 msgid "Market"
-msgstr ""
+msgstr "Рынак"
 
 #: .\templates\companies.html:194
 msgid "Add_company"
-msgstr ""
+msgstr "Дадаць"
 
-#: .\templates\disasters.html:15 .\templates\home.html:13
-#: .\templates\welcome.html:13
+#: .\templates\disasters.html:15
 msgid "Hi_disaster"
-msgstr ""
+msgstr "Катастрофы"
 
 #: .\templates\disasters.html:16
 msgid "Disaster_description"
-msgstr ""
+msgstr "Тут вось больш вам катастрофы"
 
 #: .\templates\disasters.html:56
 msgid "Success_title_disasters"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\disasters.html:64
 msgid "Warning_title_disasters"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\disasters.html:72
 msgid "Error_title_disasters"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\disasters.html:98
 msgid "Filter_disasters_title"
-msgstr ""
+msgstr "Шукай катастрофы"
 
 #: .\templates\disasters.html:123 .\templates\disasters.html:207
 #: .\templates\pagination\disasters.html:106
 msgid "Intensity_tip"
-msgstr ""
+msgstr "Пакажыце ступень інтэнсіўнасці"
 
 #: .\templates\disasters.html:136 .\templates\disasters.html:221
 #: .\templates\pagination\disasters.html:121
 msgid "Readiness_tip"
-msgstr ""
+msgstr "Пакажыце ступень гатоўнасці соцыума"
 
 #: .\templates\disasters.html:149
 msgid "Term_tip"
-msgstr ""
+msgstr "Пакажыце тэрмін дзеяння катастрофы"
 
 #: .\templates\disasters.html:182
 msgid "Create_your_disaster"
-msgstr ""
+msgstr "Стварыце уласны профіль катастрофы"
 
 #: .\templates\disasters.html:237 .\templates\pagination\disasters.html:44
 #: .\templates\pagination\disasters.html:138
 #: .\templates\pagination\disasters.html:235
 msgid "Term"
-msgstr ""
+msgstr "Тэрмін"
 
-#: .\templates\disasters.html:249 .\templates\home.html:126
-#: .\templates\pagination\disasters.html:150 .\templates\welcome.html:126
+#: .\templates\disasters.html:249 .\templates\pagination\disasters.html:150
 msgid "About"
-msgstr ""
+msgstr "Апісанне"
 
 #: .\templates\disasters.html:256
 msgid "Create_disaster"
-msgstr ""
+msgstr "Стварыць"
 
 #: .\templates\forecast-audience.html:12
 msgid "Hi_forecast_audience"
-msgstr ""
+msgstr "Вось і прагноз"
 
 #: .\templates\forecast-audience.html:13
 msgid "Forecast_audience_description"
-msgstr ""
+msgstr "У табліцы прыведзены ўсе дадзеныя прагнозу паводзін аўдыторыі"
 
 #: .\templates\forecast-audience.html:36 .\templates\forecast-company.html:98
 #: .\templates\forecast-market.html:73
 msgid "Forecast"
-msgstr ""
+msgstr "Прагноз"
 
 #: .\templates\forecast-audience.html:67
 #: .\templates\pagination\audience.html:50
 #: .\templates\pagination\audience.html:188
 msgid "Age_group"
-msgstr ""
+msgstr "Узроставая група"
 
 #: .\templates\forecast-audience.html:91
 msgid "Indicators"
-msgstr ""
+msgstr "Індыкатары"
 
 #: .\templates\forecast-audience.html:101
 #: .\templates\stresstest-company.html:108
 msgid "Indicator_toggle"
-msgstr ""
+msgstr "Гэта ключавыя аспекты дзейнасці"
 
 #: .\templates\forecast-audience.html:101
 #: .\templates\stresstest-company.html:108
 msgid "Indicator"
-msgstr ""
+msgstr "Індыкатар"
 
 #: .\templates\forecast-audience.html:103
 #: .\templates\stresstest-company.html:110
 msgid "Importance_toggle"
-msgstr ""
+msgstr "Гэта важнасць індыкатара"
 
 #: .\templates\forecast-audience.html:103
 #: .\templates\stresstest-company.html:110
 msgid "Importance"
-msgstr ""
+msgstr "Важнасць"
 
 #: .\templates\forecast-audience.html:105
 #: .\templates\stresstest-company.html:112
 msgid "Value_toggle"
-msgstr ""
+msgstr "Гэта значэнне паказчыка"
 
 #: .\templates\forecast-audience.html:105
 #: .\templates\stresstest-company.html:112
 msgid "Value"
-msgstr ""
+msgstr "Значэнне"
 
 #: .\templates\forecast-audience.html:122
 #: .\templates\stresstest-company.html:129
 msgid "Not_important"
-msgstr ""
+msgstr "Не важна"
 
 #: .\templates\forecast-audience.html:125
 #: .\templates\stresstest-company.html:132
 msgid "Important"
-msgstr ""
+msgstr "Важна"
 
 #: .\templates\forecast-audience.html:128
 #: .\templates\stresstest-company.html:135
 msgid "So_important"
-msgstr ""
+msgstr "Вельмі важна"
 
 #: .\templates\forecast-company.html:12
 msgid "Hi_forecast_company"
-msgstr ""
+msgstr "Вось і прагноз"
 
 #: .\templates\forecast-company.html:13
 msgid "Forecast_company_description"
-msgstr ""
+msgstr "Ніжэй даецца прагноз вашых аперацыйных паказчыкаў"
 
 #: .\templates\forecast-company.html:34
 msgid "Forecast_company"
-msgstr ""
+msgstr "Прагноз"
 
 #: .\templates\forecast-market.html:12
 msgid "Hi_forecast_market"
-msgstr ""
+msgstr "Вось і прагноз"
 
 #: .\templates\forecast-market.html:13
 msgid "Forecast_market_description"
-msgstr ""
+msgstr "Ніжэй даецца прагноз рынкавых паказчыкаў"
 
 #: .\templates\forecast-market.html:34
 msgid "Forecast_market"
-msgstr ""
+msgstr "Прагноз"
 
 #: .\templates\forgot-password.html:5
 msgid "Hi_forgot_password"
-msgstr ""
+msgstr "Забылі пароль?"
 
 #: .\templates\forgot-password.html:6
 msgid "Forgot_password_description"
-msgstr ""
+msgstr "Не бяда, зменіце яго ніжэй"
 
 #: .\templates\forgot-password.html:11
 msgid "Success_title_forgot_password"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\forgot-password.html:18
 msgid "Warning_title_forgot_password"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\forgot-password.html:25
 msgid "Error_title_forgot_password"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\forgot-password.html:36
 msgid "Simple_forgot_password"
-msgstr ""
+msgstr "Вось тут увядзіце пароль"
 
 #: .\templates\forgot-password.html:49 .\templates\sign-in.html:50
 #: .\templates\sign-up.html:50
 msgid "Username_placeholder"
-msgstr ""
+msgstr "Імя карыстальніка"
 
 #: .\templates\forgot-password.html:59 .\templates\sign-in.html:59
 #: .\templates\sign-up.html:96
 msgid "Password_placeholder"
-msgstr ""
+msgstr "Пароль"
 
 #: .\templates\forgot-password.html:64 .\templates\profile.html:222
 #: .\templates\sign-up.html:101
 msgid "password_strength"
-msgstr ""
+msgstr "надзейнасць"
 
 #: .\templates\forgot-password.html:66 .\templates\profile.html:225
 #: .\templates\sign-up.html:103
 msgid "strong"
-msgstr ""
+msgstr "высокая"
 
 #: .\templates\forgot-password.html:68 .\templates\profile.html:228
 #: .\templates\sign-up.html:105
 msgid "medium"
-msgstr ""
+msgstr "сярэдняя"
 
 #: .\templates\forgot-password.html:70 .\templates\profile.html:231
 #: .\templates\sign-up.html:107
 msgid "weak"
-msgstr ""
+msgstr "нізкая"
 
 #: .\templates\forgot-password.html:79 .\templates\sign-up.html:116
 msgid "Password_confirm_placeholder"
-msgstr ""
+msgstr "Пацвердзіце пароль"
 
 #: .\templates\forgot-password.html:85 .\templates\profile.html:243
 #: .\templates\sign-up.html:122
 msgid "password_confirm"
-msgstr ""
+msgstr "супадзенне"
 
 #: .\templates\forgot-password.html:87 .\templates\profile.html:246
 #: .\templates\sign-up.html:124
 msgid "matching"
-msgstr ""
+msgstr "цалкам"
 
 #: .\templates\forgot-password.html:89 .\templates\profile.html:249
 #: .\templates\sign-up.html:126
 msgid "not_matching"
-msgstr ""
+msgstr "нешта не так"
 
 #: .\templates\forgot-password.html:98 .\templates\sign-up.html:135
 msgid "I_agree_with_the"
-msgstr ""
+msgstr "Я згодны з"
 
-#: .\templates\forgot-password.html:99 .\templates\sign-up.html:136
+#: .\templates\forgot-password.html:99 .\templates\sign-up.html:137
 msgid "Privacy_policy"
-msgstr ""
+msgstr "Палітыкай канфідэнцыяльнасці"
 
 #: .\templates\forgot-password.html:110 .\templates\profile.html:152
 msgid "Reset_password"
-msgstr ""
+msgstr "Скінуць пароль"
 
 #: .\templates\forgot-password.html:117
 msgid "I_remember_password"
-msgstr ""
+msgstr "Я памятаю пароль"
 
 #: .\templates\forgot-password.html:120 .\templates\sign-in.html:85
 msgid "Create_new_account"
-msgstr ""
+msgstr "Стварыць новы ўліковы запіс"
 
 #: .\templates\home.html:14 .\templates\welcome.html:14
 msgid "Project_short_description"
-msgstr ""
+msgstr "Народжаныя дапамагаць"
 
 #: .\templates\home.html:17 .\templates\welcome.html:17
 msgid "Buy_subscription"
-msgstr ""
+msgstr "Купіць падпіску"
 
 #: .\templates\home.html:19 .\templates\welcome.html:19
 msgid "Read_full_description"
-msgstr ""
+msgstr "Чытаць апісанне"
 
 #: .\templates\home.html:31
 msgid "Success_home"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\home.html:39
 msgid "Warning_title_home"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\home.html:47
 msgid "Error_title_home"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\home.html:58 .\templates\home.html:92
 #: .\templates\welcome.html:58 .\templates\welcome.html:92
 msgid "Services"
-msgstr ""
+msgstr "Паслугі"
 
 #: .\templates\home.html:59 .\templates\home.html:93
 #: .\templates\welcome.html:59 .\templates\welcome.html:93
 msgid "Services_description"
-msgstr ""
+msgstr "Што мы можам вам даць?"
 
 #: .\templates\home.html:67
 msgid "Services_1_home"
-msgstr ""
+msgstr "Аналітыка"
 
 #: .\templates\home.html:68
 msgid "Services_1_home_description"
-msgstr ""
+msgstr "Нашы аналітычныя магутнасці заўсёды рады вашым дадзеных"
 
 #: .\templates\home.html:75
 msgid "Services_2_home"
-msgstr ""
+msgstr "Інфармацыя"
 
 #: .\templates\home.html:76
 msgid "Services_2_home_description"
-msgstr ""
+msgstr "Шырокая база інфармацыйнай падтрымкі. Усё для вас"
 
 #: .\templates\home.html:83
 msgid "Services_3_home"
-msgstr ""
+msgstr "Структуравання"
 
 #: .\templates\home.html:84
 msgid "Services_3_home_description"
-msgstr ""
+msgstr "Нас лёгка зразумець, паверце, усё вельмі проста"
+
+#: .\templates\home.html:126 .\templates\welcome.html:126
+msgid "About_us"
+msgstr "О нас"
 
 #: .\templates\home.html:127 .\templates\welcome.html:127
 msgid "About_description"
-msgstr ""
+msgstr "Хто мы такія і адкуль з'явіліся"
 
 #: .\templates\home.html:137 .\templates\welcome.html:137
 msgid "About_part_1"
-msgstr ""
+msgstr "I курс"
 
 #: .\templates\home.html:139 .\templates\welcome.html:139
 msgid "About_part_1_description"
-msgstr ""
+msgstr "Тады ідэя пачала нараджацца"
 
 #: .\templates\home.html:150 .\templates\welcome.html:150
 msgid "About_part_2"
-msgstr ""
+msgstr "II курс"
 
 #: .\templates\home.html:152 .\templates\welcome.html:152
 msgid "About_part_2_description"
-msgstr ""
+msgstr "Навучанне новых тэхналогіях"
 
 #: .\templates\home.html:163 .\templates\welcome.html:163
 msgid "About_part_3"
-msgstr ""
+msgstr "III курс"
 
-#: .\templates\home.html:165 .\templates\home.html:178
-#: .\templates\welcome.html:165 .\templates\welcome.html:178
+#: .\templates\home.html:165 .\templates\welcome.html:165
 msgid "About_part_3_description"
-msgstr ""
+msgstr "Тэхнічная муштра, каб стаць лепшым"
 
 #: .\templates\home.html:176 .\templates\welcome.html:176
 msgid "About_part_4"
-msgstr ""
+msgstr "IV курс"
+
+#: .\templates\home.html:178 .\templates\welcome.html:178
+msgid "About_part_4_description"
+msgstr "Фінальны акорд праекта"
 
 #: .\templates\home.html:182
 msgid "Watch_video"
-msgstr ""
+msgstr "Паглядзець відэа"
 
 #: .\templates\home.html:186 .\templates\welcome.html:186
 msgid "Story"
-msgstr ""
+msgstr "Гэта наша гісторыя"
 
 #: .\templates\home.html:195 .\templates\welcome.html:195
 msgid "Team_members"
-msgstr ""
+msgstr "Члены каманды"
 
 #: .\templates\home.html:196 .\templates\welcome.html:196
 msgid "Team_members_description"
-msgstr ""
+msgstr "Тыя, хто жадае вам натхнення"
 
 #: .\templates\home.html:206 .\templates\home.html:228
 #: .\templates\home.html:250 .\templates\welcome.html:206
 #: .\templates\welcome.html:228 .\templates\welcome.html:250
 msgid "Artem_Khovrat"
-msgstr ""
+msgstr "Ховрат Арцём"
 
 #: .\templates\home.html:207
 msgid "Director"
-msgstr ""
+msgstr "Кіраўнік"
 
 #: .\templates\home.html:208
 msgid "Me_director_description"
-msgstr ""
+msgstr "Яго ідэя і сіла дазволілі стварыць праект"
 
 #: .\templates\home.html:229
 msgid "Engineer"
-msgstr ""
+msgstr "Інжынер"
 
 #: .\templates\home.html:230
 msgid "Me_engineer_description"
-msgstr ""
+msgstr "Той, хто піша ў лабірынце ноччу ў пячоры"
 
 #: .\templates\home.html:251
 msgid "Translator"
-msgstr ""
+msgstr "Перакладчык"
 
 #: .\templates\home.html:252
 msgid "Me_translator_description"
-msgstr ""
+msgstr "Усе вашыя боты ў яго, ён сапраўды заслужыў"
 
 #: .\templates\home.html:270 .\templates\welcome.html:270
 #: .\templates\welcome.html:278 .\templates\welcome.html:287
 #: .\templates\welcome.html:296
 msgid "Choose_plan"
-msgstr ""
+msgstr "Выбраць план"
 
 #: .\templates\home.html:271 .\templates\welcome.html:271
 msgid "Choose_plan_description"
-msgstr ""
+msgstr "У нас іх цэлых тры"
 
 #: .\templates\home.html:275 .\templates\welcome.html:275
 #: .\templates\wrappers\subscription.html:75
 msgid "Free"
-msgstr ""
+msgstr "Бясплатны"
 
 #: .\templates\home.html:276 .\templates\welcome.html:276
 msgid "Free_Description"
-msgstr ""
+msgstr "Інфармацыйная падтрымка і аналіз кампаніі"
 
 #: .\templates\home.html:283 .\templates\home.html:296
 #: .\templates\home.html:309
 msgid "Change_plan"
-msgstr ""
+msgstr "Выбраць"
 
 #: .\templates\home.html:289 .\templates\welcome.html:284
 #: .\templates\wrappers\subscription.html:76
 msgid "Maximum"
-msgstr ""
+msgstr "Сярэдні"
 
 #: .\templates\home.html:290 .\templates\welcome.html:285
 msgid "Maximum_description"
-msgstr ""
+msgstr "Усё, што ў бясплатным і аналіз рынку"
 
 #: .\templates\home.html:302 .\templates\welcome.html:293
 #: .\templates\wrappers\subscription.html:77
 msgid "Ultra"
-msgstr ""
+msgstr "Найбольшы"
 
 #: .\templates\home.html:303 .\templates\welcome.html:294
 msgid "Ultra_description"
-msgstr ""
+msgstr "Вы адкрываеце для сябе аналіз аўдыторыі"
 
 #: .\templates\home.html:320
 msgid "SendYourFeedback"
-msgstr ""
+msgstr "Адправіць водгук"
 
 #: .\templates\home.html:322
 msgid "SendYourFeedbackDesciption"
-msgstr ""
+msgstr "Пакажыце ўсё тое, што пра нас думаеце"
 
 #: .\templates\home.html:331
 msgid "PressYourMessage"
-msgstr ""
+msgstr "Ваша паведамленне"
 
 #: .\templates\home.html:332
 msgid "Enter_review"
-msgstr ""
+msgstr "Увядзіце водгук"
 
 #: .\templates\home.html:337
 msgid "Enter_email"
-msgstr ""
+msgstr "Увядзіце пошту"
 
 #: .\templates\home.html:342
 msgid "Send_message"
-msgstr ""
+msgstr "Адправіць"
 
 #: .\templates\modelling.html:15
 msgid "Hi_modelling"
-msgstr ""
+msgstr "Мадэляванне"
 
 #: .\templates\modelling.html:16
 msgid "Modelling_description"
-msgstr ""
+msgstr "У нас іх цэлых 4, калі вы з максімальным плане"
 
 #: .\templates\modelling.html:31
 msgid "Success_title_modelling"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\modelling.html:39
 msgid "Warning_title_modelling"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\modelling.html:47
 msgid "Error_title_modelling"
-msgstr ""
+msgstr "Памылка: "
 
-#: .\templates\modelling.html:84
+#: .\templates\modelling.html:83
 msgid "Company_forecast"
-msgstr ""
+msgstr "Прагноз для кампаніі"
 
-#: .\templates\modelling.html:86
+#: .\templates\modelling.html:85
 msgid "Company_forecast_description"
-msgstr ""
+msgstr "Усё, што трэба"
+
+#: .\templates\modelling.html:89
+msgid "Company_forecast_char_1"
+msgstr "Хуткасць"
 
 #: .\templates\modelling.html:90
-msgid "Company_forecast_char_1"
-msgstr ""
+msgid "Company_forecast_char_2"
+msgstr "Дальнабачнасць"
 
 #: .\templates\modelling.html:91
-msgid "Company_forecast_char_2"
-msgstr ""
-
-#: .\templates\modelling.html:92
 msgid "Company_forecast_char_3"
-msgstr ""
+msgstr "Аб'ектыўнасць"
 
 #: .\templates\modelling.html:108
 msgid "Company_stresstest"
-msgstr ""
+msgstr "Тэставанне кампаніі"
 
 #: .\templates\modelling.html:110
 msgid "Company_stresstest_description"
-msgstr ""
+msgstr "Усё, што трэба"
 
 #: .\templates\modelling.html:114
 msgid "Company_stresstest_char_1"
-msgstr ""
+msgstr "Всеохватываемость"
 
 #: .\templates\modelling.html:115
 msgid "Company_stresstest_char_2"
-msgstr ""
+msgstr "Надзейнасць"
 
 #: .\templates\modelling.html:116
 msgid "Company_stresstest_char_3"
-msgstr ""
+msgstr "Адкрытасць"
 
 #: .\templates\modelling.html:132
 msgid "Market_forecast"
-msgstr ""
+msgstr "Прагноз для рынку"
 
 #: .\templates\modelling.html:134
 msgid "Market_forecast_description"
-msgstr ""
+msgstr "Усё, што трэба"
 
 #: .\templates\modelling.html:138
 msgid "Market_forecast_char_1"
-msgstr ""
+msgstr "Хуткасць"
 
 #: .\templates\modelling.html:139
 msgid "Market_forecast_char_2"
-msgstr ""
+msgstr "Паўната"
 
 #: .\templates\modelling.html:140
 msgid "Market_forecast_char_3"
-msgstr ""
+msgstr "Абгрунтаванасць"
 
-#: .\templates\modelling.html:155
+#: .\templates\modelling.html:156
 msgid "Audience_modelling"
-msgstr ""
+msgstr "Мадэляванне аўдыторыі"
 
-#: .\templates\modelling.html:157
+#: .\templates\modelling.html:158
 msgid "Audience_modelling_description"
-msgstr ""
-
-#: .\templates\modelling.html:161
-msgid "Audience_modelling_char_1"
-msgstr ""
+msgstr "Усё, што трэба"
 
 #: .\templates\modelling.html:162
-msgid "Audience_modelling_char_2"
-msgstr ""
+msgid "Audience_modelling_char_1"
+msgstr "Адкрытасць"
 
 #: .\templates\modelling.html:163
+msgid "Audience_modelling_char_2"
+msgstr "псыхалягічна"
+
+#: .\templates\modelling.html:164
 msgid "Audience_modelling_char_3"
-msgstr ""
+msgstr "Аб'ектыўнасць"
 
-#: .\templates\modelling.html:178 .\templates\modelling.html:265
+#: .\templates\modelling.html:180 .\templates\modelling.html:267
 msgid "Enter_info"
-msgstr ""
+msgstr "Увядзіце дадзеныя"
 
-#: .\templates\modelling.html:187 .\templates\modelling.html:275
+#: .\templates\modelling.html:189 .\templates\modelling.html:277
+#: .\templates\sign-up.html:161
 msgid "Info"
-msgstr ""
+msgstr "Інфармацыя"
 
-#: .\templates\modelling.html:197
+#: .\templates\modelling.html:199
 msgid "Data_placeholder"
-msgstr ""
+msgstr "Дадзеныя"
 
-#: .\templates\modelling.html:204 .\templates\modelling.html:245
+#: .\templates\modelling.html:206 .\templates\modelling.html:247
 msgid "Make_forecast"
-msgstr ""
+msgstr "Спрагназаваць"
 
-#: .\templates\modelling.html:224
+#: .\templates\modelling.html:226
 msgid "Select_method"
-msgstr ""
-
-#: .\templates\modelling.html:235
-msgid "Method"
-msgstr ""
+msgstr "Упарадкаваць"
 
 #: .\templates\modelling.html:237
+msgid "Method"
+msgstr "Метад"
+
+#: .\templates\modelling.html:239
 msgid "Fast"
-msgstr ""
+msgstr "Хуткі"
 
-#: .\templates\modelling.html:238
+#: .\templates\modelling.html:240
 msgid "Slow"
-msgstr ""
+msgstr "Надзейны"
 
-#: .\templates\modelling.html:282
+#: .\templates\modelling.html:284
 msgid "Testing"
-msgstr ""
+msgstr "Тэставаць"
 
 #: .\templates\news.html:20
 msgid "Hi_news"
-msgstr ""
+msgstr "Навіны"
 
 #: .\templates\news.html:62
 msgid "Go_to_aid"
-msgstr ""
+msgstr "Да дапамогі"
 
 #: .\templates\news.html:65
 msgid "Sort"
-msgstr ""
+msgstr "Сартаваць"
 
 #: .\templates\news.html:81
 msgid "Success_title_news"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\news.html:89
 msgid "Warning_title_news"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\news.html:97
 msgid "Error_title_news"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\news.html:124 .\templates\news.html:170
 #: .\templates\news.html:226
 msgid "Filter_news"
-msgstr ""
+msgstr "Фільтры для новостей"
 
 #: .\templates\news.html:150
 msgid "Language_tip"
-msgstr ""
+msgstr "Мова"
 
 #: .\templates\news.html:191
 msgid "Sort_news"
-msgstr ""
+msgstr "Сартаванне новостей"
 
 #: .\templates\news.html:198
 msgid "Sort_tip"
-msgstr ""
+msgstr "Від сартавання"
 
 #: .\templates\news.html:203
 msgid "Sort_type"
-msgstr ""
+msgstr "Тып"
 
 #: .\templates\news.html:209
 msgid "Sort_date"
-msgstr ""
+msgstr "Па даце"
 
 #: .\templates\news.html:214
 msgid "Sort_relevance"
-msgstr ""
+msgstr "За адпаведнасцю"
 
 #: .\templates\news.html:219
 msgid "Sort_popular"
-msgstr ""
+msgstr "Па папулярнасці"
 
 #: .\templates\pagination\advices.html:22
 #: .\templates\pagination\articles.html:52
 #: .\templates\pagination\articles.html:114
 msgid "Rate"
-msgstr ""
+msgstr "Рэйтынг"
 
 #: .\templates\pagination\advices.html:26
 #: .\templates\pagination\articles.html:63
 msgid "My_rate"
-msgstr ""
+msgstr "Мой рэйтынг"
 
 #: .\templates\pagination\advices.html:29
 #: .\templates\pagination\articles.html:68
 msgid "Avg_rate"
-msgstr ""
+msgstr "Сярэдні рэйтынг"
 
 #: .\templates\pagination\advices.html:32
 #: .\templates\pagination\articles.html:74
 msgid "Amount_rate"
-msgstr ""
+msgstr "Колькасць карыстальнікаў, якія далі бал"
 
 #: .\templates\pagination\advices.html:46
 msgid "Rate_your_advice"
-msgstr ""
+msgstr "Падайце ваш бал радзе"
 
 #: .\templates\pagination\advices.html:71
 msgid "Rate_advice"
-msgstr ""
+msgstr "Падаць баль"
 
 #: .\templates\pagination\advices.html:85
 #: .\templates\pagination\articles.html:222
@@ -1646,7 +1654,7 @@ msgstr ""
 #: .\templates\pagination\disasters.html:250
 #: .\templates\pagination\news.html:37 .\templates\pagination\reviews.html:45
 msgid "Ooops"
-msgstr ""
+msgstr "Ууупс"
 
 #: .\templates\pagination\advices.html:96
 #: .\templates\pagination\articles.html:234
@@ -1654,16 +1662,16 @@ msgstr ""
 #: .\templates\pagination\disasters.html:253
 #: .\templates\pagination\news.html:48 .\templates\pagination\reviews.html:40
 msgid "We_have_a_problem"
-msgstr ""
+msgstr "У нас праблема"
 
 #: .\templates\pagination\advices.html:98 .\templates\pagination\news.html:50
 #: .\templates\pagination\reviews.html:42
 msgid "We_have_a_problem_description"
-msgstr ""
+msgstr "Тут зусім нічога няма"
 
 #: .\templates\pagination\advices.html:102 .\templates\pagination\news.html:54
 msgid "My_god"
-msgstr ""
+msgstr "Божа мой"
 
 #: .\templates\pagination\advices.html:114
 #: .\templates\pagination\advices.html:121
@@ -1681,7 +1689,7 @@ msgstr ""
 #: .\templates\pagination\reviews.html:60
 #: .\templates\pagination\reviews.html:67
 msgid "Prvious_page"
-msgstr ""
+msgstr "Папярэдняя старонка"
 
 #: .\templates\pagination\advices.html:152
 #: .\templates\pagination\advices.html:159
@@ -1699,13 +1707,13 @@ msgstr ""
 #: .\templates\pagination\reviews.html:98
 #: .\templates\pagination\reviews.html:105
 msgid "Next_page"
-msgstr ""
+msgstr "Наступная старонка"
 
 #: .\templates\pagination\articles.html:12
 #: .\templates\pagination\audience.html:28
 #: .\templates\pagination\disasters.html:28
 msgid "Update"
-msgstr ""
+msgstr "Абнавіць"
 
 #: .\templates\pagination\articles.html:21
 #: .\templates\pagination\audience.html:24
@@ -1713,605 +1721,609 @@ msgstr ""
 #: .\templates\pagination\companies.html:92
 #: .\templates\pagination\disasters.html:24
 msgid "Delete"
-msgstr ""
+msgstr "Выдаліць"
 
 #: .\templates\pagination\articles.html:44
 #: .\templates\pagination\articles.html:242
 msgid "created"
-msgstr ""
+msgstr "створаны"
 
 #: .\templates\pagination\articles.html:56
 msgid "Open"
-msgstr ""
+msgstr "Адкрыць"
 
 #: .\templates\pagination\articles.html:89
 msgid "Rate_article"
-msgstr ""
+msgstr "Рэйтынг"
 
 #: .\templates\pagination\articles.html:144
 msgid "Update_your_article"
-msgstr ""
+msgstr "Абнавіце вашу артыкул"
 
 #: .\templates\pagination\articles.html:205
 msgid "Update_article"
-msgstr ""
+msgstr "Абнавіць"
 
 #: .\templates\pagination\articles.html:232
 msgid "Administration"
-msgstr ""
+msgstr "Адміністрацыя"
 
 #: .\templates\pagination\articles.html:242
 msgid "it_s_a_question"
-msgstr ""
+msgstr "гэта пытанне"
 
 #: .\templates\pagination\articles.html:249
 #: .\templates\subscription-change.html:25
 msgid "Go_to_home"
-msgstr ""
+msgstr "Дадому"
 
 #: .\templates\pagination\audience.html:79
 msgid "Update_your_audience"
-msgstr ""
+msgstr "Абнавіце вашу аўдыторыю"
 
 #: .\templates\pagination\companies-detail.html:9
 msgid "User_toggle"
-msgstr ""
+msgstr "Выбраць карыстальніка"
 
 #: .\templates\pagination\companies-detail.html:9
 msgid "User"
-msgstr ""
+msgstr "Карыстальнік"
 
 #: .\templates\pagination\companies-detail.html:11
 msgid "Position_toggle"
-msgstr ""
+msgstr "ўпішамся пасаду"
 
 #: .\templates\pagination\companies-detail.html:13
 msgid "Date_joined_toggle"
-msgstr ""
+msgstr "Дата далучэння да сістэмы"
 
 #: .\templates\pagination\companies-detail.html:13
 msgid "Date_joined"
-msgstr ""
+msgstr "Дата далучэння"
 
 #: .\templates\pagination\companies.html:9
 msgid "Company_toggle"
-msgstr ""
+msgstr "Абярыце кампанію"
 
 #: .\templates\pagination\companies.html:9
 #: .\templates\pagination\disasters.html:190
 msgid "Company"
-msgstr ""
+msgstr "Кампанія"
 
 #: .\templates\pagination\companies.html:11
 msgid "Market_toggle"
-msgstr ""
+msgstr "Вылучыце рынак"
 
 #: .\templates\pagination\companies.html:13
 msgid "Location_toggle"
-msgstr ""
+msgstr "Пакажыце лакацыі"
 
 #: .\templates\pagination\companies.html:15
 msgid "Size_toggle"
-msgstr ""
+msgstr "Пакажыце памер"
 
 #: .\templates\pagination\companies.html:17
 msgid "Revenue_toggle"
-msgstr ""
+msgstr "Пакажыце даход"
 
 #: .\templates\pagination\companies.html:19
 msgid "Website_toggle"
-msgstr ""
+msgstr "Пакажыце вэбсайт"
 
 #: .\templates\pagination\companies.html:19
 msgid "Website"
-msgstr ""
+msgstr "Сайт"
 
 #: .\templates\pagination\companies.html:21
 msgid "Completeness_toggle"
-msgstr ""
+msgstr "Узровень запоўненасці"
 
 #: .\templates\pagination\companies.html:21
 msgid "Completeness"
-msgstr ""
+msgstr "запаўненне"
 
 #: .\templates\pagination\companies.html:90
 msgid "Detail"
-msgstr ""
+msgstr "Дэталі"
 
 #: .\templates\pagination\disasters.html:48
 #: .\templates\pagination\disasters.html:239
 msgid "Intensity"
-msgstr ""
+msgstr "Інтэнсіўнасць"
 
 #: .\templates\pagination\disasters.html:52
 #: .\templates\pagination\disasters.html:243
 msgid "Readiness"
-msgstr ""
+msgstr "Гатоўнасць"
 
 #: .\templates\pagination\disasters.html:78
 msgid "Update_your_disaster"
-msgstr ""
+msgstr "Абнавіце вашу катастрофу"
 
 #: .\templates\pagination\disasters.html:158
 msgid "Update_disaster"
-msgstr ""
+msgstr "Абнавіць"
 
 #: .\templates\pagination\disasters.html:179
 msgid "Check_your_company"
-msgstr ""
+msgstr "Вылучыце вашу кампанію"
 
 #: .\templates\pagination\news.html:28
 msgid "Read"
-msgstr ""
+msgstr "Чытаць"
 
 #: .\templates\pagination\reviews.html:21
 msgid "Created"
-msgstr ""
+msgstr "Стварыць"
 
 #: .\templates\profile.html:12
 msgid "Hi_profile"
-msgstr ""
+msgstr "Профіль"
 
 #: .\templates\profile.html:13
 msgid "Profile_description"
-msgstr ""
+msgstr "Ніжэй ваша асабістая інфармацыя"
 
 #: .\templates\profile.html:39
 msgid "Success_title_profile"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\profile.html:47
 msgid "Warning_title_profile"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\profile.html:55
 msgid "Error_title_profile"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\profile.html:87 .\templates\reviews.html:34
 msgid "Reviews"
-msgstr ""
+msgstr "Водгукі"
 
 #: .\templates\profile.html:104
 msgid "Ratings"
-msgstr ""
+msgstr "Рэйтынгі"
 
 #: .\templates\profile.html:122
 msgid "joined"
-msgstr ""
+msgstr "далучыліся"
 
 #: .\templates\profile.html:144
 msgid "Edit_profile"
-msgstr ""
+msgstr "Змяніць профіль"
 
 #: .\templates\profile.html:155
 msgid "Cancel_reset_password"
-msgstr ""
+msgstr "Адмяніць абнаўленне пароля"
 
 #: .\templates\profile.html:162
 msgid "User_information"
-msgstr ""
+msgstr "Карыстацкая інфармацыя"
 
 #: .\templates\profile.html:177
 msgid "Email_address"
-msgstr ""
+msgstr "Электронны адрас"
 
 #: .\templates\profile.html:179
 msgid "Email"
-msgstr ""
+msgstr "Электронны адрас"
 
 #: .\templates\profile.html:188 .\templates\profile.html:190
 msgid "First_name"
-msgstr ""
+msgstr "Імя"
 
 #: .\templates\profile.html:197 .\templates\profile.html:199
 msgid "Last_name"
-msgstr ""
+msgstr "Прозвішча"
 
 #: .\templates\profile.html:211
 msgid "Reset_Password_Form"
-msgstr ""
+msgstr "Змена пароля"
 
 #: .\templates\profile.html:217 .\templates\profile.html:219
 msgid "New_Password"
-msgstr ""
+msgstr "Новы пароль"
 
 #: .\templates\profile.html:239 .\templates\profile.html:241
 msgid "Confirm_New_Password"
-msgstr ""
+msgstr "Пацвердзіце новы пароль"
 
 #: .\templates\profile.html:259
 msgid "Send_New_Password"
-msgstr ""
+msgstr "Адправіць пароль"
 
 #: .\templates\reviews.html:15
 msgid "Hi_reviews"
-msgstr ""
+msgstr "Водгукі"
 
 #: .\templates\reviews.html:16
 msgid "Reviews_description"
-msgstr ""
+msgstr "Тут усе водгукі пра нас"
 
 #: .\templates\reviews.html:39
 msgid "New"
-msgstr ""
+msgstr "Новы"
 
 #: .\templates\reviews.html:41
 msgid "Cancel_Filter_my"
-msgstr ""
+msgstr "Адмена фільтрацыі"
 
 #: .\templates\reviews.html:43
 msgid "Filter_my"
-msgstr ""
+msgstr "Фільтраваць мае"
 
 #: .\templates\reviews.html:55
 msgid "Success_title_reviews"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\reviews.html:63
 msgid "Warning_title_reviews"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\reviews.html:71
 msgid "Error_title_reviews"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\sign-in.html:5
 msgid "Hi_sign_in"
-msgstr ""
+msgstr "Аўтарызацыя"
 
 #: .\templates\sign-in.html:6
 msgid "Sign_in_description"
-msgstr ""
+msgstr "Пакажыце вашы дадзеныя для аўтарызацыі"
 
 #: .\templates\sign-in.html:11
 msgid "Success_title_sign_in"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\sign-in.html:18
 msgid "Warning_title_sign_in"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\sign-in.html:25
 msgid "Error_title_sign_in"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\sign-in.html:36
 msgid "Simple_sign_in_header"
-msgstr ""
+msgstr "Некалькі клікаў"
 
 #: .\templates\sign-in.html:41
 msgid "Simple_sign_in"
-msgstr ""
+msgstr "І ўсё гатова"
 
 #: .\templates\sign-in.html:66
 msgid "Remember_me"
-msgstr ""
+msgstr "Запомніць"
 
-#: .\templates\sign-in.html:74 .\templates\wrappers\main.html:78
+#: .\templates\sign-in.html:74 .\templates\wrappers\main.html:142
 msgid "Sign_in"
-msgstr ""
+msgstr "Аўтарызацыя"
 
 #: .\templates\sign-in.html:82
 msgid "Forgot_password"
-msgstr ""
+msgstr "Забылі пароль"
 
 #: .\templates\sign-up.html:5
 msgid "Hi_sign_up"
-msgstr ""
+msgstr "Рэгістрацыя"
 
 #: .\templates\sign-up.html:6
 msgid "Sign_up_description"
-msgstr ""
+msgstr "Пакажыце дадзеныя для рэгістрацыі"
 
 #: .\templates\sign-up.html:11
 msgid "Success_title_sign_up"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\sign-up.html:18
 msgid "Warning_title_sign_up"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\sign-up.html:25
 msgid "Error_title_sign_up"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\sign-up.html:36
 msgid "Simple_sign_up_header"
-msgstr ""
+msgstr "Пару клікаў"
 
 #: .\templates\sign-up.html:41
 msgid "Simple_sign_up"
-msgstr ""
+msgstr "І ўсё гатова"
 
 #: .\templates\sign-up.html:60
 msgid "First_name_placeholder"
-msgstr ""
+msgstr "Імя"
 
 #: .\templates\sign-up.html:68
 msgid "Last_name_placeholder"
-msgstr ""
+msgstr "Прозвішча"
 
 #: .\templates\sign-up.html:77
 msgid "Email_placeholder"
-msgstr ""
+msgstr "Электронны адрас"
 
 #: .\templates\sign-up.html:86
 msgid "Image_placeholder"
-msgstr ""
+msgstr "Фота"
 
-#: .\templates\sign-up.html:147
+#: .\templates\sign-up.html:148
 msgid "Create_account"
-msgstr ""
+msgstr "Стварыць запіс"
 
-#: .\templates\sign-up.html:154
+#: .\templates\sign-up.html:165
+msgid "Nothing_here"
+msgstr "Нічога няма :)"
+
+#: .\templates\sign-up.html:179
 msgid "I_have_an_account"
-msgstr ""
+msgstr "У мяне ёсць запіс"
 
 #: .\templates\stresstest-company.html:12
 msgid "Hi_stresstest_company"
-msgstr ""
+msgstr "Тэставанне Кампай"
 
 #: .\templates\stresstest-company.html:13
 msgid "Stresstest_company_description"
-msgstr ""
+msgstr "Усё, што трэба"
 
 #: .\templates\stresstest-company.html:34
 msgid "Stresstest_company"
-msgstr ""
+msgstr "Тэставанне кампаніі"
 
 #: .\templates\stresstest-company.html:98
 msgid "Stress_test"
-msgstr ""
+msgstr "Стрэс тэст"
 
 #: .\templates\subscription-buy.html:7
 msgid "Go_to_sign_up"
-msgstr ""
+msgstr "Да рэгістрацыі"
 
 #: .\templates\subscription-buy.html:20 .\templates\subscription-change.html:39
 #: .\templates\subscription-info.html:14
 msgid "Default_choose"
-msgstr ""
+msgstr "Па змаўчанні"
 
 #: .\templates\subscription-buy.html:30 .\templates\subscription-buy.html:40
 #: .\templates\subscription-change.html:50
 #: .\templates\subscription-change.html:61
 #: .\templates\subscription-info.html:18 .\templates\subscription-info.html:22
 msgid "Money_choose"
-msgstr ""
+msgstr "Трэба грошы"
 
 #: .\templates\subscription-buy.html:47 .\templates\subscription-info.html:29
 #: .\templates\welcome.html:360 .\templates\wrappers\authorization.html:54
 msgid "Admin_panel"
-msgstr ""
+msgstr "Админпанел"
 
 #: .\templates\subscription-change.html:9
 #: .\templates\subscription-change.html:69 .\templates\wrappers\navbar.html:12
 #: .\templates\wrappers\navbar.html:18 .\templates\wrappers\navbar.html:73
 #: .\templates\wrappers\navbar.html:79
 msgid "Home"
-msgstr ""
+msgstr "Дадому"
 
 #: .\templates\subscription-change.html:23
 msgid "Go_to_profile"
-msgstr ""
+msgstr "Да профілю"
 
 #: .\templates\subscription-info.html:7
 msgid "Go_to_welcome"
-msgstr ""
+msgstr "У гасціную"
 
 #: .\templates\welcome.html:31
 msgid "Success_welcome"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\welcome.html:39
 msgid "Warning_title_welcome"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\welcome.html:47
 msgid "Error_title_welcome"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\welcome.html:67
 msgid "Services_1"
-msgstr ""
+msgstr "Бизнесориентированность"
 
 #: .\templates\welcome.html:68
 msgid "Services_1_description"
-msgstr ""
+msgstr "Усё толькі для вас"
 
 #: .\templates\welcome.html:75
 msgid "Services_2"
-msgstr ""
+msgstr "Тэхналагічнасць"
 
 #: .\templates\welcome.html:76
 msgid "Services_2_description"
-msgstr ""
+msgstr "Толькі высокія тэхналогіі"
 
 #: .\templates\welcome.html:83
 msgid "Services_3"
-msgstr ""
+msgstr "Абароненасць"
 
 #: .\templates\welcome.html:84
 msgid "Services_3_description"
-msgstr ""
+msgstr "Усе дадзеныя ў бяспецы"
 
 #: .\templates\welcome.html:207
 msgid "Founder"
-msgstr ""
+msgstr "Заснавальнік"
 
 #: .\templates\welcome.html:208
 msgid "Me_founder_description"
-msgstr ""
+msgstr "Яго канцэпт і грошы"
 
 #: .\templates\welcome.html:229
 msgid "Developer"
-msgstr ""
+msgstr "Распрацоўшчык"
 
 #: .\templates\welcome.html:230
 msgid "Me_developer_description"
-msgstr ""
+msgstr "Яно жыве дзякуючы яму"
 
 #: .\templates\welcome.html:251
 msgid "Designer"
-msgstr ""
+msgstr "Дызайнер"
 
 #: .\templates\welcome.html:252
 msgid "Me_designer_description"
-msgstr ""
+msgstr "Пашкадуйце, ён стараўся"
 
 #: .\templates\welcome.html:305
 msgid "Footer_header"
-msgstr ""
+msgstr "Далучыцца"
 
 #: .\templates\welcome.html:306
 msgid "Footer_description"
-msgstr ""
+msgstr "Давайце хутчэй"
 
 #: .\templates\welcome.html:312
 msgid "Sign_up"
-msgstr ""
+msgstr "Рэгістрацыя"
 
-#: .\templates\wrappers\main.html:45
+#: .\templates\wrappers\main.html:109
 msgid "Like_us_on_Facebook"
-msgstr ""
+msgstr "лайкаць нас на Facebook"
 
-#: .\templates\wrappers\main.html:52
+#: .\templates\wrappers\main.html:116
 msgid "Follow_us_on_Instagram"
-msgstr ""
+msgstr "Падпісвайцеся ў Instagram"
 
-#: .\templates\wrappers\main.html:59
+#: .\templates\wrappers\main.html:123
 msgid "Follow_us_on_Twitter"
-msgstr ""
+msgstr "Падпісвайцеся ў Twitter"
 
-#: .\templates\wrappers\main.html:66
+#: .\templates\wrappers\main.html:130
 msgid "Star_us_on_Github"
-msgstr ""
+msgstr "Дайце зорак у Github"
 
-#: .\templates\wrappers\main.html:86
+#: .\templates\wrappers\main.html:150
 msgid "Sign_out"
-msgstr ""
+msgstr "Выхад"
 
-#: .\templates\wrappers\main.html:94
+#: .\templates\wrappers\main.html:158
 msgid "Font_size_up"
-msgstr ""
+msgstr "Павялічыць памер шрыфта"
 
-#: .\templates\wrappers\main.html:104
+#: .\templates\wrappers\main.html:168
 msgid "Font_size_down"
-msgstr ""
+msgstr "Паменшыць памер шрыфта"
 
-#: .\templates\wrappers\main.html:114
+#: .\templates\wrappers\main.html:178
 msgid "Change_language"
-msgstr ""
+msgstr "Змяніць мову"
 
-#: .\templates\wrappers\main.html:160
+#: .\templates\wrappers\main.html:224
 msgid "Play_text"
-msgstr ""
+msgstr "Прайграць тэкст"
 
-#: .\templates\wrappers\main.html:170
+#: .\templates\wrappers\main.html:234
 msgid "Pause_text"
-msgstr ""
+msgstr "Спыніць прайграванне"
 
-#: .\templates\wrappers\main.html:180
+#: .\templates\wrappers\main.html:244
 msgid "Stop_text"
-msgstr ""
+msgstr "Абнавіць прайгравання"
 
 #: .\templates\wrappers\subscription.html:13
 msgid "Hi_subscription"
-msgstr ""
+msgstr "Падпіска"
 
 #: .\templates\wrappers\subscription.html:14
 msgid "Choose_your_plan"
-msgstr ""
+msgstr "Выберыце свой план"
 
 #: .\templates\wrappers\subscription.html:35
 msgid "Success_subscription"
-msgstr ""
+msgstr "Поспех: "
 
 #: .\templates\wrappers\subscription.html:43
 msgid "Warning_title_subscription"
-msgstr ""
+msgstr "Увага: "
 
 #: .\templates\wrappers\subscription.html:51
 msgid "Error_title_subscription"
-msgstr ""
+msgstr "Памылка: "
 
 #: .\templates\wrappers\subscription.html:65
 msgid "Subscription_plan_header"
-msgstr ""
+msgstr "У нас іх тры"
 
 #: .\templates\wrappers\subscription.html:66
 msgid "Subscription_plan_description"
-msgstr ""
+msgstr "Калі ласка, што вам падабаецца"
 
 #: .\templates\wrappers\subscription.html:82
 msgid "First_feature_name"
-msgstr ""
+msgstr "Тэхналагічнасць"
 
 #: .\templates\wrappers\subscription.html:83
 msgid "First_feature_free"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:84
 msgid "First_feature_maximum"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:85
 msgid "First_feature_ultra"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:88
 msgid "Second_feature_name"
-msgstr ""
+msgstr "Бизнесориенированность"
 
 #: .\templates\wrappers\subscription.html:89
 msgid "Second_feature_free"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:90
 msgid "Second_feature_maximum"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:91
 msgid "Second_feature_ultra"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:94
 msgid "Third_feature_name"
-msgstr ""
+msgstr "Абароненасць"
 
 #: .\templates\wrappers\subscription.html:95
 msgid "Third_feature_free"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:96
 msgid "Third_feature_maximum"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:97
 msgid "Third_feature_ultra"
-msgstr ""
+msgstr "Высокая"
 
 #: .\templates\wrappers\subscription.html:100
 msgid "Fourth_feature_name"
-msgstr ""
+msgstr "Тэставанне компний"
 
 #: .\templates\wrappers\subscription.html:106
 msgid "Fifth_feature_name"
-msgstr ""
+msgstr "Мадэляванне рынку"
 
 #: .\templates\wrappers\subscription.html:112
 msgid "Sixth_feature_name"
-msgstr ""
+msgstr "Мадэляванне аўдыторыі"
 
 #: .\templates\wrappers\subscription.html:119
 msgid "Free_price"
-msgstr ""
+msgstr "0$"
 
 #: .\templates\wrappers\subscription.html:120
 msgid "Maximum_price"
-msgstr ""
+msgstr "20$"
 
 #: .\templates\wrappers\subscription.html:121
 msgid "Ultra_price"
-msgstr ""
+msgstr "40$"

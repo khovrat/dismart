@@ -68,7 +68,6 @@
             </div>
         </div>
         <div class="row d-flex align-items-center justify-content-center">
-
             <div class="card m-5" style="width: 20rem; height: 35rem">
                 <img
                         src="{% static 'base/img/company-forecast.png' %}"
@@ -92,78 +91,81 @@
                     <li class="list-group-item">{% trans 'Company_forecast_char_3' %}</li>
                 </ul>
             </div>
-            <div class="card m-5" style="width: 20rem; height: 35rem">
-                <img
-                        src="{% static 'base/img/company-stresstest.jpg' %}"
-                        class="card-img-top"
-                        alt="..."
-                        style="height:200px"
-                />
-                <div class="card-body text-center">
-                    <a href="#!" class="btn btn-default" data-toggle="modal"
-                       data-target="#modal-form-company-stresstest">{% trans 'Check' %}</a>
-                </div>
-                <div class="card-body">
+            {% if request.session.profile.subscription == "MAXIMUM" or  request.session.profile.subscription == "ULTRA" %}
+                <div class="card m-5" style="width: 20rem; height: 35rem">
+                    <img
+                            src="{% static 'base/img/company-stresstest.jpg' %}"
+                            class="card-img-top"
+                            alt="..."
+                            style="height:200px"
+                    />
+                    <div class="card-body text-center">
+                        <a href="#!" class="btn btn-default" data-toggle="modal"
+                           data-target="#modal-form-company-stresstest">{% trans 'Check' %}</a>
+                    </div>
+                    <div class="card-body">
 
-                    <h5 class="card-title">{% trans 'Company_stresstest' %}</h5>
-                    <p class="card-text">
-                        {% trans 'Company_stresstest_description' %}
-                    </p>
+                        <h5 class="card-title">{% trans 'Company_stresstest' %}</h5>
+                        <p class="card-text">
+                            {% trans 'Company_stresstest_description' %}
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{% trans 'Company_stresstest_char_1' %}</li>
+                        <li class="list-group-item">{% trans 'Company_stresstest_char_2' %}</li>
+                        <li class="list-group-item">{% trans 'Company_stresstest_char_3' %}</li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{% trans 'Company_stresstest_char_1' %}</li>
-                    <li class="list-group-item">{% trans 'Company_stresstest_char_2' %}</li>
-                    <li class="list-group-item">{% trans 'Company_stresstest_char_3' %}</li>
-                </ul>
-            </div>
-            <div class="card m-5" style="width: 20rem; height: 35rem">
+                <div class="card m-5" style="width: 20rem; height: 35rem">
 
-                <img
-                        src="{% static 'base/img/market.png' %}"
-                        class="card-img-top"
-                        alt="..."
-                        style="height:200px"
-                />
-                <div class="card-body text-center">
-                    <a href="#!" class="btn btn-default" data-toggle="modal"
-                       data-target="#modal-form-market-forecast">{% trans 'Check' %}</a>
+                    <img
+                            src="{% static 'base/img/market.png' %}"
+                            class="card-img-top"
+                            alt="..."
+                            style="height:200px"
+                    />
+                    <div class="card-body text-center">
+                        <a href="#!" class="btn btn-default" data-toggle="modal"
+                           data-target="#modal-form-market-forecast">{% trans 'Check' %}</a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans 'Market_forecast' %}</h5>
+                        <p class="card-text">
+                            {% trans 'Market_forecast_description' %}
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{% trans 'Market_forecast_char_1' %}</li>
+                        <li class="list-group-item">{% trans 'Market_forecast_char_2' %}</li>
+                        <li class="list-group-item">{% trans 'Market_forecast_char_3' %}</li>
+                    </ul>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">{% trans 'Market_forecast' %}</h5>
-                    <p class="card-text">
-                        {% trans 'Market_forecast_description' %}
-                    </p>
+            {% endif %}
+            {% if request.session.profile.subscription == "ULTRA" %}
+                <div class="card m-5" style="width: 20rem; height: 35rem">
+                    <img
+                            src="{% static 'base/img/audience.jpg' %}"
+                            class="card-img-top"
+                            alt="..."
+                            style="height:200px"
+                    />
+                    <div class="card-body text-center">
+                        <a href="{% url 'interface:audience' %}" class="btn btn-default">{% trans 'Check' %}</a>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans 'Audience_modelling' %}</h5>
+                        <p class="card-text">
+                            {% trans 'Audience_modelling_description' %}
+                        </p>
+                    </div>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">{% trans 'Audience_modelling_char_1' %}</li>
+                        <li class="list-group-item">{% trans 'Audience_modelling_char_2' %}</li>
+                        <li class="list-group-item">{% trans 'Audience_modelling_char_3' %}</li>
+                    </ul>
                 </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{% trans 'Market_forecast_char_1' %}</li>
-                    <li class="list-group-item">{% trans 'Market_forecast_char_2' %}</li>
-                    <li class="list-group-item">{% trans 'Market_forecast_char_3' %}</li>
-                </ul>
-
-            </div>
-            <div class="card m-5" style="width: 20rem; height: 35rem">
-                <img
-                        src="{% static 'base/img/audience.jpg' %}"
-                        class="card-img-top"
-                        alt="..."
-                        style="height:200px"
-                />
-                <div class="card-body text-center">
-                    <a href="{% url 'interface:audience' %}" class="btn btn-default">{% trans 'Check' %}</a>
                 </div>
-                <div class="card-body">
-                    <h5 class="card-title">{% trans 'Audience_modelling' %}</h5>
-                    <p class="card-text">
-                        {% trans 'Audience_modelling_description' %}
-                    </p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">{% trans 'Audience_modelling_char_1' %}</li>
-                    <li class="list-group-item">{% trans 'Audience_modelling_char_2' %}</li>
-                    <li class="list-group-item">{% trans 'Audience_modelling_char_3' %}</li>
-                </ul>
-            </div>
-        </div>
+            {% endif %}
         <form role="form" method="post" id="update-article-form" enctype="multipart/form-data"
               action="{% url 'interface:company_forecast' %}">
             {% csrf_token %}

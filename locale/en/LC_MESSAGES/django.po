@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-29 12:28+0300\n"
+"POT-Creation-Date: 2021-05-30 12:15+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,417 +20,419 @@ msgstr ""
 
 #: .\client_side\apps\interface_interaction\views.py:49
 msgid "Sign_out_error"
-msgstr ""
+msgstr "Logout error"
 
 #: .\client_side\apps\interface_interaction\views.py:70
 msgid "Sign_in_warning"
-msgstr ""
+msgstr "Some problems with authorization"
 
 #: .\client_side\apps\interface_interaction\views.py:72
 msgid "Sign_in_error"
-msgstr ""
+msgstr "Authorization error"
 
 #: .\client_side\apps\interface_interaction\views.py:101
 msgid "Sign_up_successful"
-msgstr ""
+msgstr "Registration was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:103
 msgid "Sign_up_warning"
-msgstr ""
+msgstr "Some problems with registration"
 
 #: .\client_side\apps\interface_interaction\views.py:105
 msgid "Sign_up_error"
-msgstr ""
+msgstr "Registration failed"
 
 #: .\client_side\apps\interface_interaction\views.py:120
 msgid "Forgot_password_successful"
-msgstr ""
+msgstr "Password was successfully changed"
 
 #: .\client_side\apps\interface_interaction\views.py:122
 #: .\client_side\apps\interface_interaction\views.py:218
 msgid "Make_payment_warning"
-msgstr ""
+msgstr "Some kind of error with the payment"
 
 #: .\client_side\apps\interface_interaction\views.py:124
 #: .\client_side\apps\interface_interaction\views.py:220
 msgid "Make_payment_error"
-msgstr ""
+msgstr "Payment failed"
 
 #: .\client_side\apps\interface_interaction\views.py:216
 msgid "Make_payment_successful"
-msgstr ""
+msgstr "Payment was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:238
 msgid "Lower_subscription_successful"
-msgstr ""
+msgstr "Rate reduced successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:240
 msgid "Lower_subscription_warning"
-msgstr ""
+msgstr "Some problems with tariff reduction"
 
 #: .\client_side\apps\interface_interaction\views.py:242
 msgid "Lower_subscription_error"
-msgstr ""
+msgstr "Error while reducing tariff"
 
 #: .\client_side\apps\interface_interaction\views.py:258
 msgid "Review_successful"
-msgstr ""
+msgstr "Review added successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:260
 #: .\client_side\apps\interface_interaction\views.py:262
 msgid "Review_warning"
-msgstr ""
+msgstr "Some problem creating a review"
 
 #: .\client_side\apps\interface_interaction\views.py:282
 msgid "Workplace_info_warning"
-msgstr ""
+msgstr "Some problem with the workers"
 
 #: .\client_side\apps\interface_interaction\views.py:284
 msgid "Count_info_warning"
-msgstr ""
+msgstr "Some problem in calculating the metrics"
 
 #: .\client_side\apps\interface_interaction\views.py:302
 msgid "User_info_successful_change"
-msgstr ""
+msgstr "User data changed successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:304
 msgid "User_info_warning_change"
-msgstr ""
+msgstr "Some problem while changing user data"
 
 #: .\client_side\apps\interface_interaction\views.py:306
 msgid "User_info_error_change"
-msgstr ""
+msgstr "Error while changing user data"
 
 #: .\client_side\apps\interface_interaction\views.py:320
 msgid "Password_successful_change"
-msgstr ""
+msgstr "Password changed successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:322
 msgid "Password_warning_change"
-msgstr ""
+msgstr "Some problem when changing password"
 
 #: .\client_side\apps\interface_interaction\views.py:324
 msgid "Password_error_change"
-msgstr ""
+msgstr "Error changing password"
 
 #: .\client_side\apps\interface_interaction\views.py:353
 msgid "Image_successful_change"
-msgstr ""
+msgstr "Image successfully modified"
 
 #: .\client_side\apps\interface_interaction\views.py:355
 msgid "Image_warning_change_server"
-msgstr ""
+msgstr "Some problem while changing the image"
 
 #: .\client_side\apps\interface_interaction\views.py:357
 msgid "Image_warning_change_file"
-msgstr ""
+msgstr "Some problem loading image"
 
 #: .\client_side\apps\interface_interaction\views.py:359
 msgid "Image_error_change"
-msgstr ""
+msgstr "Error changing image"
 
 #: .\client_side\apps\interface_interaction\views.py:386
 #: .\client_side\apps\interface_interaction\views.py:439
 msgid "Companies_info_warning"
-msgstr ""
+msgstr "Some problem with company data"
 
 #: .\client_side\apps\interface_interaction\views.py:397
 msgid "Action_warning"
-msgstr ""
+msgstr "Some problems with the actions of companies"
 
 #: .\client_side\apps\interface_interaction\views.py:399
 msgid "Action_error"
-msgstr ""
+msgstr "Company actions error"
 
 #: .\client_side\apps\interface_interaction\views.py:411
 msgid "Delete_company_successful"
-msgstr ""
+msgstr "Company deletion was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:413
 msgid "Delete_company_warning"
-msgstr ""
+msgstr "Some problem while deleting the company"
 
 #: .\client_side\apps\interface_interaction\views.py:458
 msgid "Company_info_successful_change"
-msgstr ""
+msgstr "Company data changed successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:460
 msgid "Company_info_warning_change"
-msgstr ""
+msgstr "Some problem when changing company data"
 
 #: .\client_side\apps\interface_interaction\views.py:462
 msgid "Company_info_error_change"
-msgstr ""
+msgstr "Error while changing company data"
 
 #: .\client_side\apps\interface_interaction\views.py:488
 msgid "Image_company_successful_change"
-msgstr ""
+msgstr "Company image changed successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:490
 msgid "Image_company_warning_change_server"
-msgstr ""
+msgstr "Some problem while changing the company image"
 
 #: .\client_side\apps\interface_interaction\views.py:492
 msgid "Image_company_warning_change_file"
-msgstr ""
+msgstr "Some problem loading new company image"
 
 #: .\client_side\apps\interface_interaction\views.py:494
 msgid "Company_error_change"
-msgstr ""
+msgstr "Failed to change company"
 
 #: .\client_side\apps\interface_interaction\views.py:509
 msgid "Delete_users_company_successful"
-msgstr ""
+msgstr "User deletion was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:511
 msgid "Delete_users_company_warning"
-msgstr ""
+msgstr "Some problem deleting user"
 
 #: .\client_side\apps\interface_interaction\views.py:513
 msgid "Delete_users_company_error"
-msgstr ""
+msgstr "Error deleting user"
 
 #: .\client_side\apps\interface_interaction\views.py:528
 msgid "Add_users_company_successful"
-msgstr ""
+msgstr "Adding user was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:530
 msgid "Add_users_company_warning"
-msgstr ""
+msgstr "Some problem adding user"
 
 #: .\client_side\apps\interface_interaction\views.py:532
 msgid "Add_users_company_error"
-msgstr ""
+msgstr "Error adding user"
 
 #: .\client_side\apps\interface_interaction\views.py:566
 msgid "Add_company_successful"
-msgstr ""
+msgstr "Adding company was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:568
 msgid "Add_company_warning"
-msgstr ""
+msgstr "Some problem adding a company"
 
 #: .\client_side\apps\interface_interaction\views.py:570
 msgid "Add_company_warning_files"
-msgstr ""
+msgstr "Some problem loading company image"
 
 #: .\client_side\apps\interface_interaction\views.py:572
 msgid "Add_company_error"
-msgstr ""
+msgstr "Error adding company"
 
 #: .\client_side\apps\interface_interaction\views.py:591
 msgid "Reviews_warning"
-msgstr ""
+msgstr "Some problem loading reviews"
 
 #: .\client_side\apps\interface_interaction\views.py:614
 msgid "Reviews_personal_warning"
-msgstr ""
+msgstr "Some problem uploading my own reviews"
 
 #: .\client_side\apps\interface_interaction\views.py:645
 msgid "Advices_warning"
-msgstr ""
+msgstr "Some problem loading tips"
 
 #: .\client_side\apps\interface_interaction\views.py:678
 msgid "Advices_filter_warning"
-msgstr ""
+msgstr "Some problem filtering tips"
 
 #: .\client_side\apps\interface_interaction\views.py:693
 msgid "Advices_rate_successful"
-msgstr ""
+msgstr "Submission of the rating point was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:695
 msgid "Advices_rate_warning"
-msgstr ""
+msgstr "Something went wrong with giving a rating point"
 
 #: .\client_side\apps\interface_interaction\views.py:697
 msgid "Advices_rate_error"
-msgstr ""
+msgstr "Error while providing rating score"
 
 #: .\client_side\apps\interface_interaction\views.py:723
 msgid "Articles_warning"
-msgstr ""
+msgstr "Some problems loading articles"
 
 #: .\client_side\apps\interface_interaction\views.py:752
 msgid "Create_article_successful"
-msgstr ""
+msgstr "Article added successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:754
 msgid "Create_article_warning"
-msgstr ""
+msgstr "Some problems while creating the article"
 
 #: .\client_side\apps\interface_interaction\views.py:756
 msgid "Create_article_warning_files"
-msgstr ""
+msgstr "Some problem loading article image"
 
 #: .\client_side\apps\interface_interaction\views.py:758
 msgid "Create_article_error"
-msgstr ""
+msgstr "Error creating article"
 
 #: .\client_side\apps\interface_interaction\views.py:795
 msgid "Articles_filter_warning"
-msgstr ""
+msgstr "Some problems with filtering articles"
 
 #: .\client_side\apps\interface_interaction\views.py:810
 msgid "Articles_rate_successful"
-msgstr ""
+msgstr "Submission of article score was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:812
 msgid "Articles_rate_warning"
-msgstr ""
+msgstr "Some problem in giving a score to the article"
 
 #: .\client_side\apps\interface_interaction\views.py:814
 msgid "Articles_rate_error"
-msgstr ""
+msgstr "An error occurred while giving a score to the article"
 
 #: .\client_side\apps\interface_interaction\views.py:827
 msgid "Delete_articles_successful"
-msgstr ""
+msgstr "The article was deleted successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:829
 msgid "Delete_articles_warning"
-msgstr ""
+msgstr "Some problem while deleting the article"
 
 #: .\client_side\apps\interface_interaction\views.py:831
 #: .\client_side\apps\interface_interaction\views.py:1047
 msgid "Delete_articles_error"
-msgstr ""
+msgstr "Error deleting article"
 
 #: .\client_side\apps\interface_interaction\views.py:860
 msgid "Update_article_successful"
-msgstr ""
+msgstr "The article was updated successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:862
 msgid "Update_article_warning"
-msgstr ""
+msgstr "Some problems while updating the article"
 
 #: .\client_side\apps\interface_interaction\views.py:864
 msgid "Update_article_warning_files"
-msgstr ""
+msgstr "Some problem loading new article image"
 
 #: .\client_side\apps\interface_interaction\views.py:866
 msgid "Update_article_error"
-msgstr ""
+msgstr "Failed to update article"
 
 #: .\client_side\apps\interface_interaction\views.py:880
 msgid "Get_search_warning"
-msgstr ""
+msgstr "Some kind of search problem"
 
 #: .\client_side\apps\interface_interaction\views.py:894
 #: .\client_side\apps\interface_interaction\views.py:943
 msgid "View_news_warning"
-msgstr ""
+msgstr "Some problems loading news"
 
 #: .\client_side\apps\interface_interaction\views.py:905
 msgid "View_news_error"
-msgstr ""
+msgstr "Error loading news"
 
 #: .\client_side\apps\interface_interaction\views.py:930
 msgid "Filter_search_warning"
-msgstr ""
+msgstr "Some problems with filtering news"
 
 #: .\client_side\apps\interface_interaction\views.py:986
 msgid "Disasters_warning"
-msgstr ""
+msgstr "Some problems loading disasters"
 
 #: .\client_side\apps\interface_interaction\views.py:1004
 msgid "Create_disasters_successful"
-msgstr ""
+msgstr "Crash added successfully"
 
 #: .\client_side\apps\interface_interaction\views.py:1006
 #: .\client_side\apps\interface_interaction\views.py:1008
 msgid "Create_disasters_warning"
-msgstr ""
+msgstr "Some problem adding a disaster"
 
 #: .\client_side\apps\interface_interaction\views.py:1026
 msgid "Update_disasters_successful"
-msgstr ""
+msgstr "Crash update was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:1028
 #: .\client_side\apps\interface_interaction\views.py:1030
 msgid "Update_disasters_warning"
-msgstr ""
+msgstr "Some problem updating disasters"
 
 #: .\client_side\apps\interface_interaction\views.py:1043
 msgid "Delete_disasters_successful"
-msgstr ""
+msgstr "Disaster removal was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:1045
 msgid "Delete_disasters_warning"
-msgstr ""
+msgstr "Some problems while removing the disaster"
 
 #: .\client_side\apps\interface_interaction\views.py:1088
 msgid "Disasters_filter_warning"
-msgstr ""
+msgstr "Some problems while filtering disasters"
 
 #: .\client_side\apps\interface_interaction\views.py:1100
+#, fuzzy
+#| msgid "Modeling_error"
 msgid "Modelling_error"
-msgstr ""
+msgstr "Simulation error"
 
 #: .\client_side\apps\interface_interaction\views.py:1126
 msgid "Audience_warning"
-msgstr ""
+msgstr "Some problem loading audiences"
 
 #: .\client_side\apps\interface_interaction\views.py:1144
 msgid "Create_audience_successful"
-msgstr ""
+msgstr "Audience creation was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:1146
 #: .\client_side\apps\interface_interaction\views.py:1148
 msgid "Create_audience_warning"
-msgstr ""
+msgstr "Some problem while creating an audience"
 
 #: .\client_side\apps\interface_interaction\views.py:1166
 msgid "Update_audience_successful"
-msgstr ""
+msgstr "Audience update was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:1168
 #: .\client_side\apps\interface_interaction\views.py:1170
 msgid "Update_audience_warning"
-msgstr ""
+msgstr "Some problems with updating the audience"
 
 #: .\client_side\apps\interface_interaction\views.py:1183
 msgid "Delete_audience_successful"
-msgstr ""
+msgstr "Audience deletion was successful"
 
 #: .\client_side\apps\interface_interaction\views.py:1185
 msgid "Delete_audience_warning"
-msgstr ""
+msgstr "Some problem while deleting an audience"
 
 #: .\client_side\apps\interface_interaction\views.py:1187
 msgid "Delete_audience_error"
-msgstr ""
+msgstr "Error deleting audience"
 
 #: .\client_side\apps\interface_interaction\views.py:1227
 msgid "Audience_filter_warning"
-msgstr ""
+msgstr "Some problems with audience filtering"
 
 #: .\client_side\apps\interface_interaction\views.py:1242
 msgid "Audience_forecast_error"
-msgstr ""
+msgstr "Audience Behavior Prediction Error"
 
 #: .\client_side\apps\interface_interaction\views.py:1255
 msgid "Company_forecast_warning"
-msgstr ""
+msgstr "Some problems in forecasting company performance"
 
 #: .\client_side\apps\interface_interaction\views.py:1268
 msgid "Company_forecast_error"
-msgstr ""
+msgstr "Error modeling company indicators"
 
 #: .\client_side\apps\interface_interaction\views.py:1307
 msgid "Company_stresstest_warning"
-msgstr ""
+msgstr "Some problem with the stress testing of the company"
 
 #: .\client_side\apps\interface_interaction\views.py:1319
 msgid "Company_stresstest_error"
-msgstr ""
+msgstr "Error while stress testing the company"
 
 #: .\client_side\apps\interface_interaction\views.py:1332
 msgid "Market_forecast_warning"
-msgstr ""
+msgstr "Some problems with modeling market indicators"
 
 #: .\client_side\apps\interface_interaction\views.py:1344
 msgid "Market_forecast_error"
-msgstr ""
+msgstr "Error modeling market indicators"
 
 #: .\client_side\settings.py:114
 msgid "English"
@@ -454,223 +456,223 @@ msgstr "Belarusian"
 
 #: .\templates\advices.html:15
 msgid "Hi_advice"
-msgstr ""
+msgstr "Tips"
 
 #: .\templates\advices.html:16
 msgid "Advice_description"
-msgstr ""
+msgstr "Below is a list of tips, in which case, use filtering."
 
 #: .\templates\advices.html:35 .\templates\aid.html:33
 #: .\templates\articles.html:34 .\templates\news.html:40
 #: .\templates\wrappers\navbar.html:39 .\templates\wrappers\navbar.html:45
 #: .\templates\wrappers\navbar.html:100 .\templates\wrappers\navbar.html:106
 msgid "Aid"
-msgstr ""
+msgstr "Help"
 
 #: .\templates\advices.html:36 .\templates\aid.html:49
 #: .\templates\home.html:117 .\templates\welcome.html:117
 msgid "Advices"
-msgstr ""
+msgstr "Tips"
 
 #: .\templates\advices.html:43 .\templates\articles.html:45
-#: .\templates\audience.html:48 .\templates\disasters.html:44
+#: .\templates\audience.html:47 .\templates\disasters.html:44
 #: .\templates\news.html:68
 msgid "Filter"
-msgstr ""
+msgstr "Filtering"
 
 #: .\templates\advices.html:45 .\templates\articles.html:47
-#: .\templates\audience.html:50 .\templates\disasters.html:46
+#: .\templates\audience.html:49 .\templates\disasters.html:46
 #: .\templates\news.html:70
 msgid "Cancel_Filter"
-msgstr ""
+msgstr "Cancel filtering"
 
 #: .\templates\advices.html:55
 msgid "Success_title_advices"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\advices.html:63
 msgid "Warning_title_advices"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\advices.html:71
 msgid "Error_title_advices"
-msgstr ""
+msgstr "Problem: "
 
 #: .\templates\advices.html:98
 msgid "Filter_advices_title"
-msgstr ""
+msgstr "Filtering"
 
 #: .\templates\advices.html:105 .\templates\articles.html:232
 #: .\templates\disasters.html:105 .\templates\news.html:131
 msgid "Disaster_type_tip"
-msgstr ""
+msgstr "Disaster type select"
 
 #: .\templates\advices.html:110 .\templates\articles.html:137
-#: .\templates\articles.html:237 .\templates\audience.html:114
-#: .\templates\audience.html:191 .\templates\disasters.html:110
+#: .\templates\articles.html:237 .\templates\audience.html:113
+#: .\templates\audience.html:190 .\templates\disasters.html:110
 #: .\templates\disasters.html:193 .\templates\news.html:136
 #: .\templates\pagination\articles.html:155
 #: .\templates\pagination\audience.html:90
 #: .\templates\pagination\disasters.html:89
 msgid "Type"
-msgstr ""
+msgstr "Type"
 
 #: .\templates\advices.html:123 .\templates\articles.html:250
 msgid "Rate_tip"
-msgstr ""
+msgstr "Rating score from 1 to 5"
 
 #: .\templates\advices.html:135 .\templates\articles.html:262
 msgid "Amount_tip"
-msgstr ""
+msgstr "Number of people who rated"
 
 #: .\templates\advices.html:149
 msgid "Filter_advices"
-msgstr ""
+msgstr "Filter"
 
 #: .\templates\aid.html:15
 msgid "Hi_aid"
-msgstr ""
+msgstr "Help"
 
 #: .\templates\aid.html:16
 msgid "Aid_description"
-msgstr ""
+msgstr "We have three types of help if you need it."
 
 #: .\templates\aid.html:51
 msgid "Advices_description"
-msgstr ""
+msgstr "Top-notch Tips You May Need Anytime"
 
 #: .\templates\aid.html:55
 msgid "Advices_char_1"
-msgstr ""
+msgstr "Verification"
 
 #: .\templates\aid.html:56
 msgid "Advices_char_2"
-msgstr ""
+msgstr "Experience"
 
 #: .\templates\aid.html:57
 msgid "Advices_char_3"
-msgstr ""
+msgstr "Uniqueness"
 
 #: .\templates\aid.html:60 .\templates\aid.html:82 .\templates\aid.html:104
-#: .\templates\modelling.html:81 .\templates\modelling.html:104
-#: .\templates\modelling.html:129 .\templates\modelling.html:152
+#: .\templates\modelling.html:80 .\templates\modelling.html:104
+#: .\templates\modelling.html:129 .\templates\modelling.html:153
 #: .\templates\pagination\audience.html:34
 #: .\templates\pagination\disasters.html:33
 #: .\templates\pagination\disasters.html:202
 msgid "Check"
-msgstr ""
+msgstr "Select"
 
 #: .\templates\aid.html:71 .\templates\articles.html:35
 #: .\templates\articles.html:85 .\templates\home.html:111
 #: .\templates\profile.html:108 .\templates\welcome.html:111
 msgid "Articles"
-msgstr ""
+msgstr "Articles"
 
 #: .\templates\aid.html:73
 msgid "Articles_description"
-msgstr ""
+msgstr "Top-notch articles created by our users"
 
 #: .\templates\aid.html:77
 msgid "Articles_char_1"
-msgstr ""
+msgstr "Creativity"
 
 #: .\templates\aid.html:78
 msgid "Articles_char_2"
-msgstr ""
+msgstr "Availability"
 
 #: .\templates\aid.html:79
 msgid "Articles_char_3"
-msgstr ""
+msgstr "Sincerity"
 
 #: .\templates\aid.html:93 .\templates\news.html:41
 msgid "News"
-msgstr ""
+msgstr "News"
 
 #: .\templates\aid.html:95 .\templates\news.html:21
 msgid "News_description"
-msgstr ""
+msgstr "All the news you need, depending on the type"
 
 #: .\templates\aid.html:99
 msgid "News_char_1"
-msgstr ""
+msgstr "Informational content"
 
 #: .\templates\aid.html:100
 msgid "News_char_2"
-msgstr ""
+msgstr "Credibility"
 
 #: .\templates\aid.html:101
 msgid "News_char_3"
-msgstr ""
+msgstr "Speed"
 
 #: .\templates\articles.html:15
 msgid "Hi_article"
-msgstr ""
+msgstr "Articles"
 
 #: .\templates\articles.html:16
 msgid "Article_description"
-msgstr ""
+msgstr "Below you can see the best works of our users"
 
-#: .\templates\articles.html:42 .\templates\audience.html:45
+#: .\templates\articles.html:42 .\templates\audience.html:44
 #: .\templates\companies-detail.html:241 .\templates\companies.html:78
 #: .\templates\disasters.html:41
 msgid "Add"
-msgstr ""
+msgstr "Add"
 
 #: .\templates\articles.html:57
 msgid "Success_title_articles"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\articles.html:65
 msgid "Warning_title_articles"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\articles.html:73
 msgid "Error_title_articles"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\articles.html:119 .\templates\articles.html:197
 #: .\templates\companies.html:97
 msgid "Image_required"
-msgstr ""
+msgstr "Image is required"
 
 #: .\templates\articles.html:126
 msgid "Create_your_article"
-msgstr ""
+msgstr "Create your own article"
 
 #: .\templates\articles.html:153 .\templates\companies-detail.html:169
 #: .\templates\companies-detail.html:171 .\templates\companies.html:130
 #: .\templates\pagination\articles.html:174
 msgid "Name"
-msgstr ""
+msgstr "Title"
 
 #: .\templates\articles.html:166 .\templates\news.html:155
 #: .\templates\pagination\articles.html:187
 msgid "Language"
-msgstr ""
+msgstr "Language"
 
 #: .\templates\articles.html:185
 msgid "Text"
-msgstr ""
+msgstr "Link to text"
 
 #: .\templates\articles.html:205
 msgid "Create_article"
-msgstr ""
+msgstr "Create"
 
 #: .\templates\articles.html:225
 msgid "Filter_articles_title"
-msgstr ""
+msgstr "Filtering Articles"
 
 #: .\templates\articles.html:276
 msgid "Filter_articles"
-msgstr ""
+msgstr "Filter"
 
 #: .\templates\audience.html:15
 msgid "Hi_audience"
-msgstr ""
+msgstr "Audiences"
 
 #: .\templates\audience.html:16
 msgid "Audience_description"
-msgstr ""
+msgstr "Below you can see the audiences available to you"
 
 #: .\templates\audience.html:35 .\templates\disasters.html:34
 #: .\templates\forecast-audience.html:30 .\templates\forecast-company.html:30
@@ -679,61 +681,63 @@ msgstr ""
 #: .\templates\wrappers\navbar.html:52 .\templates\wrappers\navbar.html:58
 #: .\templates\wrappers\navbar.html:113 .\templates\wrappers\navbar.html:119
 msgid "Disasters"
-msgstr ""
+msgstr "Disasters"
 
-#: .\templates\audience.html:37 .\templates\forecast-audience.html:32
+#: .\templates\audience.html:36 .\templates\forecast-audience.html:32
 #: .\templates\forecast-company.html:32 .\templates\forecast-market.html:32
 #: .\templates\modelling.html:64 .\templates\stresstest-company.html:32
+#, fuzzy
+#| msgid "Modeling"
 msgid "Modelling"
-msgstr ""
+msgstr "Simulation"
 
-#: .\templates\audience.html:38 .\templates\forecast-audience.html:34
+#: .\templates\audience.html:37 .\templates\forecast-audience.html:34
 msgid "Audience"
-msgstr ""
+msgstr "Audiences"
 
-#: .\templates\audience.html:60
+#: .\templates\audience.html:59
 msgid "Success_title_audience"
-msgstr ""
+msgstr "Success: "
 
-#: .\templates\audience.html:68
+#: .\templates\audience.html:67
 msgid "Warning_title_audience"
-msgstr ""
+msgstr "Warning: "
 
-#: .\templates\audience.html:76
+#: .\templates\audience.html:75
 msgid "Error_title_audience"
-msgstr ""
+msgstr "Error: "
 
-#: .\templates\audience.html:102
+#: .\templates\audience.html:101
 msgid "Filter_audience_title"
-msgstr ""
+msgstr "Filtering audiences"
 
-#: .\templates\audience.html:109
+#: .\templates\audience.html:108
 msgid "Audience_type_tip"
-msgstr ""
+msgstr "Select audience type"
 
-#: .\templates\audience.html:127
+#: .\templates\audience.html:126
 msgid "Size_tip"
-msgstr ""
+msgstr "Specify size"
 
-#: .\templates\audience.html:143 .\templates\audience.html:207
+#: .\templates\audience.html:142 .\templates\audience.html:206
 #: .\templates\pagination\audience.html:109
 msgid "Age_left"
-msgstr ""
+msgstr "Younger"
 
-#: .\templates\audience.html:151 .\templates\audience.html:215
+#: .\templates\audience.html:150 .\templates\audience.html:214
 #: .\templates\pagination\audience.html:118
 msgid "Age_right"
-msgstr ""
+msgstr "The Greater Century"
 
-#: .\templates\audience.html:159 .\templates\disasters.html:161
+#: .\templates\audience.html:158 .\templates\disasters.html:161
 msgid "Filter_disasters"
-msgstr ""
+msgstr "Catastrophe filtering"
 
-#: .\templates\audience.html:180
+#: .\templates\audience.html:179
 msgid "Create_your_audience"
-msgstr ""
+msgstr "Create your own audience profile"
 
-#: .\templates\audience.html:227 .\templates\companies-detail.html:112
+#: .\templates\audience.html:226 .\templates\companies-detail.html:112
 #: .\templates\companies-detail.html:190 .\templates\companies-detail.html:192
 #: .\templates\companies.html:152 .\templates\forecast-audience.html:63
 #: .\templates\forecast-company.html:65 .\templates\forecast-market.html:52
@@ -743,87 +747,87 @@ msgstr ""
 #: .\templates\pagination\companies.html:15
 #: .\templates\stresstest-company.html:65
 msgid "Size"
-msgstr ""
+msgstr "Size"
 
-#: .\templates\audience.html:239 .\templates\pagination\audience.html:143
+#: .\templates\audience.html:238 .\templates\pagination\audience.html:143
 msgid "Features"
-msgstr ""
+msgstr "Features"
 
-#: .\templates\audience.html:246 .\templates\pagination\audience.html:151
+#: .\templates\audience.html:245 .\templates\pagination\audience.html:151
 msgid "Create_audience"
-msgstr ""
+msgstr "Create Audience"
 
 #: .\templates\card.html:5
 msgid "Hi_card_info"
-msgstr ""
+msgstr "Your bank card"
 
 #: .\templates\card.html:6
 msgid "Card_info_description"
-msgstr ""
+msgstr "Describe your card details here"
 
 #: .\templates\card.html:11
 msgid "Success_title_card"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\card.html:18
 msgid "Warning_title_card"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\card.html:25
 msgid "Error_title_card"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\card.html:36
 msgid "Simple_card_info"
-msgstr ""
+msgstr "Here is the map data"
 
 #: .\templates\card.html:42
 msgid "EnterCardInfo"
-msgstr ""
+msgstr "Maintain card information"
 
 #: .\templates\card.html:47
 msgid "FullNameCard"
-msgstr ""
+msgstr "Full name"
 
 #: .\templates\card.html:49
 msgid "YourNameCard"
-msgstr ""
+msgstr "Your full name"
 
 #: .\templates\card.html:55
 msgid "CardNumber"
-msgstr ""
+msgstr "Card number"
 
 #: .\templates\card.html:58
 msgid "YourCard"
-msgstr ""
+msgstr "Your card"
 
 #: .\templates\card.html:65
 msgid "ExpirationCard"
-msgstr ""
+msgstr "Card end date"
 
 #: .\templates\card.html:88
 msgid "card_expiration"
-msgstr ""
+msgstr "Enter end date"
 
 #: .\templates\card.html:90
 msgid "confirm"
-msgstr ""
+msgstr "confirmed"
 
 #: .\templates\card.html:92
 msgid "not_confirm"
-msgstr ""
+msgstr "not confirmed"
 
 #: .\templates\card.html:95
 msgid "Payment"
-msgstr ""
+msgstr "Pay"
 
 #: .\templates\card.html:104
 msgid "Return_to_subscription"
-msgstr ""
+msgstr "Return to subscriptions"
 
 #: .\templates\companies-detail.html:13
 msgid "Company_description"
-msgstr ""
+msgstr "Company Description"
 
 #: .\templates\companies-detail.html:29 .\templates\companies.html:32
 #: .\templates\profile.html:28 .\templates\reviews.html:33
@@ -832,41 +836,41 @@ msgstr ""
 #: .\templates\wrappers\navbar.html:32 .\templates\wrappers\navbar.html:87
 #: .\templates\wrappers\navbar.html:93
 msgid "Profile"
-msgstr ""
+msgstr "Profile"
 
 #: .\templates\companies-detail.html:31 .\templates\companies-detail.html:91
 #: .\templates\companies.html:33 .\templates\home.html:105
 #: .\templates\profile.html:85 .\templates\welcome.html:105
 msgid "Companies"
-msgstr ""
+msgstr "Companies"
 
 #: .\templates\companies-detail.html:43
 msgid "Success_title_companies_detail"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\companies-detail.html:51
 msgid "Warning_title_companies_detail"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\companies-detail.html:59
 msgid "Error_title_companies_detail"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\companies-detail.html:96 .\templates\companies-detail.html:150
 #: .\templates\forecast-company.html:102 .\templates\forecast-market.html:77
 #: .\templates\profile.html:92 .\templates\profile.html:149
 msgid "Save"
-msgstr ""
+msgstr "Save"
 
 #: .\templates\companies-detail.html:98 .\templates\profile.html:94
 msgid "Cancel"
-msgstr ""
+msgstr "Undo"
 
 #: .\templates\companies-detail.html:108 .\templates\companies-detail.html:237
 #: .\templates\forecast-company.html:61 .\templates\home.html:99
 #: .\templates\stresstest-company.html:61 .\templates\welcome.html:99
 msgid "Users"
-msgstr ""
+msgstr "Users"
 
 #: .\templates\companies-detail.html:116 .\templates\companies-detail.html:199
 #: .\templates\companies-detail.html:201 .\templates\companies.html:163
@@ -874,769 +878,778 @@ msgstr ""
 #: .\templates\pagination\companies.html:17
 #: .\templates\stresstest-company.html:69
 msgid "Revenue"
-msgstr ""
+msgstr "Income"
 
 #: .\templates\companies-detail.html:126 .\templates\forecast-company.html:79
 #: .\templates\stresstest-company.html:79
 msgid "site"
-msgstr ""
+msgstr "site"
 
 #: .\templates\companies-detail.html:145
 msgid "Edit_company"
-msgstr ""
+msgstr "Edit"
 
 #: .\templates\companies-detail.html:153
 msgid "Open_users"
-msgstr ""
+msgstr "Open Users"
 
 #: .\templates\companies-detail.html:156
 msgid "Close_users"
-msgstr ""
+msgstr "Close Users"
 
+# :.\templates\companies-detail.html: 163
 #: .\templates\companies-detail.html:163
 msgid "Company_information"
-msgstr ""
+msgstr "Company Information"
 
 #: .\templates\companies-detail.html:179 .\templates\companies-detail.html:181
 #: .\templates\companies.html:141
 msgid "Site"
-msgstr ""
+msgstr "Site"
 
 #: .\templates\companies-detail.html:210 .\templates\companies-detail.html:212
 #: .\templates\companies.html:174 .\templates\pagination\companies.html:13
 msgid "Location"
-msgstr ""
+msgstr "Location"
 
 #: .\templates\companies-detail.html:219 .\templates\companies-detail.html:221
 #: .\templates\companies.html:185
 msgid "Description"
-msgstr ""
+msgstr "Description"
 
 #: .\templates\companies-detail.html:232
 msgid "Users_info"
-msgstr ""
+msgstr "User Information"
 
 #: .\templates\companies-detail.html:256
 msgid "Add_new_user_to_company"
-msgstr ""
+msgstr "Add new user"
 
 #: .\templates\companies-detail.html:268 .\templates\profile.html:168
 #: .\templates\profile.html:170
 msgid "Username"
-msgstr ""
+msgstr "Username"
 
 #: .\templates\companies-detail.html:283
 #: .\templates\pagination\companies-detail.html:11
 msgid "Position"
-msgstr ""
+msgstr "Position"
 
 #: .\templates\companies-detail.html:290
 msgid "Add_user"
-msgstr ""
+msgstr "Add"
 
 #: .\templates\companies.html:15
 msgid "Hi_companies"
-msgstr ""
+msgstr "Companies"
 
 #: .\templates\companies.html:16
 msgid "Companies_description"
-msgstr ""
+msgstr "All companies open to you are here"
 
 #: .\templates\companies.html:44
 msgid "Success_title_companies"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\companies.html:52
 msgid "Warning_title_companies"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\companies.html:60
 msgid "Error_title_companies"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\companies.html:74
 msgid "Companies_table"
-msgstr ""
+msgstr "Companies"
 
 #: .\templates\companies.html:104
 msgid "Add_new_company"
-msgstr ""
+msgstr "Add new"
 
 #: .\templates\companies.html:115 .\templates\pagination\companies.html:11
 msgid "Market"
-msgstr ""
+msgstr "Market"
 
 #: .\templates\companies.html:194
 msgid "Add_company"
-msgstr ""
+msgstr "Add"
 
-#: .\templates\disasters.html:15 .\templates\home.html:13
-#: .\templates\welcome.html:13
+#: .\templates\disasters.html:15
 msgid "Hi_disaster"
-msgstr ""
+msgstr "Disasters"
 
 #: .\templates\disasters.html:16
 msgid "Disaster_description"
-msgstr ""
+msgstr "Here's more disaster for you"
 
 #: .\templates\disasters.html:56
 msgid "Success_title_disasters"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\disasters.html:64
 msgid "Warning_title_disasters"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\disasters.html:72
 msgid "Error_title_disasters"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\disasters.html:98
 msgid "Filter_disasters_title"
-msgstr ""
+msgstr "Filter disasters"
 
 #: .\templates\disasters.html:123 .\templates\disasters.html:207
 #: .\templates\pagination\disasters.html:106
 msgid "Intensity_tip"
-msgstr ""
+msgstr "Specify the degree of intensity"
 
 #: .\templates\disasters.html:136 .\templates\disasters.html:221
 #: .\templates\pagination\disasters.html:121
 msgid "Readiness_tip"
-msgstr ""
+msgstr "Indicate the degree of readiness of the society"
 
 #: .\templates\disasters.html:149
 msgid "Term_tip"
-msgstr ""
+msgstr "Specify the duration of the disaster"
 
 #: .\templates\disasters.html:182
 msgid "Create_your_disaster"
-msgstr ""
+msgstr "Create your own disaster profile"
 
 #: .\templates\disasters.html:237 .\templates\pagination\disasters.html:44
 #: .\templates\pagination\disasters.html:138
 #: .\templates\pagination\disasters.html:235
 msgid "Term"
-msgstr ""
+msgstr "Term"
 
-#: .\templates\disasters.html:249 .\templates\home.html:126
-#: .\templates\pagination\disasters.html:150 .\templates\welcome.html:126
+#: .\templates\disasters.html:249 .\templates\pagination\disasters.html:150
 msgid "About"
-msgstr ""
+msgstr "Description"
 
 #: .\templates\disasters.html:256
 msgid "Create_disaster"
-msgstr ""
+msgstr "Create"
 
 #: .\templates\forecast-audience.html:12
 msgid "Hi_forecast_audience"
-msgstr ""
+msgstr "Here's the forecast"
 
 #: .\templates\forecast-audience.html:13
 msgid "Forecast_audience_description"
-msgstr ""
+msgstr "The table contains all the data for forecasting audience behavior"
 
 #: .\templates\forecast-audience.html:36 .\templates\forecast-company.html:98
 #: .\templates\forecast-market.html:73
 msgid "Forecast"
-msgstr ""
+msgstr "Forecast"
 
 #: .\templates\forecast-audience.html:67
 #: .\templates\pagination\audience.html:50
 #: .\templates\pagination\audience.html:188
 msgid "Age_group"
-msgstr ""
+msgstr "Age Group"
 
 #: .\templates\forecast-audience.html:91
 msgid "Indicators"
-msgstr ""
+msgstr "Indicators"
 
 #: .\templates\forecast-audience.html:101
 #: .\templates\stresstest-company.html:108
 msgid "Indicator_toggle"
-msgstr ""
+msgstr "These are the key aspects of the business"
 
 #: .\templates\forecast-audience.html:101
 #: .\templates\stresstest-company.html:108
 msgid "Indicator"
-msgstr ""
+msgstr "Indicator"
 
 #: .\templates\forecast-audience.html:103
 #: .\templates\stresstest-company.html:110
 msgid "Importance_toggle"
-msgstr ""
+msgstr "This is the importance of the indicator"
 
 #: .\templates\forecast-audience.html:103
 #: .\templates\stresstest-company.html:110
 msgid "Importance"
-msgstr ""
+msgstr "Importance"
 
 #: .\templates\forecast-audience.html:105
 #: .\templates\stresstest-company.html:112
 msgid "Value_toggle"
-msgstr ""
+msgstr "This is the value of the metric"
 
 #: .\templates\forecast-audience.html:105
 #: .\templates\stresstest-company.html:112
 msgid "Value"
-msgstr ""
+msgstr "Value"
 
 #: .\templates\forecast-audience.html:122
 #: .\templates\stresstest-company.html:129
 msgid "Not_important"
-msgstr ""
+msgstr "Doesn't matter"
 
 #: .\templates\forecast-audience.html:125
 #: .\templates\stresstest-company.html:132
 msgid "Important"
-msgstr ""
+msgstr "Important"
 
 #: .\templates\forecast-audience.html:128
 #: .\templates\stresstest-company.html:135
 msgid "So_important"
-msgstr ""
+msgstr "Very important"
 
 #: .\templates\forecast-company.html:12
 msgid "Hi_forecast_company"
-msgstr ""
+msgstr "Here's the forecast"
 
 #: .\templates\forecast-company.html:13
 msgid "Forecast_company_description"
-msgstr ""
+msgstr "Below is your forecast for your operating performance"
 
 #: .\templates\forecast-company.html:34
 msgid "Forecast_company"
-msgstr ""
+msgstr "Forecast"
 
 #: .\templates\forecast-market.html:12
 msgid "Hi_forecast_market"
-msgstr ""
+msgstr "Here's the forecast"
 
 #: .\templates\forecast-market.html:13
 msgid "Forecast_market_description"
-msgstr ""
+msgstr "Forecast of market indicators is presented below"
 
 #: .\templates\forecast-market.html:34
 msgid "Forecast_market"
-msgstr ""
+msgstr "Forecast"
 
 #: .\templates\forgot-password.html:5
 msgid "Hi_forgot_password"
-msgstr ""
+msgstr "Forgot your password?"
 
 #: .\templates\forgot-password.html:6
 msgid "Forgot_password_description"
-msgstr ""
+msgstr "No problem, change it below"
 
 #: .\templates\forgot-password.html:11
 msgid "Success_title_forgot_password"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\forgot-password.html:18
 msgid "Warning_title_forgot_password"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\forgot-password.html:25
 msgid "Error_title_forgot_password"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\forgot-password.html:36
 msgid "Simple_forgot_password"
-msgstr ""
+msgstr "Enter your password here"
 
 #: .\templates\forgot-password.html:49 .\templates\sign-in.html:50
 #: .\templates\sign-up.html:50
 msgid "Username_placeholder"
-msgstr ""
+msgstr "Username"
 
 #: .\templates\forgot-password.html:59 .\templates\sign-in.html:59
 #: .\templates\sign-up.html:96
 msgid "Password_placeholder"
-msgstr ""
+msgstr "Password"
 
 #: .\templates\forgot-password.html:64 .\templates\profile.html:222
 #: .\templates\sign-up.html:101
 msgid "password_strength"
-msgstr ""
+msgstr "reliability"
 
 #: .\templates\forgot-password.html:66 .\templates\profile.html:225
 #: .\templates\sign-up.html:103
 msgid "strong"
-msgstr ""
+msgstr "high"
 
 #: .\templates\forgot-password.html:68 .\templates\profile.html:228
 #: .\templates\sign-up.html:105
 msgid "medium"
-msgstr ""
+msgstr "medium"
 
 #: .\templates\forgot-password.html:70 .\templates\profile.html:231
 #: .\templates\sign-up.html:107
 msgid "weak"
-msgstr ""
+msgstr "low"
 
 #: .\templates\forgot-password.html:79 .\templates\sign-up.html:116
 msgid "Password_confirm_placeholder"
-msgstr ""
+msgstr "Confirm password"
 
 #: .\templates\forgot-password.html:85 .\templates\profile.html:243
 #: .\templates\sign-up.html:122
 msgid "password_confirm"
-msgstr ""
+msgstr "match"
 
 #: .\templates\forgot-password.html:87 .\templates\profile.html:246
 #: .\templates\sign-up.html:124
 msgid "matching"
-msgstr ""
+msgstr "whole"
 
 #: .\templates\forgot-password.html:89 .\templates\profile.html:249
 #: .\templates\sign-up.html:126
 msgid "not_matching"
-msgstr ""
+msgstr "something is wrong"
 
 #: .\templates\forgot-password.html:98 .\templates\sign-up.html:135
 msgid "I_agree_with_the"
-msgstr ""
+msgstr "I agree with"
 
-#: .\templates\forgot-password.html:99 .\templates\sign-up.html:136
+#: .\templates\forgot-password.html:99 .\templates\sign-up.html:137
 msgid "Privacy_policy"
-msgstr ""
+msgstr "Privacy Policy"
 
 #: .\templates\forgot-password.html:110 .\templates\profile.html:152
 msgid "Reset_password"
-msgstr ""
+msgstr "Reset password"
 
 #: .\templates\forgot-password.html:117
 msgid "I_remember_password"
-msgstr ""
+msgstr "I remember my password"
 
 #: .\templates\forgot-password.html:120 .\templates\sign-in.html:85
 msgid "Create_new_account"
-msgstr ""
+msgstr "Create new account"
 
 #: .\templates\home.html:14 .\templates\welcome.html:14
 msgid "Project_short_description"
-msgstr ""
+msgstr "Born to Help"
 
 #: .\templates\home.html:17 .\templates\welcome.html:17
 msgid "Buy_subscription"
-msgstr ""
+msgstr "Buy subscription"
 
 #: .\templates\home.html:19 .\templates\welcome.html:19
 msgid "Read_full_description"
-msgstr ""
+msgstr "Read Description"
 
 #: .\templates\home.html:31
 msgid "Success_home"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\home.html:39
 msgid "Warning_title_home"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\home.html:47
 msgid "Error_title_home"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\home.html:58 .\templates\home.html:92
 #: .\templates\welcome.html:58 .\templates\welcome.html:92
 msgid "Services"
-msgstr ""
+msgstr "Services"
 
 #: .\templates\home.html:59 .\templates\home.html:93
 #: .\templates\welcome.html:59 .\templates\welcome.html:93
 msgid "Services_description"
-msgstr ""
+msgstr "What can we give you?"
 
 #: .\templates\home.html:67
 msgid "Services_1_home"
-msgstr ""
+msgstr "Analytics"
 
 #: .\templates\home.html:68
 msgid "Services_1_home_description"
-msgstr ""
+msgstr "Our analytical facilities are always glad to receive your data"
 
 #: .\templates\home.html:75
 msgid "Services_2_home"
-msgstr ""
+msgstr "Information"
 
 #: .\templates\home.html:76
 msgid "Services_2_home_description"
-msgstr ""
+msgstr "Wide base of informational support. Everything for you"
 
 #: .\templates\home.html:83
 msgid "Services_3_home"
-msgstr ""
+msgstr "Structured"
 
 #: .\templates\home.html:84
 msgid "Services_3_home_description"
-msgstr ""
+msgstr "It's easy to understand us, believe me, it's very simple"
+
+#: .\templates\home.html:126 .\templates\welcome.html:126
+msgid "About_us"
+msgstr "About Us"
 
 #: .\templates\home.html:127 .\templates\welcome.html:127
 msgid "About_description"
-msgstr ""
+msgstr "Who we are and where we come from"
 
 #: .\templates\home.html:137 .\templates\welcome.html:137
 msgid "About_part_1"
-msgstr ""
+msgstr "I course"
 
 #: .\templates\home.html:139 .\templates\welcome.html:139
 msgid "About_part_1_description"
-msgstr ""
+msgstr "Then the idea began to be born"
 
 #: .\templates\home.html:150 .\templates\welcome.html:150
 msgid "About_part_2"
-msgstr ""
+msgstr "II course"
 
 #: .\templates\home.html:152 .\templates\welcome.html:152
 msgid "About_part_2_description"
-msgstr ""
+msgstr "Teaching new technologies"
 
 #: .\templates\home.html:163 .\templates\welcome.html:163
 msgid "About_part_3"
-msgstr ""
+msgstr "III course"
 
-#: .\templates\home.html:165 .\templates\home.html:178
-#: .\templates\welcome.html:165 .\templates\welcome.html:178
+#: .\templates\home.html:165 .\templates\welcome.html:165
 msgid "About_part_3_description"
-msgstr ""
+msgstr "Technical Drill to Be the Best"
 
 #: .\templates\home.html:176 .\templates\welcome.html:176
 msgid "About_part_4"
-msgstr ""
+msgstr "IV course"
+
+#: .\templates\home.html:178 .\templates\welcome.html:178
+msgid "About_part_4_description"
+msgstr "Final chord of the project"
 
 #: .\templates\home.html:182
 msgid "Watch_video"
-msgstr ""
+msgstr "Watch the video"
 
 #: .\templates\home.html:186 .\templates\welcome.html:186
 msgid "Story"
-msgstr ""
+msgstr "This is our story"
 
 #: .\templates\home.html:195 .\templates\welcome.html:195
 msgid "Team_members"
-msgstr ""
+msgstr "Team Members"
 
 #: .\templates\home.html:196 .\templates\welcome.html:196
 msgid "Team_members_description"
-msgstr ""
+msgstr "Those who wish you inspiration"
 
 #: .\templates\home.html:206 .\templates\home.html:228
 #: .\templates\home.html:250 .\templates\welcome.html:206
 #: .\templates\welcome.html:228 .\templates\welcome.html:250
 msgid "Artem_Khovrat"
-msgstr ""
+msgstr "Khovrat Artem"
 
 #: .\templates\home.html:207
 msgid "Director"
-msgstr ""
+msgstr "Manager"
 
 #: .\templates\home.html:208
 msgid "Me_director_description"
-msgstr ""
+msgstr "His idea and strength led to the creation of the project"
 
 #: .\templates\home.html:229
 msgid "Engineer"
-msgstr ""
+msgstr "Engineer"
 
 #: .\templates\home.html:230
 msgid "Me_engineer_description"
-msgstr ""
+msgstr "He who writes in a maze at night in a cave"
 
 #: .\templates\home.html:251
 msgid "Translator"
-msgstr ""
+msgstr "Translator"
 
 #: .\templates\home.html:252
 msgid "Me_translator_description"
-msgstr ""
+msgstr "All your boots in him, he definitely deserves it"
 
 #: .\templates\home.html:270 .\templates\welcome.html:270
 #: .\templates\welcome.html:278 .\templates\welcome.html:287
 #: .\templates\welcome.html:296
 msgid "Choose_plan"
-msgstr ""
+msgstr "Select plan"
 
 #: .\templates\home.html:271 .\templates\welcome.html:271
 msgid "Choose_plan_description"
-msgstr ""
+msgstr "We have three of them"
 
 #: .\templates\home.html:275 .\templates\welcome.html:275
 #: .\templates\wrappers\subscription.html:75
 msgid "Free"
-msgstr ""
+msgstr "Free"
 
 #: .\templates\home.html:276 .\templates\welcome.html:276
 msgid "Free_Description"
-msgstr ""
+msgstr "Information support and analysis of the company"
 
 #: .\templates\home.html:283 .\templates\home.html:296
 #: .\templates\home.html:309
 msgid "Change_plan"
-msgstr ""
+msgstr "Select"
 
 #: .\templates\home.html:289 .\templates\welcome.html:284
 #: .\templates\wrappers\subscription.html:76
 msgid "Maximum"
-msgstr ""
+msgstr "Medium"
 
 #: .\templates\home.html:290 .\templates\welcome.html:285
 msgid "Maximum_description"
-msgstr ""
+msgstr "Everything in Free and Market Analysis"
 
 #: .\templates\home.html:302 .\templates\welcome.html:293
 #: .\templates\wrappers\subscription.html:77
 msgid "Ultra"
-msgstr ""
+msgstr "Maximum"
 
 #: .\templates\home.html:303 .\templates\welcome.html:294
 msgid "Ultra_description"
-msgstr ""
+msgstr "You are discovering audience analysis"
 
 #: .\templates\home.html:320
 msgid "SendYourFeedback"
-msgstr ""
+msgstr "Send Feedback"
 
 #: .\templates\home.html:322
 msgid "SendYourFeedbackDesciption"
-msgstr ""
+msgstr "List everything that you think of us"
 
 #: .\templates\home.html:331
 msgid "PressYourMessage"
-msgstr ""
+msgstr "Your message"
 
 #: .\templates\home.html:332
 msgid "Enter_review"
-msgstr ""
+msgstr "Enter your review"
 
 #: .\templates\home.html:337
 msgid "Enter_email"
-msgstr ""
+msgstr "Enter mail"
 
 #: .\templates\home.html:342
 msgid "Send_message"
-msgstr ""
+msgstr "Submit"
 
 #: .\templates\modelling.html:15
 msgid "Hi_modelling"
-msgstr ""
+msgstr "Simulation"
 
 #: .\templates\modelling.html:16
+#, fuzzy
+#| msgid "Modeling_description"
 msgid "Modelling_description"
-msgstr ""
+msgstr "We have 4 of them, if you are with the maximum plan"
 
 #: .\templates\modelling.html:31
 msgid "Success_title_modelling"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\modelling.html:39
 msgid "Warning_title_modelling"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\modelling.html:47
 msgid "Error_title_modelling"
-msgstr ""
+msgstr "Error: "
 
-#: .\templates\modelling.html:84
+#: .\templates\modelling.html:83
 msgid "Company_forecast"
-msgstr ""
+msgstr "Forecast for the company"
 
-#: .\templates\modelling.html:86
+#: .\templates\modelling.html:85
 msgid "Company_forecast_description"
-msgstr ""
+msgstr "Everything you need"
+
+#: .\templates\modelling.html:89
+msgid "Company_forecast_char_1"
+msgstr "Speed"
 
 #: .\templates\modelling.html:90
-msgid "Company_forecast_char_1"
-msgstr ""
+msgid "Company_forecast_char_2"
+msgstr "Foresight"
 
 #: .\templates\modelling.html:91
-msgid "Company_forecast_char_2"
-msgstr ""
-
-#: .\templates\modelling.html:92
 msgid "Company_forecast_char_3"
-msgstr ""
+msgstr "Objectivity"
 
 #: .\templates\modelling.html:108
 msgid "Company_stresstest"
-msgstr ""
+msgstr "Company Testing"
 
 #: .\templates\modelling.html:110
 msgid "Company_stresstest_description"
-msgstr ""
+msgstr "Everything you need"
 
 #: .\templates\modelling.html:114
 msgid "Company_stresstest_char_1"
-msgstr ""
+msgstr "Inclusiveness"
 
 #: .\templates\modelling.html:115
 msgid "Company_stresstest_char_2"
-msgstr ""
+msgstr "Reliability"
 
 #: .\templates\modelling.html:116
 msgid "Company_stresstest_char_3"
-msgstr ""
+msgstr "Openness"
 
 #: .\templates\modelling.html:132
 msgid "Market_forecast"
-msgstr ""
+msgstr "Forecast for the market"
 
 #: .\templates\modelling.html:134
 msgid "Market_forecast_description"
-msgstr ""
+msgstr "Everything you need"
 
 #: .\templates\modelling.html:138
 msgid "Market_forecast_char_1"
-msgstr ""
+msgstr "Speed"
 
 #: .\templates\modelling.html:139
 msgid "Market_forecast_char_2"
-msgstr ""
+msgstr "Completeness"
 
 #: .\templates\modelling.html:140
 msgid "Market_forecast_char_3"
-msgstr ""
+msgstr "Reasonable"
 
-#: .\templates\modelling.html:155
+#: .\templates\modelling.html:156
 msgid "Audience_modelling"
-msgstr ""
+msgstr "Audience Modeling"
 
-#: .\templates\modelling.html:157
+#: .\templates\modelling.html:158
 msgid "Audience_modelling_description"
-msgstr ""
-
-#: .\templates\modelling.html:161
-msgid "Audience_modelling_char_1"
-msgstr ""
+msgstr "Everything you need"
 
 #: .\templates\modelling.html:162
-msgid "Audience_modelling_char_2"
-msgstr ""
+msgid "Audience_modelling_char_1"
+msgstr "Openness"
 
 #: .\templates\modelling.html:163
+msgid "Audience_modelling_char_2"
+msgstr "Psychological"
+
+#: .\templates\modelling.html:164
 msgid "Audience_modelling_char_3"
-msgstr ""
+msgstr "Objectivity"
 
-#: .\templates\modelling.html:178 .\templates\modelling.html:265
+#: .\templates\modelling.html:180 .\templates\modelling.html:267
 msgid "Enter_info"
-msgstr ""
+msgstr "Enter data"
 
-#: .\templates\modelling.html:187 .\templates\modelling.html:275
+#: .\templates\modelling.html:189 .\templates\modelling.html:277
+#: .\templates\sign-up.html:161
 msgid "Info"
-msgstr ""
+msgstr "Information"
 
-#: .\templates\modelling.html:197
+#: .\templates\modelling.html:199
 msgid "Data_placeholder"
-msgstr ""
+msgstr "Data"
 
-#: .\templates\modelling.html:204 .\templates\modelling.html:245
+#: .\templates\modelling.html:206 .\templates\modelling.html:247
 msgid "Make_forecast"
-msgstr ""
+msgstr "Predict"
 
-#: .\templates\modelling.html:224
+#: .\templates\modelling.html:226
 msgid "Select_method"
-msgstr ""
-
-#: .\templates\modelling.html:235
-msgid "Method"
-msgstr ""
+msgstr "Sort"
 
 #: .\templates\modelling.html:237
+msgid "Method"
+msgstr "Method"
+
+#: .\templates\modelling.html:239
 msgid "Fast"
-msgstr ""
+msgstr "Fast"
 
-#: .\templates\modelling.html:238
+#: .\templates\modelling.html:240
 msgid "Slow"
-msgstr ""
+msgstr "Reliable"
 
-#: .\templates\modelling.html:282
+#: .\templates\modelling.html:284
 msgid "Testing"
-msgstr ""
+msgstr "Test"
 
 #: .\templates\news.html:20
 msgid "Hi_news"
-msgstr ""
+msgstr "News"
 
 #: .\templates\news.html:62
 msgid "Go_to_aid"
-msgstr ""
+msgstr "Help"
 
 #: .\templates\news.html:65
 msgid "Sort"
-msgstr ""
+msgstr "Sort"
 
 #: .\templates\news.html:81
 msgid "Success_title_news"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\news.html:89
 msgid "Warning_title_news"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\news.html:97
 msgid "Error_title_news"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\news.html:124 .\templates\news.html:170
 #: .\templates\news.html:226
 msgid "Filter_news"
-msgstr ""
+msgstr "News Filters"
 
 #: .\templates\news.html:150
 msgid "Language_tip"
-msgstr ""
+msgstr "Language"
 
 #: .\templates\news.html:191
 msgid "Sort_news"
-msgstr ""
+msgstr "Sort news"
 
 #: .\templates\news.html:198
 msgid "Sort_tip"
-msgstr ""
+msgstr "Sort type"
 
 #: .\templates\news.html:203
 msgid "Sort_type"
-msgstr ""
+msgstr "Type"
 
 #: .\templates\news.html:209
 msgid "Sort_date"
-msgstr ""
+msgstr "By date"
 
 #: .\templates\news.html:214
 msgid "Sort_relevance"
-msgstr ""
+msgstr "Matching"
 
 #: .\templates\news.html:219
 msgid "Sort_popular"
-msgstr ""
+msgstr "Most Popular"
 
 #: .\templates\pagination\advices.html:22
 #: .\templates\pagination\articles.html:52
 #: .\templates\pagination\articles.html:114
 msgid "Rate"
-msgstr ""
+msgstr "Rating"
 
 #: .\templates\pagination\advices.html:26
 #: .\templates\pagination\articles.html:63
 msgid "My_rate"
-msgstr ""
+msgstr "My rating"
 
 #: .\templates\pagination\advices.html:29
 #: .\templates\pagination\articles.html:68
 msgid "Avg_rate"
-msgstr ""
+msgstr "Average Rating"
 
 #: .\templates\pagination\advices.html:32
 #: .\templates\pagination\articles.html:74
 msgid "Amount_rate"
-msgstr ""
+msgstr "Number of users who gave a point"
 
 #: .\templates\pagination\advices.html:46
 msgid "Rate_your_advice"
-msgstr ""
+msgstr "Submit your score to the advice"
 
 #: .\templates\pagination\advices.html:71
 msgid "Rate_advice"
-msgstr ""
+msgstr "Grant a ball"
 
 #: .\templates\pagination\advices.html:85
 #: .\templates\pagination\articles.html:222
@@ -1644,7 +1657,7 @@ msgstr ""
 #: .\templates\pagination\disasters.html:250
 #: .\templates\pagination\news.html:37 .\templates\pagination\reviews.html:45
 msgid "Ooops"
-msgstr ""
+msgstr "Whoops"
 
 #: .\templates\pagination\advices.html:96
 #: .\templates\pagination\articles.html:234
@@ -1652,16 +1665,16 @@ msgstr ""
 #: .\templates\pagination\disasters.html:253
 #: .\templates\pagination\news.html:48 .\templates\pagination\reviews.html:40
 msgid "We_have_a_problem"
-msgstr ""
+msgstr "We have a problem"
 
 #: .\templates\pagination\advices.html:98 .\templates\pagination\news.html:50
 #: .\templates\pagination\reviews.html:42
 msgid "We_have_a_problem_description"
-msgstr ""
+msgstr "There is nothing here at all"
 
 #: .\templates\pagination\advices.html:102 .\templates\pagination\news.html:54
 msgid "My_god"
-msgstr ""
+msgstr "Oh my God"
 
 #: .\templates\pagination\advices.html:114
 #: .\templates\pagination\advices.html:121
@@ -1679,7 +1692,7 @@ msgstr ""
 #: .\templates\pagination\reviews.html:60
 #: .\templates\pagination\reviews.html:67
 msgid "Prvious_page"
-msgstr ""
+msgstr "Previous Page"
 
 #: .\templates\pagination\advices.html:152
 #: .\templates\pagination\advices.html:159
@@ -1697,13 +1710,13 @@ msgstr ""
 #: .\templates\pagination\reviews.html:98
 #: .\templates\pagination\reviews.html:105
 msgid "Next_page"
-msgstr ""
+msgstr "Next Page"
 
 #: .\templates\pagination\articles.html:12
 #: .\templates\pagination\audience.html:28
 #: .\templates\pagination\disasters.html:28
 msgid "Update"
-msgstr ""
+msgstr "Refresh"
 
 #: .\templates\pagination\articles.html:21
 #: .\templates\pagination\audience.html:24
@@ -1711,605 +1724,609 @@ msgstr ""
 #: .\templates\pagination\companies.html:92
 #: .\templates\pagination\disasters.html:24
 msgid "Delete"
-msgstr ""
+msgstr "Delete"
 
 #: .\templates\pagination\articles.html:44
 #: .\templates\pagination\articles.html:242
 msgid "created"
-msgstr ""
+msgstr "created"
 
 #: .\templates\pagination\articles.html:56
 msgid "Open"
-msgstr ""
+msgstr "Open"
 
 #: .\templates\pagination\articles.html:89
 msgid "Rate_article"
-msgstr ""
+msgstr "Rating"
 
 #: .\templates\pagination\articles.html:144
 msgid "Update_your_article"
-msgstr ""
+msgstr "Update your article"
 
 #: .\templates\pagination\articles.html:205
 msgid "Update_article"
-msgstr ""
+msgstr "Refresh"
 
 #: .\templates\pagination\articles.html:232
 msgid "Administration"
-msgstr ""
+msgstr "Administration"
 
 #: .\templates\pagination\articles.html:242
 msgid "it_s_a_question"
-msgstr ""
+msgstr "this is a question"
 
 #: .\templates\pagination\articles.html:249
 #: .\templates\subscription-change.html:25
 msgid "Go_to_home"
-msgstr ""
+msgstr "Home"
 
 #: .\templates\pagination\audience.html:79
 msgid "Update_your_audience"
-msgstr ""
+msgstr "Refresh your audience"
 
 #: .\templates\pagination\companies-detail.html:9
 msgid "User_toggle"
-msgstr ""
+msgstr "Select user"
 
 #: .\templates\pagination\companies-detail.html:9
 msgid "User"
-msgstr ""
+msgstr "User"
 
 #: .\templates\pagination\companies-detail.html:11
 msgid "Position_toggle"
-msgstr ""
+msgstr "Please enter a title"
 
 #: .\templates\pagination\companies-detail.html:13
 msgid "Date_joined_toggle"
-msgstr ""
+msgstr "Date of joining the system"
 
 #: .\templates\pagination\companies-detail.html:13
 msgid "Date_joined"
-msgstr ""
+msgstr "Join Date"
 
 #: .\templates\pagination\companies.html:9
 msgid "Company_toggle"
-msgstr ""
+msgstr "Select a company"
 
 #: .\templates\pagination\companies.html:9
 #: .\templates\pagination\disasters.html:190
 msgid "Company"
-msgstr ""
+msgstr "Company"
 
 #: .\templates\pagination\companies.html:11
 msgid "Market_toggle"
-msgstr ""
+msgstr "Select a market"
 
 #: .\templates\pagination\companies.html:13
 msgid "Location_toggle"
-msgstr ""
+msgstr "Specify location"
 
 #: .\templates\pagination\companies.html:15
 msgid "Size_toggle"
-msgstr ""
+msgstr "Specify size"
 
 #: .\templates\pagination\companies.html:17
 msgid "Revenue_toggle"
-msgstr ""
+msgstr "Specify income"
 
 #: .\templates\pagination\companies.html:19
 msgid "Website_toggle"
-msgstr ""
+msgstr "Specify a website"
 
 #: .\templates\pagination\companies.html:19
 msgid "Website"
-msgstr ""
+msgstr "Site"
 
 #: .\templates\pagination\companies.html:21
 msgid "Completeness_toggle"
-msgstr ""
+msgstr "Occupancy level"
 
 #: .\templates\pagination\companies.html:21
 msgid "Completeness"
-msgstr ""
+msgstr "Fullness"
 
 #: .\templates\pagination\companies.html:90
 msgid "Detail"
-msgstr ""
+msgstr "Details"
 
 #: .\templates\pagination\disasters.html:48
 #: .\templates\pagination\disasters.html:239
 msgid "Intensity"
-msgstr ""
+msgstr "Intensity"
 
 #: .\templates\pagination\disasters.html:52
 #: .\templates\pagination\disasters.html:243
 msgid "Readiness"
-msgstr ""
+msgstr "Ready"
 
 #: .\templates\pagination\disasters.html:78
 msgid "Update_your_disaster"
-msgstr ""
+msgstr "Refresh your crash"
 
 #: .\templates\pagination\disasters.html:158
 msgid "Update_disaster"
-msgstr ""
+msgstr "Refresh"
 
 #: .\templates\pagination\disasters.html:179
 msgid "Check_your_company"
-msgstr ""
+msgstr "Choose your company"
 
 #: .\templates\pagination\news.html:28
 msgid "Read"
-msgstr ""
+msgstr "Read"
 
 #: .\templates\pagination\reviews.html:21
 msgid "Created"
-msgstr ""
+msgstr "Create"
 
 #: .\templates\profile.html:12
 msgid "Hi_profile"
-msgstr ""
+msgstr "Profile"
 
 #: .\templates\profile.html:13
 msgid "Profile_description"
-msgstr ""
+msgstr "Below is your personal information"
 
 #: .\templates\profile.html:39
 msgid "Success_title_profile"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\profile.html:47
 msgid "Warning_title_profile"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\profile.html:55
 msgid "Error_title_profile"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\profile.html:87 .\templates\reviews.html:34
 msgid "Reviews"
-msgstr ""
+msgstr "Reviews"
 
 #: .\templates\profile.html:104
 msgid "Ratings"
-msgstr ""
+msgstr "Ratings"
 
 #: .\templates\profile.html:122
 msgid "joined"
-msgstr ""
+msgstr "joined"
 
 #: .\templates\profile.html:144
 msgid "Edit_profile"
-msgstr ""
+msgstr "Change profile"
 
 #: .\templates\profile.html:155
 msgid "Cancel_reset_password"
-msgstr ""
+msgstr "Cancel password update"
 
 #: .\templates\profile.html:162
 msgid "User_information"
-msgstr ""
+msgstr "User info"
 
 #: .\templates\profile.html:177
 msgid "Email_address"
-msgstr ""
+msgstr "Email address"
 
 #: .\templates\profile.html:179
 msgid "Email"
-msgstr ""
+msgstr "Email address"
 
 #: .\templates\profile.html:188 .\templates\profile.html:190
 msgid "First_name"
-msgstr ""
+msgstr "Name"
 
 #: .\templates\profile.html:197 .\templates\profile.html:199
 msgid "Last_name"
-msgstr ""
+msgstr "Last Name"
 
 #: .\templates\profile.html:211
 msgid "Reset_Password_Form"
-msgstr ""
+msgstr "Change Password"
 
 #: .\templates\profile.html:217 .\templates\profile.html:219
 msgid "New_Password"
-msgstr ""
+msgstr "New password"
 
 #: .\templates\profile.html:239 .\templates\profile.html:241
 msgid "Confirm_New_Password"
-msgstr ""
+msgstr "Confirm new password"
 
 #: .\templates\profile.html:259
 msgid "Send_New_Password"
-msgstr ""
+msgstr "Send password"
 
 #: .\templates\reviews.html:15
 msgid "Hi_reviews"
-msgstr ""
+msgstr "Reviews"
 
 #: .\templates\reviews.html:16
 msgid "Reviews_description"
-msgstr ""
+msgstr "All reviews about us are here"
 
 #: .\templates\reviews.html:39
 msgid "New"
-msgstr ""
+msgstr "New"
 
 #: .\templates\reviews.html:41
 msgid "Cancel_Filter_my"
-msgstr ""
+msgstr "Cancel filtering"
 
 #: .\templates\reviews.html:43
 msgid "Filter_my"
-msgstr ""
+msgstr "Filter mine"
 
 #: .\templates\reviews.html:55
 msgid "Success_title_reviews"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\reviews.html:63
 msgid "Warning_title_reviews"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\reviews.html:71
 msgid "Error_title_reviews"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\sign-in.html:5
 msgid "Hi_sign_in"
-msgstr ""
+msgstr "Login"
 
 #: .\templates\sign-in.html:6
 msgid "Sign_in_description"
-msgstr ""
+msgstr "Enter your login details"
 
 #: .\templates\sign-in.html:11
 msgid "Success_title_sign_in"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\sign-in.html:18
 msgid "Warning_title_sign_in"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\sign-in.html:25
 msgid "Error_title_sign_in"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\sign-in.html:36
 msgid "Simple_sign_in_header"
-msgstr ""
+msgstr "Several clicks"
 
 #: .\templates\sign-in.html:41
 msgid "Simple_sign_in"
-msgstr ""
+msgstr "And you're done"
 
 #: .\templates\sign-in.html:66
 msgid "Remember_me"
-msgstr ""
+msgstr "Remember"
 
-#: .\templates\sign-in.html:74 .\templates\wrappers\main.html:78
+#: .\templates\sign-in.html:74 .\templates\wrappers\main.html:142
 msgid "Sign_in"
-msgstr ""
+msgstr "Login"
 
 #: .\templates\sign-in.html:82
 msgid "Forgot_password"
-msgstr ""
+msgstr "Forgot password"
 
 #: .\templates\sign-up.html:5
 msgid "Hi_sign_up"
-msgstr ""
+msgstr "Register"
 
 #: .\templates\sign-up.html:6
 msgid "Sign_up_description"
-msgstr ""
+msgstr "Enter your registration data"
 
 #: .\templates\sign-up.html:11
 msgid "Success_title_sign_up"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\sign-up.html:18
 msgid "Warning_title_sign_up"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\sign-up.html:25
 msgid "Error_title_sign_up"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\sign-up.html:36
 msgid "Simple_sign_up_header"
-msgstr ""
+msgstr "A couple of clicks"
 
 #: .\templates\sign-up.html:41
 msgid "Simple_sign_up"
-msgstr ""
+msgstr "And you're done"
 
 #: .\templates\sign-up.html:60
 msgid "First_name_placeholder"
-msgstr ""
+msgstr "Name"
 
 #: .\templates\sign-up.html:68
 msgid "Last_name_placeholder"
-msgstr ""
+msgstr "Last Name"
 
 #: .\templates\sign-up.html:77
 msgid "Email_placeholder"
-msgstr ""
+msgstr "Email address"
 
 #: .\templates\sign-up.html:86
 msgid "Image_placeholder"
-msgstr ""
+msgstr "Photo"
 
-#: .\templates\sign-up.html:147
+#: .\templates\sign-up.html:148
 msgid "Create_account"
-msgstr ""
+msgstr "Create Record"
 
-#: .\templates\sign-up.html:154
+#: .\templates\sign-up.html:165
+msgid "Nothing_here"
+msgstr "There is nothing :)"
+
+#: .\templates\sign-up.html:179
 msgid "I_have_an_account"
-msgstr ""
+msgstr "I have an entry"
 
 #: .\templates\stresstest-company.html:12
 msgid "Hi_stresstest_company"
-msgstr ""
+msgstr "Testing the company"
 
 #: .\templates\stresstest-company.html:13
 msgid "Stresstest_company_description"
-msgstr ""
+msgstr "Everything you need"
 
 #: .\templates\stresstest-company.html:34
 msgid "Stresstest_company"
-msgstr ""
+msgstr "Company Testing"
 
 #: .\templates\stresstest-company.html:98
 msgid "Stress_test"
-msgstr ""
+msgstr "Stress test"
 
 #: .\templates\subscription-buy.html:7
 msgid "Go_to_sign_up"
-msgstr ""
+msgstr "To registration"
 
 #: .\templates\subscription-buy.html:20 .\templates\subscription-change.html:39
 #: .\templates\subscription-info.html:14
 msgid "Default_choose"
-msgstr ""
+msgstr "Default"
 
 #: .\templates\subscription-buy.html:30 .\templates\subscription-buy.html:40
 #: .\templates\subscription-change.html:50
 #: .\templates\subscription-change.html:61
 #: .\templates\subscription-info.html:18 .\templates\subscription-info.html:22
 msgid "Money_choose"
-msgstr ""
+msgstr "Need money"
 
 #: .\templates\subscription-buy.html:47 .\templates\subscription-info.html:29
 #: .\templates\welcome.html:360 .\templates\wrappers\authorization.html:54
 msgid "Admin_panel"
-msgstr ""
+msgstr "Adminpanel"
 
 #: .\templates\subscription-change.html:9
 #: .\templates\subscription-change.html:69 .\templates\wrappers\navbar.html:12
 #: .\templates\wrappers\navbar.html:18 .\templates\wrappers\navbar.html:73
 #: .\templates\wrappers\navbar.html:79
 msgid "Home"
-msgstr ""
+msgstr "Home"
 
 #: .\templates\subscription-change.html:23
 msgid "Go_to_profile"
-msgstr ""
+msgstr "Go to profile"
 
 #: .\templates\subscription-info.html:7
 msgid "Go_to_welcome"
-msgstr ""
+msgstr "To the living room"
 
 #: .\templates\welcome.html:31
 msgid "Success_welcome"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\welcome.html:39
 msgid "Warning_title_welcome"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\welcome.html:47
 msgid "Error_title_welcome"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\welcome.html:67
 msgid "Services_1"
-msgstr ""
+msgstr "Business Orientation"
 
 #: .\templates\welcome.html:68
 msgid "Services_1_description"
-msgstr ""
+msgstr "Everything just for you"
 
 #: .\templates\welcome.html:75
 msgid "Services_2"
-msgstr ""
+msgstr "Manufacturability"
 
 #: .\templates\welcome.html:76
 msgid "Services_2_description"
-msgstr ""
+msgstr "Only high technologies"
 
 #: .\templates\welcome.html:83
 msgid "Services_3"
-msgstr ""
+msgstr "Security"
 
 #: .\templates\welcome.html:84
 msgid "Services_3_description"
-msgstr ""
+msgstr "All data is safe"
 
 #: .\templates\welcome.html:207
 msgid "Founder"
-msgstr ""
+msgstr "Founder"
 
 #: .\templates\welcome.html:208
 msgid "Me_founder_description"
-msgstr ""
+msgstr "His concept and money"
 
 #: .\templates\welcome.html:229
 msgid "Developer"
-msgstr ""
+msgstr "Developer"
 
 #: .\templates\welcome.html:230
 msgid "Me_developer_description"
-msgstr ""
+msgstr "It lives thanks to it"
 
 #: .\templates\welcome.html:251
 msgid "Designer"
-msgstr ""
+msgstr "Designer"
 
 #: .\templates\welcome.html:252
 msgid "Me_designer_description"
-msgstr ""
+msgstr "Sorry, he tried"
 
 #: .\templates\welcome.html:305
 msgid "Footer_header"
-msgstr ""
+msgstr "Join"
 
 #: .\templates\welcome.html:306
 msgid "Footer_description"
-msgstr ""
+msgstr "Let's go faster"
 
 #: .\templates\welcome.html:312
 msgid "Sign_up"
-msgstr ""
+msgstr "Register"
 
-#: .\templates\wrappers\main.html:45
+#: .\templates\wrappers\main.html:109
 msgid "Like_us_on_Facebook"
-msgstr ""
+msgstr "Like us on Facebook"
 
-#: .\templates\wrappers\main.html:52
+#: .\templates\wrappers\main.html:116
 msgid "Follow_us_on_Instagram"
-msgstr ""
+msgstr "Subscribe to Instagram"
 
-#: .\templates\wrappers\main.html:59
+#: .\templates\wrappers\main.html:123
 msgid "Follow_us_on_Twitter"
-msgstr ""
+msgstr "Follow Twitter"
 
-#: .\templates\wrappers\main.html:66
+#: .\templates\wrappers\main.html:130
 msgid "Star_us_on_Github"
-msgstr ""
+msgstr "Give stars to Github"
 
-#: .\templates\wrappers\main.html:86
+#: .\templates\wrappers\main.html:150
 msgid "Sign_out"
-msgstr ""
+msgstr "Quit"
 
-#: .\templates\wrappers\main.html:94
+#: .\templates\wrappers\main.html:158
 msgid "Font_size_up"
-msgstr ""
+msgstr "Increase font size"
 
-#: .\templates\wrappers\main.html:104
+#: .\templates\wrappers\main.html:168
 msgid "Font_size_down"
-msgstr ""
+msgstr "Decrease font size"
 
-#: .\templates\wrappers\main.html:114
+#: .\templates\wrappers\main.html:178
 msgid "Change_language"
-msgstr ""
+msgstr "Change language"
 
-#: .\templates\wrappers\main.html:160
+#: .\templates\wrappers\main.html:224
 msgid "Play_text"
-msgstr ""
+msgstr "Play text"
 
-#: .\templates\wrappers\main.html:170
+#: .\templates\wrappers\main.html:234
 msgid "Pause_text"
-msgstr ""
+msgstr "Stop playing"
 
-#: .\templates\wrappers\main.html:180
+#: .\templates\wrappers\main.html:244
 msgid "Stop_text"
-msgstr ""
+msgstr "Refresh Plays"
 
 #: .\templates\wrappers\subscription.html:13
 msgid "Hi_subscription"
-msgstr ""
+msgstr "Subscription"
 
 #: .\templates\wrappers\subscription.html:14
 msgid "Choose_your_plan"
-msgstr ""
+msgstr "Choose your plan"
 
 #: .\templates\wrappers\subscription.html:35
 msgid "Success_subscription"
-msgstr ""
+msgstr "Success: "
 
 #: .\templates\wrappers\subscription.html:43
 msgid "Warning_title_subscription"
-msgstr ""
+msgstr "Warning: "
 
 #: .\templates\wrappers\subscription.html:51
 msgid "Error_title_subscription"
-msgstr ""
+msgstr "Error: "
 
 #: .\templates\wrappers\subscription.html:65
 msgid "Subscription_plan_header"
-msgstr ""
+msgstr "We have three of them"
 
 #: .\templates\wrappers\subscription.html:66
 msgid "Subscription_plan_description"
-msgstr ""
+msgstr "Choose what you like"
 
 #: .\templates\wrappers\subscription.html:82
 msgid "First_feature_name"
-msgstr ""
+msgstr "Manufacturability"
 
 #: .\templates\wrappers\subscription.html:83
 msgid "First_feature_free"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:84
 msgid "First_feature_maximum"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:85
 msgid "First_feature_ultra"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:88
 msgid "Second_feature_name"
-msgstr ""
+msgstr "Business orientation"
 
 #: .\templates\wrappers\subscription.html:89
 msgid "Second_feature_free"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:90
 msgid "Second_feature_maximum"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:91
 msgid "Second_feature_ultra"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:94
 msgid "Third_feature_name"
-msgstr ""
+msgstr "Security"
 
 #: .\templates\wrappers\subscription.html:95
 msgid "Third_feature_free"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:96
 msgid "Third_feature_maximum"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:97
 msgid "Third_feature_ultra"
-msgstr ""
+msgstr "High"
 
 #: .\templates\wrappers\subscription.html:100
 msgid "Fourth_feature_name"
-msgstr ""
+msgstr "Computer testing"
 
 #: .\templates\wrappers\subscription.html:106
 msgid "Fifth_feature_name"
-msgstr ""
+msgstr "Market Modeling"
 
 #: .\templates\wrappers\subscription.html:112
 msgid "Sixth_feature_name"
-msgstr ""
+msgstr "Audience Modeling"
 
 #: .\templates\wrappers\subscription.html:119
 msgid "Free_price"
-msgstr ""
+msgstr "0$"
 
 #: .\templates\wrappers\subscription.html:120
 msgid "Maximum_price"
-msgstr ""
+msgstr "20$"
 
 #: .\templates\wrappers\subscription.html:121
 msgid "Ultra_price"
-msgstr ""
+msgstr "40$"
