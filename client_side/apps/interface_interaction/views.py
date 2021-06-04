@@ -96,7 +96,7 @@ def sign_up_inner(request):
             delete = default_storage.delete(filename)
             user_info.update({"img": storage.child("files/" + filename).get_url(None)})
         response = requests.put(config("SERVER_URL") + "/api/sign-up/", data=user_info)
-        if response.status_code == 201:
+        if response.status_code == 200:
             utils.set_session_profile(request, json.loads(response.text))
             messages.success(request, _("Sign_up_successful"))
             return redirect("interface:buy_subscription")
@@ -151,7 +151,7 @@ def buy_subscription(request):
 
 
 def buy_subscription_free(request):
-    del request.session["subscription"]
+    request.session["subscription"] = "FREE"
     return redirect("interface:index")
 
 
@@ -212,7 +212,6 @@ def make_payment(request):
             utils.update_subscription_session_profile(
                 request, request.session["subscription"]
             )
-            del request.session["subscription"]
             messages.success(request, _("Make_payment_successful"))
             return redirect("interface:home")
         messages.warning(request, _("Make_payment_warning"))
@@ -234,7 +233,6 @@ def lower_subscription(request):
             utils.update_subscription_session_profile(
                 request, request.session["subscription"]
             )
-            del request.session["subscription"]
             messages.success(request, _("Lower_subscription_successful"))
             return redirect("interface:home")
         messages.warning(request, _("Lower_subscription_warning"))

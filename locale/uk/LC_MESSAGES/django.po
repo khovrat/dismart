@@ -2069,7 +2069,7 @@ msgstr "Все що треба"
 
 #: .\templates\stresstest-company.html:34
 msgid "Stresstest_company"
-msgstr "Тестування компаіх"
+msgstr "Тестування компанії"
 
 #: .\templates\stresstest-company.html:98
 msgid "Stress_test"
