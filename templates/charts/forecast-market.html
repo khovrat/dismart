@@ -36,7 +36,8 @@
 {% endif %}
 
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.0.0/chart.js" integrity="sha512-heziW2w3+/erezjMdHOyvg67lCz19RzOQRy118vTH9+DU6GS56G2FdQJDrGlXuCKGpH+yPdWZajxK+IoqvjYjA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 <script>
     var ctx = document.getElementById('chart').getContext('2d');
     let chart = new Chart(ctx, {
@@ -59,6 +60,9 @@
         options: {
             title: {
                 text: 'Forecast',
+                display: true
+            },
+            legend: {
                 display: true
             }
         }

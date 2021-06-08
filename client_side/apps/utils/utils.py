@@ -187,6 +187,8 @@ def get_news_context(context, data, page, pages, total_, search):
 def change_data(data):
     for index, dataset in enumerate(data["datasets"]):
         list_ = list(data["datasets"][index]["data"])
+        for i, item in enumerate(list_):
+            list_[i] = round(item, 2)
         data["datasets"][index]["data"] = json.dumps(list_)
     return data
 
