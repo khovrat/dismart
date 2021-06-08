@@ -1,3 +1,0 @@
-function checkPolicy(policyCheckBox) {
-    checkBlock();
-}
